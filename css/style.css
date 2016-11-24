@@ -1,0 +1,158 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
+@import "http://webfonts.ru/import/lato.css";
+body {
+  font-family: 'Lato', 'Segoe UI', sans-serif;
+  background: #028e9b;
+  color: #fff;
+  text-align: center;
+  min-width: 1120px;
+}
+header {
+  background: #1e6d74;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 30px;
+}
+main {
+  position: absolute;
+  top: 131px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 980px;
+  height: calc(100vh - 131px);
+  background: url(../img/pcpic.png) no-repeat center bottom/contain;
+}
+main .menu {
+  margin-top: 12vh;
+
+}
+main .menu a {
+  display: inline-block;
+  margin: 10px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #1d3740;
+  text-decoration: none;
+}
+main .menu a img {
+  display: block;
+  width: 150px;
+  margin-bottom: 15px;
+  transition: all .3s;
+}
+main .menu a:hover img{
+  transform: translateY(-10px);
+}
+
+@media screen and (max-height: 780px) {
+  main .menu a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #1d3740;
+    text-decoration: none;
+  }
+  main .menu a img {
+    display: block;
+    width: 125px;
+    margin-bottom: 15px;
+    transition: all .3s;
+  }
+}
+@media screen and (max-height: 720px) {
+  main .menu a {
+    display: inline-block;
+    margin: 5px;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #1d3740;
+    text-decoration: none;
+  }
+  main .menu a img {
+    display: block;
+    width: 100px;
+    margin-bottom: 15px;
+    transition: all .3s;
+  }
+}
+
+@media screen and (min-height: 930px) {
+  main .menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 480px;
+  }
+}
+
+.app header {
+  text-align: left;
+}
+.app header .logo,
+.app header .tabs {
+  display: inline-block;
+}
+.app header .logo img {
+  width: 150px;
+  display: block;
+}
+.app header .logo span {
+  font-size: .6em;
+  text-transform: uppercase;
+  margin-left: 3px;
+  font-weight: 900;
+}
+.app main {
+  background: none;
+}
+.tab-wrapper {
+  display: inline-block;
+  width: 70%;
+  float: right;
+
+}
+.tab-menu li {
+  position:relative;
+  background-color: #fff;
+  color:#028e9b;
+  display: inline-block;
+padding: 15px;
+  cursor:pointer;
+  z-index:0;
+transition: all .3s;
+}
+
+.tab-menu li.active {
+  color:#464646;
+  opacity: 1;
+  background-color: #028e9b;
+  color:#fff;
+      padding: 15px;
+}
+
+.tab-content>div {
+  background-color: #028e9b;
+  box-sizing:border-box;
+  width: 100%;
+  padding: 15px;
+  color: #000;
+}
+.tab-content>div>div.block {
+  display: inline-block !important;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  background: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #028e9b;
+  border: 4px solid #fff;
+  margin-right: 5px;
+}
