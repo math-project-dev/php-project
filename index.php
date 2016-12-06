@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>КРОК</title>
+    <meta charset="utf-8"> 
+    <title>Электронно-обучающее пособие по математике</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,13 +15,13 @@
     </header>
     <main>
         <div class="menu">
-            <a href="pages/school/index.html">
+            <a href="pages/school/index.php">
                 <img src="img/schoolcourse.png" alt="школьный курс"> школьный курс
             </a>
-            <a href="pages/ege/index.html">
+            <a href="pages/ege/index.php">
                 <img src="img/ege.png" alt="егэ"> егэ 2017
             </a>
-            <a href="pages/olymp/index.html">
+            <a href="pages/olymp/index.php">
                 <img src="img/olimp.png" alt="олимпиады"> олимпиады
             </a>
         </div>

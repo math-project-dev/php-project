@@ -90,13 +90,20 @@ main .menu a:hover img{
     bottom: 480px;
   }
 }
+.app {
 
+  background: #b9e9e8;
+}
 .app header {
   text-align: left;
+  z-index: 999;
 }
 .app header .logo,
 .app header .tabs {
   display: inline-block;
+}
+.app header .logo {
+  text-align: center;
 }
 .app header .logo img {
   width: 150px;
@@ -115,7 +122,7 @@ main .menu a:hover img{
   display: inline-block;
   width: 70%;
   float: right;
-
+  margin-right: 365px;
 }
 .tab-menu li {
   position:relative;
@@ -133,15 +140,20 @@ transition: all .3s;
   opacity: 1;
   background-color: #028e9b;
   color:#fff;
-      padding: 15px;
+  padding: 15px;
 }
 
 .tab-content>div {
   background-color: #028e9b;
-  box-sizing:border-box;
-  width: 100%;
-  padding: 15px;
+  box-sizing: border-box;
+  width: 1660px;
+  padding: 16px;
   color: #000;
+  white-space:nowrap;
+  overflow-y: hidden;
+  max-height: 113px;
+  text-decoration: none;
+  z-index: 999;
 }
 .tab-content>div>div.block {
   display: inline-block !important;
@@ -155,4 +167,33 @@ transition: all .3s;
   color: #028e9b;
   border: 4px solid #fff;
   margin-right: 5px;
+}
+.app main {
+  top: 235px;
+  height: calc(100vh - 235px);
+}
+.buttons {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+    background-color: #01626B;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #004D54;
+}
+.tasks {
+  margin-top: 15px;
+  font-weight: 800;
+  background-color: #fff;
+  border-width: thin;
+  border-style: solid;
+  border-color: #028e9b;
+}
+.title {
+  padding-top: 15px;
+  color:#1e6d74;
+}
+.task {
+  padding-bottom: 10px;
 }

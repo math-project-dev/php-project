@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>КРОК</title>
+    <title>Электронно-обучающее пособие по математике</title>
     <link rel="stylesheet" href="../../css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../../js/app.js" charset="utf-8"></script>
