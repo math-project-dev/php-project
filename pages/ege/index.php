@@ -55,7 +55,7 @@
 				?>
 				<div class="tasks">
 					<div class="title">ЗАДАНИЕ #<?=$i?></div></br>
-					<img class="task" src="tasks/01_0<?=$i?>.svg" />
+					<img class="task" src="tasks/01/0<?=$i?>.svg" />
 				</div>
 				<?php
 			}
