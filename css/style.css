@@ -122,17 +122,17 @@ main .menu a:hover img{
   display: inline-block;
   width: 70%;
   float: right;
-  margin-right: 365px;
+  margin-right: 220px;
 }
 .tab-menu li {
   position:relative;
   background-color: #fff;
   color:#028e9b;
   display: inline-block;
-padding: 15px;
+  padding: 15px;
   cursor:pointer;
   z-index:0;
-transition: all .3s;
+  transition: all .3s;
 }
 
 .tab-menu li.active {
@@ -196,4 +196,19 @@ transition: all .3s;
 }
 .task {
   padding-bottom: 10px;
+}
+.positionTasks {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #1e6d74;
+}
+.selectPosition {
+  margin-top: 150px;
+  font-weight: 800;
+  font-size: 30px;
+  color: #1e6d74;
+}
+.level-style {
+  position: sticky;
 }

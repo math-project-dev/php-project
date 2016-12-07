@@ -19,47 +19,44 @@
         <div class="tab-wrapper">
 
             <ul class="tab-menu">
-                <li class="active">уровень</li>
-                <li>позиция</li>
+                <li class="active">позиция</li>
             </ul>
 
             <div class="tab-content">
-                <div>
-                    <div class="block">
-                        <a class="buttons" href="">Б</a>
-                    </div>
-                    <div class="block">
-                        <a class="buttons" href="">П</a>
-                    </div>
-                </div>
                 <div class="long">
-				<?php
-				for ($i = 1; $i <= 20; $i++)
-				{
-					?>
-					<div class="block" >
-                        <a class="buttons" href=""><?=$i?></a>
+          				<?php
+          				for ($i = 1; $i <= 20; $i++)
+          				{
+          					?>
+          					<div class="block" >
+                      <a class="buttons" href="?tasks=<?=$i?>"><?=$i?></a>
                     </div>
-					<?php
-				}
-				?>
+          					<?php
+          				}
+          				?>
                 </div>
             </div>
         </div>
     </header>
     <main>
         <div class="allTasks">
-			<?php
-			for ($i = 1; $i <= 20; $i++)
-			{
-				?>
-				<div class="tasks">
-					<div class="title">ЗАДАНИЕ #<?=$i?></div></br>
-					<img class="task" src="tasks/01/0<?=$i?>.svg" />
-				</div>
-				<?php
-			}
-			?>
+    			<? $selectTask = $_GET['tasks']; ?>
+    			<?if ($selectTask == 0) { ?>
+    				<div class="selectPosition">ВЫБЕРИТЕ НУЖНУЮ ПОЗИЦИЮ,</br> ЗАТЕМ ПРИСТУПИТЕ К РЕШЕНИЮ ЗАДАНИЙ!</div>
+    			<?}
+    			if ($selectTask > 0) { ?>
+    				<div class="positionTasks">ПОЗИЦИЯ №<?=$selectTask?></div>
+    			<?
+    				for ($i = 1; $i <= 20; $i++)
+    				{
+    					?>
+    					<div class="tasks">
+    						<div class="title">ЗАДАНИЕ №<?=$i?></div></br>
+    						<img class="task" src="tasks/0<?=$selectTask?>/0<?=$i?>.svg" />
+    					</div>
+    					<?php
+    				}
+    			} ?>
         </div>
     </main>
 </body>
