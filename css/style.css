@@ -122,7 +122,7 @@ main .menu a:hover img{
   display: inline-block;
   width: 70%;
   float: right;
-  margin-right: 220px;
+  margin-right: 365px;
 }
 .tab-menu li {
   position:relative;
@@ -196,6 +196,7 @@ main .menu a:hover img{
 }
 .task {
   padding-bottom: 10px;
+  padding: 20px;
 }
 .positionTasks {
   margin-top: 20px;
@@ -204,6 +205,12 @@ main .menu a:hover img{
   color: #1e6d74;
 }
 .selectPosition {
+  margin-top: 20px;
+  font-weight: 800;
+  font-size: 30px;
+  color: #1e6d74;
+}
+.selectType {
   margin-top: 150px;
   font-weight: 800;
   font-size: 30px;

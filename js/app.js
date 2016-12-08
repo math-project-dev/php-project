@@ -26,4 +26,5 @@ $(document).ready(function() {
     $getWrapper.find($allTabs).hide();
     $getWrapper.find($allTabs).filter('[data-tab='+dataTab+']').show();
   });
+
 });

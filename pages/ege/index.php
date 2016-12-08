@@ -19,17 +19,34 @@
         <div class="tab-wrapper">
 
             <ul class="tab-menu">
+              <? $selectType = $_GET['type'];
+              if ($selectType == 0) { ?>
+                <li class="active">уровень</li>
+                <li>позиция</li>
+              <?} else { ?>
                 <li class="active">позиция</li>
+              <? } ?>
             </ul>
 
             <div class="tab-content">
+              <? $selectType = $_GET['type'];
+              if ($selectType == 0) { ?>
+                <div>
+                    <div class="block">
+                        <a class="buttons" href="?type=1">Б</a>
+                    </div>
+                    <div class="block">
+                        <a class="buttons" href="?type=2">П</a>
+                    </div>
+                </div>
+                <?}?>
                 <div class="long">
-          				<?php
+          				<? $selectType = $_GET['type'];
           				for ($i = 1; $i <= 20; $i++)
           				{
           					?>
           					<div class="block" >
-                      <a class="buttons" href="?tasks=<?=$i?>"><?=$i?></a>
+                      <a class="buttons" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
                     </div>
           					<?php
           				}
@@ -40,23 +57,33 @@
     </header>
     <main>
         <div class="allTasks">
-    			<? $selectTask = $_GET['tasks']; ?>
-    			<?if ($selectTask == 0) { ?>
-    				<div class="selectPosition">ВЫБЕРИТЕ НУЖНУЮ ПОЗИЦИЮ,</br> ЗАТЕМ ПРИСТУПИТЕ К РЕШЕНИЮ ЗАДАНИЙ!</div>
-    			<?}
-    			if ($selectTask > 0) { ?>
-    				<div class="positionTasks">ПОЗИЦИЯ №<?=$selectTask?></div>
+    			<? $selectTask = $_GET['tasks'];
+             $selectType = $_GET['type']; ?>
+          <? if ($selectType == 0 ) { ?>
+            <div class="selectType">ВЫБЕРИТЕ УРОВЕНЬ ЭКЗАМЕНА,</br> ЗАТЕМ</div>
+          <? }?>
+          <? if ($selectTask == 0 ) { ?>
+    				<div class="selectPosition">ВЫБЕРИТЕ НУЖНУЮ ПОЗИЦИЮ,</br> И ПРИСТУПИТЕ К РЕШЕНИЮ ЗАДАНИЙ!</div>
+    			<?} if ($selectTask > 0 ) { ?>
+            <? if ($selectType == 1) {
+              $type = "БАЗОВЫЙ";
+            } else {
+              $type = "ПРОФИЛЬНЫЙ";
+            }?>
+    				<div class="positionTasks">ПОЗИЦИЯ: #<?=$selectTask?> / <?=$type?> УРОВЕНЬ</div>
     			<?
     				for ($i = 1; $i <= 20; $i++)
     				{
     					?>
     					<div class="tasks">
-    						<div class="title">ЗАДАНИЕ №<?=$i?></div></br>
-    						<img class="task" src="tasks/0<?=$selectTask?>/0<?=$i?>.svg" />
+    						<div class="title">ЗАДАНИЕ #<?=$i?></div></br>
+    						<img class="task" src="tasks/type-<?=$selectType?>/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
     					</div>
     					<?php
+              $inProcess = 1;
     				}
-    			} ?>
+    			}
+          ?>
         </div>
     </main>
 </body>
