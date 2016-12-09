@@ -81,7 +81,7 @@
                 <div class="answerDiv">
                   <button class="answer" onclick="document.getElementById('answer-<?=$i?>').style.display='';">решение и ответ</button>
                   <div class="answerImage" >
-                    <img id="answer-<?=$i?>" style="display: none;" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
+                    <img id="answer-<?=$i?>" style="display: none; padding: 5px" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
                   </div>
                 </div>
     					</div>
