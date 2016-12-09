@@ -64,7 +64,7 @@
           <? }?>
           <? if ($selectTask == 0 ) { ?>
     				<div class="selectPosition">ВЫБЕРИТЕ НУЖНУЮ ПОЗИЦИЮ,</br> И ПРИСТУПИТЕ К РЕШЕНИЮ ЗАДАНИЙ!</div>
-    			<? } if ($selectTask > 0 ) { ?>
+    			  <? } if ($selectTask > 0 ) { ?>
             <? if ($selectType == 1) {
               $type = "БАЗОВЫЙ";
             } else {
@@ -79,7 +79,8 @@
     						<div class="title">ЗАДАНИЕ #<?=$i?></div></br>
     						<img class="task" src="tasks/type-<?=$selectType?>/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
                 <div class="answerDiv">
-                  <button class="answer" onclick="document.getElementById('answer-<?=$i?>').style.display='';">решение и ответ</button>
+                  <button class="answer" id="b1" style="" onclick="document.getElementById('answer-<?=$i?>').style.display=''; document.getElementById('b1').style.display='none'; document.getElementById('b2').style.display=''">ПОКАЗАТЬ РЕШЕНИЕ И ОТВЕТ</button>
+                  <button class="answer" id="b2" style="display: none;" onclick="document.getElementById('answer-<?=$i?>').style.display='none';document.getElementById('b1').style.display='';document.getElementById('b2').style.display='none'">СКРЫТЬ РЕШЕНИЕ И ОТВЕТ</button>
                   <div class="answerImage" >
                     <img id="answer-<?=$i?>" style="display: none; padding: 5px" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
                   </div>

@@ -221,12 +221,15 @@ main .menu a:hover img{
 }
 .answer {
   background-color: #1e6d74;
+  padding: 10px 27px;
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  font-weight: 600;
 }
 .answerDiv {
   padding: 10px;
+  padding-left: 10px;
 }
