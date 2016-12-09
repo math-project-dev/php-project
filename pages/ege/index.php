@@ -64,7 +64,7 @@
           <? }?>
           <? if ($selectTask == 0 ) { ?>
     				<div class="selectPosition">ВЫБЕРИТЕ НУЖНУЮ ПОЗИЦИЮ,</br> И ПРИСТУПИТЕ К РЕШЕНИЮ ЗАДАНИЙ!</div>
-    			<?} if ($selectTask > 0 ) { ?>
+    			<? } if ($selectTask > 0 ) { ?>
             <? if ($selectType == 1) {
               $type = "БАЗОВЫЙ";
             } else {
@@ -78,9 +78,14 @@
     					<div class="tasks">
     						<div class="title">ЗАДАНИЕ #<?=$i?></div></br>
     						<img class="task" src="tasks/type-<?=$selectType?>/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
+                <div class="answerDiv">
+                  <button class="answer" onclick="document.getElementById('answer-<?=$i?>').style.display='';">решение и ответ</button>
+                  <div class="answerImage" >
+                    <img id="answer-<?=$i?>" style="display: none;" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
+                  </div>
+                </div>
     					</div>
     					<?php
-              $inProcess = 1;
     				}
     			}
           ?>
