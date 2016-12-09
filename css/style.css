@@ -174,6 +174,7 @@ main .menu a:hover img{
 }
 .buttons {
   text-decoration: none;
+  color: #1e6d74;
 }
 ::-webkit-scrollbar {
     background-color: #01626B;
@@ -181,6 +182,9 @@ main .menu a:hover img{
 }
 ::-webkit-scrollbar-thumb {
   background-color: #004D54;
+}
+.allTasks {
+  padding-bottom: 20px;
 }
 .tasks {
   margin-top: 15px;
@@ -199,8 +203,9 @@ main .menu a:hover img{
   padding: 20px;
 }
 .positionTasks {
-  margin-top: 20px;
-  font-size: 30px;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  font-size: 35px;
   font-weight: 800;
   color: #1e6d74;
 }
@@ -232,4 +237,8 @@ main .menu a:hover img{
 .answerDiv {
   padding: 10px;
   padding-left: 10px;
+}
+.anytext {
+  color: #1e6d74;
+  padding-bottom: 10px;
 }
