@@ -13,7 +13,9 @@
 <body>
     <header>
         <div class="logo">
+          <a href="http://test1.ru/" alt="Вернуться назад">
             <img src="../../img/schoolcourse.png" alt="">
+          </a>
             <span>школьный курс</span>
         </div>
         <div class="tab-wrapper">
