@@ -1,5 +1,7 @@
 # Электронное пособие по математике:
 
+[![Build Status](https://travis-ci.org/school-math-project/php-project.svg?branch=master)](https://travis-ci.org/school-math-project/php-project)
+
 Планы на будущее:
 - [x] Первая страница с выбором 
 - [x] Страница со школьным материалом
