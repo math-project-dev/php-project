@@ -1,9 +1,16 @@
 language: php
-php:
-  - '5.4'
-  - '5.5'
-  - '5.6'
-  - '7.0'
-  - '7.1'
-  - hhvm
-  - nightly
+
+matrix:
+  include:
+    - dist: precise
+      sudo: false
+    - dist: precise
+      sudo: required
+    - dist: trusty
+      sudo: false
+    - dist: trusty
+      sudo: required
+      
+install: true
+script:
+  - npm --version
