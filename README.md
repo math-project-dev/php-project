@@ -1,6 +1,8 @@
 # Электронное пособие по математике:
 
 [![Build Status](https://travis-ci.org/school-math-project/php-project.svg?branch=master)](https://travis-ci.org/school-math-project/php-project)
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/school-math-project/php-project/blob/master/LICENSE)
+[![GitHub forks](https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork)](https://github.com/school-math-project/php-project#fork-destination-box)
 
 Планы на будущее:
 - [x] Первая страница с выбором 
