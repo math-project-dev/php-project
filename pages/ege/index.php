@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="app">
 
 <head>
     <meta charset="utf-8">
     <title>Электронно-обучающее пособие по математике</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#1e6d74">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'></script>
@@ -13,10 +15,10 @@
 <body>
     <header>
         <div class="logo">
-            <a href="http://test1.ru/" alt="Вернуться назад">
+            <a href="http://174.129.143.211/" alt="Вернуться назад">
               <img src="../../img/ege.png" alt="">
             </a>
-            <span>егэ <? echo date("Y") + 1; ?></span>
+            <span>егэ 2017</span>
         </div>
         <div class="tab-wrapper">
 

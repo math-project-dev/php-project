@@ -249,3 +249,30 @@ main .menu a:hover img{
 .checkAnswers {
   padding-top: 5px;
 }
+
+@media screen and (max-width: 768px) {
+	.tab-content>div {
+		width: 897px;
+	}
+	.tab-wrapper {
+		margin-right: 125px;
+	}
+	.allTasks {
+		width: 1120px;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.tab-content>div {
+		width: 897px;
+	}
+	.tab-wrapper {
+		margin-right: 125px;
+	}
+	.allTasks {
+		width: 1100px;
+		margin: auto;
+	}
+}
+
