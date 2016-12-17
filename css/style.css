@@ -46,7 +46,7 @@ main .menu a:hover img{
   transform: translateY(-10px);
 }
 
-@media screen and (max-height: 780px) {
+@media screen and (max-height: 768px) {
   main .menu a {
     display: inline-block;
     margin: 10px;
@@ -211,7 +211,7 @@ main .menu a:hover img{
   color: #1e6d74;
 }
 .selectPosition {
-  margin-top: 20px;
+  margin-top: 30px;
   font-weight: 800;
   font-size: 30px;
   color: #1e6d74;
@@ -257,7 +257,7 @@ main .menu a:hover img{
 
 @media screen and (max-width: 1440px) and (max-height: 900px) {
 	.tab-content>div {
-		width: 1148px;
+		width: 1161px;
 	}
 	.tab-wrapper {
 		margin-right: 165px;
@@ -271,7 +271,7 @@ main .menu a:hover img{
 
 @media screen and (max-width: 1280px) and (max-height: 800px) {
 	.tab-content>div {
-		width: 1085px;
+		width: 1049px;
 	}
 	.tab-wrapper {
 		margin-right: 165px;

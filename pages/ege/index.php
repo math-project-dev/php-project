@@ -7,26 +7,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#1e6d74">
     <link rel="stylesheet" href="../../css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../../js/app.js" charset="utf-8"></script>
 </head>
   <? require_once('/../../config.php'); ?>
 <body>
     <header>
+	
         <div class="logo">
             <a href="http://174.129.143.211/" alt="Вернуться назад">
               <img src="../../img/ege.png" alt="">
             </a>
             <span>егэ 2017</span>
         </div>
+		
         <div class="tab-wrapper">
 
             <ul class="tab-menu">
               <? $selectType = $_GET['type'];
               if ($selectType == 0) { ?>
                 <li class="active">уровень</li>
-                <li>позиция</li>
               <?} else { ?>
                 <li class="active">позиция</li>
               <? } ?>
@@ -43,12 +44,12 @@
                     </div>
                 </div>
                 <?}?>
+				
                 <div class="long">
           				<? $selectType = $_GET['type'];
                   if ($selectType == 1) {
             				for ($i = 1; $i <= 20; $i++)
-            				{
-            					?><div class="block" >
+            				{?><div class="block" >
                         <a class="buttons" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
                       </div>
             					<?php
@@ -65,10 +66,12 @@
                   }
           				?>
                 </div>
+				
             </div>
         </div>
     </header>
     <main>
+	
         <div class="allTasks">
     			<? $selectTask = $_GET['tasks'];
              $selectType = $_GET['type']; ?>
@@ -87,7 +90,7 @@
           if ($selectType == 1) {
       				for ($i = 1; $i <= 20; $i++)
       				{
-                $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .'  '); ?>
+                $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .' LIMIT 1 '); ?>
       					<div class="tasks">
       						<div class="title">ЗАДАНИЕ #<?=$i?></div></br>
       						<img class="task" src="tasks/type-<?=$selectType?>/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
@@ -97,7 +100,6 @@
                         function checkAnswer<? echo $i;?>() {
                             var x, text;
                             var query = "<? while ($row = mysql_fetch_array($result, MYSQL_NUM)) { echo $row[0];} mysql_free_result($result);?>" ;
-
                             x = document.getElementById("numb-<? echo $i;?>").value;
                             if (x != "") {
                               if ( x == query) {
@@ -127,7 +129,7 @@
                     <div class="answerImage" >
                       <img id="answer-<?=$i?>" style="display: none; padding: 5px" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
                       <div>
-                        <? $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .'  '); ?>
+                        <? $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .' LIMIT 1 '); ?>
                         <span id="answerAsMySQL-<?=$i?>" style="display: none; padding: 5px" class="anytext" > Ответ: <? while ($row = mysql_fetch_array($result, MYSQL_NUM)) { echo $row[0];}
                        mysql_free_result($result); ?> </span>
                       </div>
@@ -140,7 +142,7 @@
             if ($selectType == 2) {
         				for ($i = 1; $i <= 19; $i++)
         				{
-                  $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .'  '); ?>
+                  $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .' LIMIT 1 '); ?>
         					<div class="tasks">
         						<div class="title">ЗАДАНИЕ #<?=$i?></div></br>
         						<img class="task" src="tasks/type-<?=$selectType?>/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
@@ -180,7 +182,7 @@
                       <div class="answerImage" >
                         <img id="answer-<?=$i?>" style="display: none; padding: 5px" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
                         <div>
-                          <? $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .'  '); ?>
+                          <? $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .' LIMIT 1 '); ?>
                           <span id="answerAsMySQL-<?=$i?>" style="display: none; padding: 5px" class="anytext" > Ответ: <? while ($row = mysql_fetch_array($result, MYSQL_NUM)) { echo $row[0];}
                          mysql_free_result($result); ?> </span>
                         </div>

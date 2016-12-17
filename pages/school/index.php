@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="app" ng-app="app">
 
 <head>
@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="logo">
-          <a href="http://test1.ru/" alt="Вернуться назад">
+          <a href="http://174.129.143.211/" alt="Вернуться назад">
             <img src="../../img/schoolcourse.png" alt="">
           </a>
             <span>школьный курс</span>

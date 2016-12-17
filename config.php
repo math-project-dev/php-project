@@ -1,6 +1,6 @@
 <?php
 
-$link = mysql_connect('localhost', 'root', '');
+$link = mysql_connect('localhost', 'root', '12345678');
 if (!$link) {
     die('Error while connection : ' . mysql_error());
 }
