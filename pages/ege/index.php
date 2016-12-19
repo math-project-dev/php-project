@@ -7,8 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#1e6d74">
     <link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
     <script src="../../js/app.js" charset="utf-8"></script>
 </head>
   <? require_once('/../../config.php'); ?>
@@ -27,20 +29,25 @@
             <ul class="tab-menu">
               <? $selectType = $_GET['type'];
               if ($selectType == 0) { ?>
-                <li class="active">уровень</li>
+                <li class="active">Уровень</li>
               <?} else { ?>
-                <li class="active">позиция</li>
+                <li class="active">Позиция</li>
               <? } ?>
+				<li class="go-back" onclick="goBack()">Назад</li>
             </ul>
-
+			<script>
+				function goBack() {
+					window.history.back();
+				}
+			</script>
             <div class="tab-content">
               <? $selectType = $_GET['type'];
               if ($selectType == 0) { ?><div>
-                    <div class="block">
-                        <a class="buttons" href="?type=1">Б</a>
+                    <div class="level-blocks">
+                        <a class="level-buttons" style="display:block" href="?type=1">Базовый</a>
                     </div>
-                    <div class="block">
-                        <a class="buttons" href="?type=2">П</a>
+                    <div class="level-blocks">
+                        <a class="level-buttons" style="display:block" href="?type=2">Профильный</a>
                     </div>
                 </div>
                 <?}?>
@@ -50,7 +57,7 @@
                   if ($selectType == 1) {
             				for ($i = 1; $i <= 20; $i++)
             				{?><div class="block" >
-                        <a class="buttons" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
+								<a class="buttons" style="display:block" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
                       </div>
             					<?php
             				}
@@ -59,7 +66,7 @@
             				for ($i = 1; $i <= 19; $i++)
             				{
             					?><div class="block" >
-                        <a class="buttons" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
+									<a class="buttons" style="display:block" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
                       </div>
             					<?php
             				}
@@ -76,50 +83,59 @@
     		<? $selectTask = $_GET['tasks'];
 			$selectType = $_GET['type']; 
 			if ($selectType == 0 || $selectType < 0 || $selectType > 21) { ?>
-				<div class="selectType">Выберите уровень экзамена,</br> затем</div>
+				<div class="selectType animated fadeInDown">Выберите уровень экзамена,</br> затем</div>
 			<? } ?>
 			<? if ($selectTask == 0 || $selectTask < 0 || $selectTask > 21) { ?>
-				<div class="selectPosition">Выберите нужную позицию,</br> и приступите к решению заданий!</div>
+				<div class="selectPosition animated fadeInDown">Выберите нужную позицию,</br> и приступите к решению заданий!</div>
 			<? } if ($selectTask > 0 ) { ?>
 			<? if ($selectType == 1) {
 				$type = "БАЗОВЫЙ";
 			} else {
 				$type = "ПРОФИЛЬНЫЙ";
-			}?><div class="positionTasks">ПОЗИЦИЯ: #<?=$selectTask?> / <?=$type?> УРОВЕНЬ</div>
+			}?><div class="positionTasks animated fadeInDown">ПОЗИЦИЯ: #<?=$selectTask?> / <?=$type?> УРОВЕНЬ</div>
 				<?
 			if ($selectType == 1) {
       			for ($i = 1; $i <= 20; $i++)
-      			{
-					$result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .' LIMIT 1 '); ?>
-      				<div class="tasks">
+      			{ ?>
+      				<div class="tasks animated fadeInDown">
       					<div class="title">ЗАДАНИЕ #<?=$i?></div></br>
       					<img class="task" src="tasks/type-<?=$selectType?>/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
 						<div class="answerDiv">
 						<div>
 							<script>
 								function checkAnswer<? echo $i;?>() {
-								var x, text;
-								var query = "<? while ($row = mysql_fetch_array($result, MYSQL_NUM)) { echo $row[0];} mysql_free_result($result);?>" ;
-
-								x = document.getElementById("numb-<? echo $i;?>").value;
-								if (x != "") {
-									if ( x == query) {
-										text = "Ответ верный";
-										document.getElementById("result-<? echo $i;?>").style.color="green";
-									} else {
-										text = "Ответ неверный";
-										document.getElementById("result-<? echo $i;?>").style.color="red";
-									}
+									var x, text;
+									var query = [<? 
+										$query = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND type='. $selectType .' AND tasks='. $selectTask .''); 
+										$rows = array(); 
+										while ($row = mysql_fetch_assoc($query)) { 
+											$rows[] = $row["answer"]; 
+										} 
+										echo implode(",", $rows);?>];
+									x = document.getElementById("numb-<? echo $i;?>").value;
+										
+									if (x != "" || x != null) 
+									{
+											
+										if ( x == query[0] || x == query[1] || x == query[2] || x == query[3]) 
+										{
+											text = "Ответ верный";
+											document.getElementById("result-<? echo $i;?>").style.color="green";
+										} else {
+											text = "Ответ неверный";
+											document.getElementById("result-<? echo $i;?>").style.color="red";
+										}
+													
 									} else {
 										text = "Введите ответ";
-										 document.getElementById("result-<? echo $i;?>").style.color="orange"; <!-- triggered -->
+										document.getElementById("result-<? echo $i;?>").style.color="orange"; <!-- triggered -->
 									}
 									document.getElementById("result-<? echo $i;?>").innerHTML = text;
 								}
-							</script>
+								</script>
 							<span class="anytext">Ваш ответ:</span>
 							<input id="numb-<? echo $i;?>">
-							<button type="button" class="answer" onclick="checkAnswer<? echo $i;?>()">Проверить</button>
+							<button type="submit" class="answer" onclick="checkAnswer<? echo $i;?>()">Проверить</button>
 							<p class="checkAnswers" id="result-<? echo $i;?>"></p>
 						</div>
 						<? $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .'  '); ?>
@@ -141,38 +157,48 @@
       			}
       		}
 			if ($selectType == 2) {
-        		for ($i = 1; $i <= 19; $i++)
+        		for ($i = 1; $i <= 20; $i++)
         		{
-					$result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .' LIMIIT 1 '); ?>
-        			<div class="tasks">
+					$result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .' LIMIT 1 '); ?>
+        			<div class="tasks animated fadeInDown">
         				<div class="title">ЗАДАНИЕ #<?=$i?></div></br>
         				<img class="task" src="tasks/type-<?=$selectType?>/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
 						<div class="answerDiv">
 							<div>
 								<script>
 									function checkAnswer<? echo $i;?>() {
-									var x, text;
-									var query = "<? while ($row = mysql_fetch_array($result, MYSQL_NUM)) { echo $row[0];} mysql_free_result($result);?>" ;
-
-									x = document.getElementById("numb-<? echo $i;?>").value;
-									if (x != "") {
-										if ( x == query) {
-										text = "Ответ верный";
-											document.getElementById("result-<? echo $i;?>").style.color="green";
-										} else {
-											text = "Ответ неверный";
-											document.getElementById("result-<? echo $i;?>").style.color="red";
-										}
+										var x, text;
+										var query = [<? 
+											$query = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND type='. $selectType .' AND tasks='. $selectTask .''); 
+											$rows = array(); 
+											while ($row = mysql_fetch_assoc($query)) { 
+												$rows[] = $row["answer"]; 
+											} 
+											echo implode(",", $rows);?>];
+										x = document.getElementById("numb-<? echo $i;?>").value;
+										
+										if (x != "" || x != null) 
+										{
+											
+											if ( x == query[0] || x == query[1] || x == query[2] || x == query[3]) 
+											{
+												text = "Ответ верный";
+												document.getElementById("result-<? echo $i;?>").style.color="green";
+											} else {
+												text = "Ответ неверный";
+												document.getElementById("result-<? echo $i;?>").style.color="red";
+											}
+													
 										} else {
 											text = "Введите ответ";
 											document.getElementById("result-<? echo $i;?>").style.color="orange"; <!-- triggered -->
 										}
 										document.getElementById("result-<? echo $i;?>").innerHTML = text;
 									}
-								</script>
+									</script>
 								<span class="anytext">Ваш ответ:</span>
 								<input id="numb-<? echo $i;?>">
-								<button type="button" class="answer" onclick="checkAnswer<? echo $i;?>()">Проверить</button>
+								<button type="submit" class="answer" onclick="checkAnswer<? echo $i;?>()">Проверить</button>
 								<p class="checkAnswers" id="result-<? echo $i;?>"></p>
 							</div>
 							<? $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .'  '); ?>
@@ -190,7 +216,7 @@
 							</div>
 						</div>
         			</div>
-        			<?php
+        		<?php
         		}
         	}
 		}?>
