@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Электронно-обучающее пособие по математике</title>
+    <title>Справочно-обучающее электронное пособие по математике</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#1e6d74">
     <link rel="stylesheet" href="../../css/style.css">
@@ -83,7 +83,12 @@
 				<div class="selectType animated fadeInDown">Выберите уровень экзамена,</br> затем</div>
 			<? } ?>
 			<? if ($selectTask == 0 || $selectTask < 0 || $selectTask > 21) { ?>
-				<div class="selectPosition animated fadeInDown">Выберите нужную позицию,</br> и приступите к решению заданий!</div>
+				<div class="selectPosition animated fadeInDown">Выберите нужную позицию,</br> и приступите к решению заданий!</br> или </br></div>
+				<div class="selectPosition animated fadeInDown">Создайте классический вариант</div>
+				<div class="generate-own">
+					<a class="pick-variant animated fadeInDown" href="http://174.129.143.211/pages/ege/c/?type=1">Базовый уровень</a>
+					<a class="pick-variant animated fadeInDown" href="http://174.129.143.211/pages/ege/c/?type=2">Профильный уровень</a>
+				</div>
 			<? } if ($selectTask > 0 ) { ?>
 			<? if ($selectType == 1) {
 				$type = "БАЗОВЫЙ";
@@ -143,9 +148,12 @@
 						<div class="answerImage" >
 							<img id="answer-<?=$i?>" style="display: none; padding: 5px" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
 							<div>
-								<? $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .'  '); ?>
-								<span id="answerAsMySQL-<?=$i?>" style="display: none; padding: 5px" class="anytext" > Ответ: <? while ($row = mysql_fetch_array($result, MYSQL_NUM)) { echo $row[0]." ";}
-							   mysql_free_result($result); ?> </span>
+								<? $result = mysql_query('SELECT answer FROM answers WHERE id='. $i .' AND tasks='. $selectTask .' AND type='. $selectType .'  '); 
+								if ($selectType == 2 && $selectTask < 13)
+								{?>
+									<span id="answerAsMySQL-<?=$i?>" style="display: none; padding: 5px" class="anytext" > Ответ: <? while ($row = mysql_fetch_array($result, MYSQL_NUM)) { echo $row[0]." ";}
+								   mysql_free_result($result); ?> </span>
+								<?}?>
 							</div>
 						</div>
 					</div>

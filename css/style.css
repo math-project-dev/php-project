@@ -149,6 +149,7 @@ main .menu a:hover img{
   box-sizing: border-box;
   width: 1685px;
   padding: 16px;
+  padding-bottom: 105px;
   color: #000;
   white-space:nowrap;
   overflow-y: hidden;
@@ -180,7 +181,8 @@ main .menu a:hover img{
 }
 ::-webkit-scrollbar {
     background-color: #01626B;
-    height: 8px;
+    width: 15px;
+	height: 15px
 }
 ::-webkit-scrollbar-thumb {
   background-color: #004D54;
@@ -336,8 +338,21 @@ main .menu a:hover img{
 	color: #028e9b;
 	padding: 12px;
 }
+
 .go-back-label {
 	padding: 10px; 
 	text-decoration: none;
 	color: #028e9b;
+}
+.pick-variant {
+	text-decoration: none;
+	display: inline;
+	font-size: 1.1rem;
+	font-weight: 700;
+	background-color: #1e6d74;
+	color: #fff;
+	padding: 12px;
+}
+.generate-own {
+	margin-top: 30px;
 }
