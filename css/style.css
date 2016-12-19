@@ -329,7 +329,15 @@ main .menu a:hover img{
     color: #1e6d74;
     font-size: 22px;
 }
-.go-back {
-	display: block; 
+.go-back { 
 	text-decoration: none;
+	display: inline;
+	background-color: #fff;
+	color: #028e9b;
+	padding: 12px;
+}
+.go-back-label {
+	padding: 10px; 
+	text-decoration: none;
+	color: #028e9b;
 }

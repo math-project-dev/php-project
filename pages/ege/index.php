@@ -33,13 +33,10 @@
 				<?} else { ?>
 					<li class="active">Позиция</li>
 				<? } ?>
-				<li class="go-back" onclick="goBack()">Назад</li>
+				<div class="go-back" > 
+					<a class="go-back-label" href="http://174.129.143.211/pages/ege/" >Назад</a>
+				</div>
             </ul>
-			<script>
-				function goBack() {
-					window.history.back();
-				}
-			</script>
             <div class="tab-content">
               <? $selectType = $_GET['type'];
               if ($selectType == 0) { ?><div>
