@@ -13,7 +13,7 @@
 	
     <script src="../../js/app.js" charset="utf-8"></script>
 </head>
-  <? require_once('/../../config.php'); ?>
+	<? require_once('/../../config.php'); ?>
 <body>
     <header>
 	
@@ -27,12 +27,12 @@
         <div class="tab-wrapper">
 
             <ul class="tab-menu">
-              <? $selectType = $_GET['type'];
-              if ($selectType == 0) { ?>
-                <li class="active">Уровень</li>
-              <?} else { ?>
-                <li class="active">Позиция</li>
-              <? } ?>
+				<? $selectType = $_GET['type'];
+				if ($selectType == 0) { ?>
+					<li class="active">Уровень</li>
+				<?} else { ?>
+					<li class="active">Позиция</li>
+				<? } ?>
 				<li class="go-back" onclick="goBack()">Назад</li>
             </ul>
 			<script>
@@ -53,25 +53,25 @@
                 <?}?>
 				
                 <div class="long">
-          				<? $selectType = $_GET['type'];
-                  if ($selectType == 1) {
-            				for ($i = 1; $i <= 20; $i++)
-            				{?><div class="block" >
+					<? $selectType = $_GET['type'];
+					if ($selectType == 1) 
+					{
+						for ($i = 1; $i <= 20; $i++)
+							{?>
+							<div class="block" >
 								<a class="buttons" style="display:block" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
-                      </div>
-            					<?php
-            				}
-                  }
-                  if ($selectType == 2) {
-            				for ($i = 1; $i <= 19; $i++)
-            				{
-            					?><div class="block" >
-									<a class="buttons" style="display:block" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
-                      </div>
-            					<?php
-            				}
-                  }
-          				?>
+							</div>
+						<?}
+					}
+					if ($selectType == 2) 
+					{
+						for ($i = 1; $i <= 19; $i++)
+						{?>
+							<div class="block" >
+								<a class="buttons" style="display:block" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
+							</div>
+						<?}
+					}?>
                 </div>
 				
             </div>
