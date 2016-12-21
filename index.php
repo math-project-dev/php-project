@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#1e6d74">
-    <title>Электронно-обучающее пособие по математике</title>
+    <title>Справочно-обучающее электронное пособие по математике</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 

@@ -27,19 +27,14 @@
         <div class="tab-wrapper">
 
             <ul class="tab-menu">
-				<? $selectType = $_GET['type'];
-				if ($selectType == 0) { ?>
-					<li class="active">Уровень</li>
-				<?} else { ?>
-					<li class="active">Позиция</li>
-				<? } ?>
+				<li class="active">Уровень</li>
+				
 				<div class="go-back" > 
 					<a class="go-back-label" href="http://174.129.143.211/pages/ege/" >Назад</a>
 				</div>
             </ul>
             <div class="tab-content">
-              <? $selectType = $_GET['type'];
-              if ($selectType == 0) { ?>
+			
 				<div>
                     <div class="level-blocks">
                         <a class="level-buttons" style="display:block" href="?type=1">Базовый</a>
@@ -47,29 +42,6 @@
                     <div class="level-blocks">
                         <a class="level-buttons" style="display:block" href="?type=2">Профильный</a>
                     </div>
-                </div>
-                <?}?>
-				
-                <div class="long">
-					<? $selectType = $_GET['type'];
-					if ($selectType == 1) 
-					{
-						for ($i = 1; $i <= 20; $i++)
-							{?>
-							<div class="block" >
-								<a class="buttons" style="display:block" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
-							</div>
-						<?}
-					}
-					if ($selectType == 2) 
-					{
-						for ($i = 1; $i <= 19; $i++)
-						{?>
-							<div class="block" >
-								<a class="buttons" style="display:block" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
-							</div>
-						<?}
-					}?>
                 </div>
 				
             </div>
