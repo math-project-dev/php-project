@@ -82,9 +82,17 @@ if (isset($_POST['btn-signup'])) {
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <title>Регистрация в системе</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"  />
+	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
       <link rel="stylesheet" href="../css/style.css" type="text/css" />
    </head>
    <body>
+   		<header>
+			<div class="user-reg">
+				<a href="/user/login.php" class="reg-link fa fa-sign-in"></a>
+			</div>
+			<span>СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
+			<br> ПОСОБИЕ ПО МАТЕМАТИКЕ</span>
+		</header>
       <div class="container">
          <div id="login-form">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">

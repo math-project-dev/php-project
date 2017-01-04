@@ -11,7 +11,7 @@ header {
   background: #1e6d74;
   font-size: 1.7rem;
   font-weight: 700;
-  padding: 30px;
+  padding: 20px;
 }
 main {
   position: absolute;
@@ -367,7 +367,7 @@ main .menu a:hover img{
 }
 .register-new-user {
 	text-decoration: none;
-	margin-top: 350px;
+	margin-top: 300px;
 	font-size: 1.3rem;
 	font-weight: 700;
 }
@@ -392,4 +392,45 @@ main .menu a:hover img{
     	border-collapse: separate;
     	width: 250px;
     	margin: auto;
+}
+.profile-name {
+    	font-size: 1.7rem;
+   	font-weight: 700;
+}
+.profile-avatar {
+	float: right;
+	margin-top: 76px;	
+	margin-right: 200px;
+	background: #fff;
+}
+.user-information {
+	margin-top: 96px;
+	float: right;
+	font-size: 1.1rem;
+   	font-weight: 700;
+	text-align: left;
+	margin-right: 70px;
+	padding: 5px
+}
+.edit-button {
+	padding: 10px;
+    	text-decoration: none;
+    	background-color: #1e6d74;
+	margin-top 10px;
+	color: #fff;
+}
+.edit-panel {
+	margin-top: 20px;
+}
+.profile-achive {
+	margin-top: 276px;
+	background-color: #1e6d74;
+	padding-bottom: 155px;
+}
+.achive-text {
+	padding-top: 10px;
+	padding-left: 20px;
+	float: left;
+	font-size: 1.2rem;
+   	font-weight: 700;
 }

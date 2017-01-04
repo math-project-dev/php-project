@@ -28,10 +28,11 @@
 		<?	if (isset($_SESSION['user']) != "") { ?>
 			<div class="user-reg">
 				<a href="/user/logout.php?logout" class="reg-link fa fa-sign-out"></a>
+				<a href="/user/" class="reg-link fa fa-user"></a>
 			</div>
 		<? } else if (isset($_SESSION['user']) == "") { ?>
 			<div class="user-reg">
-				<a href="/user/" class="reg-link fa fa-sign-in"></a>
+				<a href="/user/login.php" class="reg-link fa fa-sign-in"></a>
 			</div>
 		<? } ?>
 			<span>СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
