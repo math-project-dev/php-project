@@ -356,3 +356,15 @@ main .menu a:hover img{
 .generate-own {
 	margin-top: 30px;
 }
+.user-reg {
+	display: inline;
+    	float: right;
+    	margin-top: 13px;
+}
+.reg-link {
+	text-decoration: none;
+	color: #fff;
+}
+.register-new-user {
+	margin-top: 15px;
+}
