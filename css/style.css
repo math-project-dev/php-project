@@ -366,5 +366,30 @@ main .menu a:hover img{
 	color: #fff;
 }
 .register-new-user {
-	margin-top: 15px;
+	text-decoration: none;
+	margin-top: 350px;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+.acc-enter {
+	text-decoration: none;
+	font-weight: 700;
+	color: #fff;
+}
+.profile-buttons {
+    	text-decoration: none;
+    	display: inline;
+    	font-size: 1.1rem;
+   	font-weight: 700;
+    	background-color: #1e6d74;
+    	color: #fff;
+    	padding: 12px;
+	border-style: none;
+}
+.input-group {
+	position: relative;
+    	display: table;
+    	border-collapse: separate;
+    	width: 250px;
+    	margin: auto;
 }

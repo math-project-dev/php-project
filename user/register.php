@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 if (isset($_SESSION['user']) != "") {
-    header("Location: home.php");
+    header("Location: http://174.129.143.211/");
 }
 include_once '../config.php';
 
@@ -88,12 +88,8 @@ if (isset($_POST['btn-signup'])) {
       <div class="container">
          <div id="login-form">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-               <div class="col-md-4">
                   <div class="form-group">
                      <h2 class="register-new-user">Регистрация нового пользователя</h2>
-                  </div>
-                  <div class="form-group">
-                     <hr />
                   </div>
                   <?php
                      if ( isset($errMSG) ) 
@@ -128,19 +124,13 @@ if (isset($_POST['btn-signup'])) {
                      </div>
                      <span class="text-danger"><?php echo $passError; ?></span>
                   </div>
+
                   <div class="form-group">
-                     <hr />
+                     <button type="submit" class="profile-buttons" name="btn-signup">Зарегистрироваться</button>
                   </div>
                   <div class="form-group">
-                     <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Войти</button>
+                     <a href="index.php" class="acc-enter" >Войти в существующий аккаунт</a>
                   </div>
-                  <div class="form-group">
-                     <hr />
-                  </div>
-                  <div class="form-group">
-                     <a href="index.php">Войти в существующий аккаунт</a>
-                  </div>
-               </div>
             </form>
          </div>
       </div>

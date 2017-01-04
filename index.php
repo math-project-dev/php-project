@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<? 	
+	ob_start();
+	session_start();
+	require_once 'config.php'; 
+?>
 
 <head>
     <meta charset="utf-8">
@@ -20,9 +25,15 @@
 <body>
 		<div class="remodal-bg">
 		<header>
+		<?	if (isset($_SESSION['user']) != "") { ?>
+			<div class="user-reg">
+				<a href="/user/logout.php?logout" class="reg-link fa fa-sign-out"></a>
+			</div>
+		<? } else if (isset($_SESSION['user']) == "") { ?>
 			<div class="user-reg">
 				<a href="/user/" class="reg-link fa fa-sign-in"></a>
 			</div>
+		<? } ?>
 			<span>СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
 			<br> ПОСОБИЕ ПО МАТЕМАТИКЕ</span>
 		</header>

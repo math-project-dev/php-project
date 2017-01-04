@@ -4,7 +4,7 @@ session_start();
 require_once '../config.php';
 
 if (isset($_SESSION['user']) != "") {
-    header("Location: home.php");
+    header("Location: http://174.129.143.211/");
     exit;
 }
 
@@ -44,7 +44,7 @@ if (isset($_POST['btn-login'])) {
         
         if ($count == 1 && $row['userPass'] == $password) {
             $_SESSION['user'] = $row['userId'];
-            header("Location: home.php");
+            header("Location: http://174.129.143.211/");
         } else {
             $errMSG = "Неверные данные";
         }
@@ -65,12 +65,8 @@ if (isset($_POST['btn-login'])) {
       <div class="container">
          <div id="login-form">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-               <div class="col-md-12">
                   <div class="form-group">
-                     <h2 class="">Вход в систему</h2>
-                  </div>
-                  <div class="form-group">
-                     <hr />
+                     <h2 class="register-new-user">Вход в систему</h2>
                   </div>
                   <?php
                      if ( isset($errMSG) ) {
@@ -99,18 +95,11 @@ if (isset($_POST['btn-login'])) {
                      <span class="text-danger"><?php echo $passError; ?></span>
                   </div>
                   <div class="form-group">
-                     <hr />
+                     <button type="submit" class="profile-buttons" name="btn-login">Войти</button>
                   </div>
                   <div class="form-group">
-                     <button type="submit" class="pick-variant" name="btn-login">Войти</button>
+                     <a href="register.php" class="acc-enter" >Зарегестрироваться</a>
                   </div>
-                  <div class="form-group">
-                     <hr />
-                  </div>
-                  <div class="form-group">
-                     <a href="register.php">Зарегестрироваться</a>
-                  </div>
-               </div>
             </form>
          </div>
       </div>
