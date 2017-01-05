@@ -4,7 +4,7 @@ session_start();
 if (isset($_SESSION['user']) != "") {
     header("Location: http://174.129.143.211/");
 }
-include_once '../config.php';
+include_once '../../config.php';
 
 $error = false;
 
@@ -83,12 +83,13 @@ if (isset($_POST['btn-signup'])) {
       <title>Регистрация в системе</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"  />
 	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-      <link rel="stylesheet" href="../css/style.css" type="text/css" />
+      <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+	  <meta name="theme-color" content="#1e6d74">
    </head>
    <body>
    		<header>
 			<div class="user-reg">
-				<a href="/user/login.php" class="reg-link fa fa-sign-in"></a>
+				<a href="/pages/user/login.php" class="reg-link fa fa-sign-in"></a>
 			</div>
 			<span>СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
 			<br> ПОСОБИЕ ПО МАТЕМАТИКЕ</span>
@@ -144,4 +145,4 @@ if (isset($_POST['btn-signup'])) {
       </div>
    </body>
 </html>
-<?php ob_end_flush(); ?>
+<? ob_end_flush(); ?>

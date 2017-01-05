@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-require_once '../config.php';
+require_once '../../config.php';
 
 if (isset($_SESSION['user']) != "") {
     header("Location: http://174.129.143.211/");
@@ -59,7 +59,8 @@ if (isset($_POST['btn-login'])) {
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <title>Вход в систему</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"  />
-      <link rel="stylesheet" href="../css/style.css" type="text/css" />
+      <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+	  <meta name="theme-color" content="#1e6d74">
    </head>
    <body>
 		<header>
