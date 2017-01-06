@@ -33,19 +33,22 @@
 				 <div class="user-reg">
 					<a href="/pages/user/logout.php?logout" class="reg-link fa fa-sign-out"></a>
 				 </div>
-				 <span>СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
-				 <br> ПОСОБИЕ ПО МАТЕМАТИКЕ</span>	
+				 <span style="padding: 4px;">РЕДАКТИРОВАНИЕ ЗАДАНИЙ
+				 <br>СПИСОК ЗАДАНИЙ</span>	
 			</header>
-			<main style="background: none;"> 
-				<ul>
+			<main style="background: none; text-align:center"> 
+				<ul class="ul-list">
 					
 					<? 
 						while ($row = mysql_fetch_assoc($query)) 
 						{ ?>
-							<li class="ul-list"> <a class="task-list" href="edit.php?id=<?=$row[tableID]?>">Задание № <?=$row[id] ?> / Позиция № <?=$row[tasks] ?> / Уровень <?=$row[type] ?></a>
+							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row[tableID]?>">ЗАДАНИЕ # <?=$row[id] ?> / ПОЗИЦИЯ # <?=$row[tasks] ?> / УРОВЕНЬ <?=$row[type] ?></a>
 						<?} 
 					?>
+					
 				</ul>
 			</main>
 		</body>
 	</html>
+
+<? ob_end_flush(); ?>

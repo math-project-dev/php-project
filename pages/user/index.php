@@ -7,15 +7,20 @@
 		header("Location: http://174.129.143.211/pages/user/login.php");
 		exit;
 	}
-	
-	$res=mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']);
+	if ($_GET['id'] > 0 )
+	{
+		$res = mysql_query("SELECT * FROM users WHERE userId=". $_GET['id']);
+	} else {
+		$res = mysql_query("SELECT * FROM users WHERE userId=".$_SESSION['user']);
+	}
+		
 	$userRow=mysql_fetch_array($res);
 ?> 
 <!DOCTYPE html>
 <html style="background: #b9e9e8;">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <title>Ваш личный кабинет</title>
+      <title>Справочно-обучающее электронное пособие по математике</title>
 	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	  <script src="//cdn.jsdelivr.net/jdenticon/1.4.0/jdenticon.min.js" async></script>
       <link rel="stylesheet" href="../../css/style.css" type="text/css" />
@@ -27,41 +32,55 @@
 			<div class="user-reg">
 				<a href="/pages/user/logout.php?logout" class="reg-link fa fa-sign-out"></a>
 			</div>
-			<span>СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
-			<br> ПОСОБИЕ ПО МАТЕМАТИКЕ</span>
+			<span style="padding: 4px;">ЛИЧНЫЙ КАБИНЕТ
+			<br>ПОЛЬЗОВАТЕЛЯ</span>
 		</header>
 		<main style="background: none">
-			<h1 class="profile-name">С возвращением, <?php echo $userRow['userName']; ?>! </h1>
+			<? if (empty($_GET['id']) ) { ?>
+			<h1 class="profile-name">С ВОЗВРАЩЕНИЕМ, <?php echo $userRow['userName']; ?>! </h1>
 			<div class="user-information" >
-				<span>Ваш уникальный ID: <?php echo $userRow['userId']; ?></span><br>
-				<span>Ваш логин: <?php echo $userRow['userName']; ?></span><br>
-				<span>Ваша почта: <?php echo $userRow['userEmail']; ?></span><br>
+				<span>ВАШ УНИКАЛЬНЫЙ ID: <?php echo $userRow['userId']; ?></span><br>
+				<span>ВАШ ЛОГИН: <?php echo $userRow['userName']; ?></span><br>
+				<span>ВАША ПОЧТА: <?php echo $userRow['userEmail']; ?></span><br>
 				<? if ($userRow['statusID'] == 1) {
-					$status = "Ученик"; 
+					$status = "УЧЕНИК"; 
 				} else if ($userRow['statusID'] == 2) {
-					$status = "Учитель";
+					$status = "УЧИТЕЛЬ";
 				} else if ($userRow['statusID'] == 3) {
-					$status = "Школьный администратор";
+					$status = "ШКОЛЬНЫЙ АДМИНИСТРАТОР";
 				} else if ($userRow['statusID'] == 4) {
-					$status = "Разработчик";
+					$status = "РАЗРАБОТЧИК";
 				}
 				?>
-				<span>Ваша статус: <?php echo $status; ?></span><br>
+				<span>ВАШ СТАТУС: <?php echo $status; ?></span><br>
 				
 				<? if ($userRow['statusID'] != 1) { ?>
 				<div class="edit-panel">
-					<a class="edit-button" href="/pages/user/panel/list.php">Преступить к редактированию заданий</a>
+					<a class="edit-button" href="/pages/user/panel/list.php">ПРЕСТУПИТЬ К РЕШЕНИЮ ЗАДАНИЙ</a>
 				</div>
 				<? } ?>
 			</div>
+			<? } else { ?>
+			<div class="user-information" >
+				<span>УНИКАЛЬНЫЙ ID ПОЛЬЗОВАТЕЛЯ: <?php echo $userRow['userId']; ?></span><br>
+				<span>ЛОГИН ПОЛЬЗОВАТЕЛЯ: <?php echo $userRow['userName']; ?></span><br>
+				<span>ПОЧТА ПОЛЬЗОВАТЕЛЯ: <?php echo $userRow['userEmail']; ?></span><br>
+					<? if ($userRow['statusID'] == 1) {
+						$status = "УЧЕНИК"; 
+					} else if ($userRow['statusID'] == 2) {
+						$status = "УЧИТЕЛЬ";
+					} else if ($userRow['statusID'] == 3) {
+						$status = "ШКОЛЬНЫЙ АДМИНИСТРАТОР";
+					} else if ($userRow['statusID'] == 4) {
+						$status = "РАЗРАБОТЧИК";
+					}
+					?>
+				<span>СТАТУС ПОЛЬЗОВАТЕЛЯ: <?php echo $status; ?></span><br>
+				
+			</div>
+			<? } ?>
 			<div class="profile-avatar" >
 				<canvas class="" width="150" height="150" data-jdenticon-hash="<? echo md5($userRow['userName']) ?>"></canvas>
-			</div>
-			<div class="profile-achive" >
-			
-				<p class="achive-text">Ваши достижения:</p>
-				<!-- тут должна быть система с ачивками
-					 но её тут нет, потому что я не знаю нужно ли её делать--> 
 			</div>
 		</main>
    </body>

@@ -27,8 +27,8 @@
 		
         <div class="tab-wrapper">
 
-            <ul class="tab-menu">
-				<? $selectType = $_GET['type'];
+            <ul class="tab-menu" style="margin-right: 1000px;">
+				<? $selectType = (int) $_GET['type'];
 				if ($selectType == 0) { ?>
 					<li class="active">Уровень</li>
 				<?} else { ?>
@@ -39,7 +39,7 @@
 				</div>
             </ul>
             <div class="tab-content">
-              <? $selectType = $_GET['type'];
+              <? $selectType = (int) $_GET['type'];
               if ($selectType == 0) { ?><div>
                     <div class="level-blocks">
                         <a class="level-buttons" style="display:block" href="?type=1">Базовый</a>
@@ -51,7 +51,7 @@
                 <?}?>
 				
                 <div class="long">
-					<? $selectType = $_GET['type'];
+					<? $selectType = (int) $_GET['type'];
 					if ($selectType == 1) 
 					{
 						for ($i = 1; $i <= 20; $i++)
@@ -78,8 +78,8 @@
     
 	<main>
         <div class="allTasks">
-    		<? $selectTask = $_GET['tasks'];
-			$selectType = $_GET['type']; 
+    		<? $selectTask = (int) $_GET['tasks'];
+			$selectType = (int) $_GET['type']; 
 			if ($selectType == 0 || $selectType < 0 || $selectType > 21) { ?>
 				<div class="selectType animated fadeInDown">Выберите уровень экзамена,</br> затем</div>
 			<? } ?>

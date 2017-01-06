@@ -368,7 +368,7 @@ header span {
 }
 .register-new-user {
 	text-decoration: none;
-	margin-top: 300px;
+	margin-top: 240px;
 	font-size: 1.3rem;
 	font-weight: 700;
 }
@@ -440,16 +440,22 @@ header span {
 .task-list {
 	padding: 5px;
 	text-decoration: none;
+	color: #1e6d74;
 }
-.ul-list {
-	height: 20px;
-	display: block;
-	text-align: left; 
-	width: 400pt;
+.li-list {
+	font-size: 1.1rem;
+   	font-weight: 700;
+        margin-right:10px;
+	height: 25px;
+}
+.upload-text {
+	font-size: 1.1rem;
+   	font-weight: 700;
+	color: #1e6d74;
 }
 .task-name {
-    padding-bottom: 20px;
-    font-size: 35px;
-    font-weight: 800;
-    color: #1e6d74;
+    	padding-bottom: 20px;
+    	font-size: 35px;
+    	font-weight: 800;
+    	color: #1e6d74;
 }

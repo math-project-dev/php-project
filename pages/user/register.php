@@ -30,7 +30,7 @@ if (isset($_POST['btn-signup'])) {
         $nameError = "Имя должно состоять не менее чем из 3 символов!";
     } else if (!preg_match("/^[a-zA-Z ]+$/", $name)) {
         $error     = true;
-        $nameError = "Имя должно включать буквы и другие символы!";
+        $nameError = "Имя должно включать символы на латинской расскладке!";
     }
     
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -80,7 +80,7 @@ if (isset($_POST['btn-signup'])) {
 <html>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <title>Регистрация в системе</title>
+      <title>Справочно-обучающее электронное пособие по математике</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"  />
 	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
       <link rel="stylesheet" href="../../css/style.css" type="text/css" />
@@ -91,8 +91,8 @@ if (isset($_POST['btn-signup'])) {
 			<div class="user-reg">
 				<a href="/pages/user/login.php" class="reg-link fa fa-sign-in"></a>
 			</div>
-			<span>СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
-			<br> ПОСОБИЕ ПО МАТЕМАТИКЕ</span>
+			<span style="padding: 5px;">РЕГИСТРАЦИЯ НОВОГО<br>
+			ПОЛЬЗОВАТЕЛЯ</span>
 		</header>
       <div class="container">
          <div id="login-form">
