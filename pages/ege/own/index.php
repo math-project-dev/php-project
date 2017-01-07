@@ -26,7 +26,7 @@
 		
         <div class="tab-wrapper">
 
-            <ul class="tab-menu">
+            <ul class="tab-menu" style="margin-right: 1000px;">
 				<li class="active">Уровень</li>
 				
 				<div class="go-back" > 

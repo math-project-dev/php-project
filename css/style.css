@@ -229,16 +229,6 @@ header span {
 .level-style {
   position: sticky;
 }
-.answer {
-  background-color: #1e6d74;
-  padding: 10px 27px;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-}
 .answerDiv {
   padding: 10px;
   padding-left: 10px;
@@ -252,6 +242,16 @@ header span {
 }
 .checkAnswers {
   padding-top: 5px;
+}
+.answer {
+  background-color: #1e6d74;
+  padding: 10px 27px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
 }
 @media screen and (max-width: 1920px) {
 	.tab-wrapper{
@@ -316,16 +316,17 @@ header span {
 }
 .level-blocks {
 	display: inline-block !important;
-    width: 140px;
-    height: 75px;
-    line-height: 75px;
-    text-align: center;
-    background: #fff;
-    font-size: 2rem;
-    font-weight: 900;
-    color: #028e9b;
-    border: 4px solid #fff;
-    margin-right: 5px;
+    	width: 140px;
+    	height: 75px;
+    	line-height: 75px;
+    	text-align: center;
+    	background: #fff;
+    	font-size: 2rem;
+    	font-weight: 900;
+    	color: #028e9b;
+    	border: 4px solid #fff;
+   	margin-right: 5px;
+	float: left;
 }
 .level-buttons {
     text-decoration: none;
@@ -345,7 +346,10 @@ header span {
 	text-decoration: none;
 	color: #028e9b;
 }
-.pick-variant {
+.generate-own {
+	margin-top: 30px;
+}
+.generate-own a {
 	text-decoration: none;
 	display: inline;
 	font-size: 1.1rem;
@@ -353,9 +357,6 @@ header span {
 	background-color: #1e6d74;
 	color: #fff;
 	padding: 12px;
-}
-.generate-own {
-	margin-top: 30px;
 }
 .user-reg {
 	display: inline;
@@ -395,8 +396,9 @@ header span {
     	margin: auto;
 }
 .profile-name {
-    	font-size: 1.7rem;
-   	font-weight: 700;
+    	font-size: 35px;
+   	font-weight: 800;
+	color: #1e6d74;
 }
 .profile-avatar {
 	float: right;
@@ -407,11 +409,15 @@ header span {
 .user-information {
 	margin-top: 96px;
 	float: right;
-	font-size: 1.1rem;
+	font-size: 20px;
    	font-weight: 700;
 	text-align: left;
 	margin-right: 70px;
 	padding: 5px
+}
+.user-information span {
+	height: 10px;
+	color: #1e6d74;
 }
 .edit-button {
 	padding: 10px;
@@ -422,14 +428,10 @@ header span {
 }
 .edit-panel {
 	margin-top: 20px;
-    	padding: 30px;
+    	padding-top: 10px;
 	float: left;
 }
-.profile-achive {
-	margin-top: 276px;
-	background-color: #1e6d74;
-	padding-bottom: 155px;
-}
+
 .achive-text {
 	padding-top: 10px;
 	padding-left: 20px;
@@ -457,5 +459,12 @@ header span {
     	padding-bottom: 20px;
     	font-size: 35px;
     	font-weight: 800;
+    	color: #1e6d74;
+}
+.preview-task div {
+	padding-top: 20px;
+	padding-bottom: 20px;
+    	font-size: 25px;
+    	font-weight: 700;
     	color: #1e6d74;
 }

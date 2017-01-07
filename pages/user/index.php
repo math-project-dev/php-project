@@ -37,22 +37,22 @@
 		</header>
 		<main style="background: none">
 			<? if (empty($_GET['id']) ) { ?>
-			<h1 class="profile-name">С ВОЗВРАЩЕНИЕМ, <?php echo $userRow['userName']; ?>! </h1>
+			<h1 class="profile-name">С возвращением, <?php echo $userRow['userName']; ?>! </h1>
 			<div class="user-information" >
-				<span>ВАШ УНИКАЛЬНЫЙ ID: <?php echo $userRow['userId']; ?></span><br>
-				<span>ВАШ ЛОГИН: <?php echo $userRow['userName']; ?></span><br>
-				<span>ВАША ПОЧТА: <?php echo $userRow['userEmail']; ?></span><br>
+				<span>Ваш уникальный ID: <?php echo $userRow['userId']; ?></span><br>
+				<span>Ваш логин: <?php echo $userRow['userName']; ?></span><br>
+				<span>Ваша почта: <?php echo $userRow['userEmail']; ?></span><br>
 				<? if ($userRow['statusID'] == 1) {
-					$status = "УЧЕНИК"; 
+					$status = "ученик"; 
 				} else if ($userRow['statusID'] == 2) {
-					$status = "УЧИТЕЛЬ";
+					$status = "учитель";
 				} else if ($userRow['statusID'] == 3) {
-					$status = "ШКОЛЬНЫЙ АДМИНИСТРАТОР";
+					$status = "школьный администратор";
 				} else if ($userRow['statusID'] == 4) {
-					$status = "РАЗРАБОТЧИК";
+					$status = "разработчик";
 				}
 				?>
-				<span>ВАШ СТАТУС: <?php echo $status; ?></span><br>
+				<span>Ваш статус: <?php echo $status; ?></span><br>
 				
 				<? if ($userRow['statusID'] != 1) { ?>
 				<div class="edit-panel">
@@ -62,21 +62,26 @@
 			</div>
 			<? } else { ?>
 			<div class="user-information" >
-				<span>УНИКАЛЬНЫЙ ID ПОЛЬЗОВАТЕЛЯ: <?php echo $userRow['userId']; ?></span><br>
-				<span>ЛОГИН ПОЛЬЗОВАТЕЛЯ: <?php echo $userRow['userName']; ?></span><br>
-				<span>ПОЧТА ПОЛЬЗОВАТЕЛЯ: <?php echo $userRow['userEmail']; ?></span><br>
-					<? if ($userRow['statusID'] == 1) {
-						$status = "УЧЕНИК"; 
-					} else if ($userRow['statusID'] == 2) {
-						$status = "УЧИТЕЛЬ";
-					} else if ($userRow['statusID'] == 3) {
-						$status = "ШКОЛЬНЫЙ АДМИНИСТРАТОР";
-					} else if ($userRow['statusID'] == 4) {
-						$status = "РАЗРАБОТЧИК";
-					}
-					?>
-				<span>СТАТУС ПОЛЬЗОВАТЕЛЯ: <?php echo $status; ?></span><br>
+				<span>Ваш уникальный ID: <?php echo $userRow['userId']; ?></span><br>
+				<span>Ваш логин: <?php echo $userRow['userName']; ?></span><br>
+				<span>Ваша почта: <?php echo $userRow['userEmail']; ?></span><br>
+				<? if ($userRow['statusID'] == 1) {
+					$status = "Ученик"; 
+				} else if ($userRow['statusID'] == 2) {
+					$status = "Учитель";
+				} else if ($userRow['statusID'] == 3) {
+					$status = "Школьный администратор";
+				} else if ($userRow['statusID'] == 4) {
+					$status = "Разработчик";
+				}
+				?>
+				<span>Ваш статус: <?php echo $status; ?></span><br>
 				
+				<? if ($userRow['statusID'] != 1) { ?>
+				<div class="edit-panel">
+					<a class="edit-button" href="/pages/user/panel/list.php">Приступить к редактированию заданий</a>
+				</div>
+				<? } ?>
 			</div>
 			<? } ?>
 			<div class="profile-avatar" >

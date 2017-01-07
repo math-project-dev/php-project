@@ -80,15 +80,15 @@
         <div class="allTasks">
     		<? $selectTask = (int) $_GET['tasks'];
 			$selectType = (int) $_GET['type']; 
-			if ($selectType == 0 || $selectType < 0 || $selectType > 21) { ?>
-				<div class="selectType animated fadeInDown">Выберите уровень экзамена,</br> затем</div>
+			if ($selectType == 0 || $selectType < 0 || empty($selectType) ) { ?>
+				<div class="selectType">Выберите уровень экзамена,</br> затем</div>
 			<? } ?>
-			<? if ($selectTask == 0 || $selectTask < 0 || $selectTask > 21) { ?>
-				<div class="selectPosition animated fadeInDown">Выберите нужную позицию,</br> и приступите к решению заданий!</br></div>
-				<div class="selectPosition animated fadeInDown"> или </br></br>Создайте классический вариант</div>
-				<div class="generate-own fadeInUp">
-					<a class="pick-variant animated fadeInUp" href="http://174.129.143.211/pages/ege/c/?type=1">Базовый уровень</a>
-					<a class="pick-variant animated fadeInUp" href="http://174.129.143.211/pages/ege/c/?type=2">Профильный уровень</a>
+			<? if ($selectTask == 0 || $selectTask < 0 || empty($selectType) ) { ?>
+				<div class="selectPosition">Выберите нужную позицию,</br> и приступите к решению заданий!</br></div>
+				<div class="selectPosition"> или </br></br>Создайте классический вариант</div>
+				<div class="generate-own">
+					<a href="http://174.129.143.211/pages/ege/own/?type=1">Базовый уровень</a>
+					<a href="http://174.129.143.211/pages/ege/own/type=2">Профильный уровень</a>
 				</div>
 			<? } if ($selectTask > 0 ) { ?>
 			<? if ($selectType == 1) {
