@@ -1,5 +1,6 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css";
 @import "http://webfonts.ru/import/lato.css";
+
 body {
   font-family: 'Lato', 'Segoe UI', sans-serif;
   background: #028e9b;
@@ -19,7 +20,6 @@ main {
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 980px;
   height: calc(100vh - 131px);
   background: url(../img/pcpic.png) no-repeat center bottom/contain;
 }
@@ -32,6 +32,7 @@ main .menu a {
   margin: 13px;
   padding-right: 10px;
   font-size: 1.0rem;
+  margin-bottom: 50px;
   text-transform: uppercase;
   font-weight: 900;
   color: #1d3740;
@@ -190,6 +191,8 @@ header span {
 }
 .allTasks {
   padding-bottom: 20px;
+  margin: 0 auto;
+  width: 980px;
 }
 .tasks {
   margin-top: 15px;
@@ -407,13 +410,14 @@ header span {
 	background: #fff;
 }
 .user-information {
-	margin-top: 96px;
 	float: right;
 	font-size: 20px;
    	font-weight: 700;
 	text-align: left;
-	margin-right: 70px;
-	padding: 5px
+	width: 50%;
+    	margin: 0 auto;
+	padding: 5px;
+	margin-top: 67px;
 }
 .user-information span {
 	height: 10px;
@@ -424,12 +428,13 @@ header span {
     	text-decoration: none;
     	background-color: #1e6d74;
 	margin-top 10px;
+	font-size: 20px;
+   	font-weight: 700;
 	color: #fff;
 }
 .edit-panel {
-	margin-top: 20px;
+	margin-top: 60px;
     	padding-top: 10px;
-	float: left;
 }
 
 .achive-text {

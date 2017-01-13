@@ -88,7 +88,7 @@
 				<div class="selectPosition"> или </br></br>Создайте классический вариант</div>
 				<div class="generate-own">
 					<a href="http://174.129.143.211/pages/ege/own/?type=1">Базовый уровень</a>
-					<a href="http://174.129.143.211/pages/ege/own/type=2">Профильный уровень</a>
+					<a href="http://174.129.143.211/pages/ege/own/?type=2">Профильный уровень</a>
 				</div>
 			<? } if ($selectTask > 0 ) { ?>
 			<? if ($selectType == 1) {

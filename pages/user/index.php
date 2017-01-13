@@ -20,6 +20,7 @@
 <html style="background: #b9e9e8;">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Справочно-обучающее электронное пособие по математике</title>
 	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	  <script src="//cdn.jsdelivr.net/jdenticon/1.4.0/jdenticon.min.js" async></script>
@@ -42,46 +43,47 @@
 				<span>Ваш уникальный ID: <?php echo $userRow['userId']; ?></span><br>
 				<span>Ваш логин: <?php echo $userRow['userName']; ?></span><br>
 				<span>Ваша почта: <?php echo $userRow['userEmail']; ?></span><br>
-				<? if ($userRow['statusID'] == 1) {
-					$status = "ученик"; 
-				} else if ($userRow['statusID'] == 2) {
-					$status = "учитель";
-				} else if ($userRow['statusID'] == 3) {
-					$status = "школьный администратор";
-				} else if ($userRow['statusID'] == 4) {
-					$status = "разработчик";
-				}
-				?>
+				
+					<? 
+						if ($userRow['statusID'] == 1) {
+							$status = "ученик"; 
+						} else if ($userRow['statusID'] == 2) {
+							$status = "учитель";
+						} else if ($userRow['statusID'] == 3) {
+							$status = "школьный администратор";
+						} else if ($userRow['statusID'] == 4) {
+							$status = "разработчик";
+						}
+					?>
+					
 				<span>Ваш статус: <?php echo $status; ?></span><br>
 				
 				<? if ($userRow['statusID'] != 1) { ?>
 				<div class="edit-panel">
-					<a class="edit-button" href="/pages/user/panel/list.php">ПРЕСТУПИТЬ К РЕШЕНИЮ ЗАДАНИЙ</a>
+					<a class="edit-button" href="/pages/user/panel/list.php">приступить к редактированию</a>
 				</div>
 				<? } ?>
 			</div>
 			<? } else { ?>
 			<div class="user-information" >
-				<span>Ваш уникальный ID: <?php echo $userRow['userId']; ?></span><br>
-				<span>Ваш логин: <?php echo $userRow['userName']; ?></span><br>
-				<span>Ваша почта: <?php echo $userRow['userEmail']; ?></span><br>
-				<? if ($userRow['statusID'] == 1) {
-					$status = "Ученик"; 
-				} else if ($userRow['statusID'] == 2) {
-					$status = "Учитель";
-				} else if ($userRow['statusID'] == 3) {
-					$status = "Школьный администратор";
-				} else if ($userRow['statusID'] == 4) {
-					$status = "Разработчик";
-				}
-				?>
-				<span>Ваш статус: <?php echo $status; ?></span><br>
-				
-				<? if ($userRow['statusID'] != 1) { ?>
-				<div class="edit-panel">
-					<a class="edit-button" href="/pages/user/panel/list.php">Приступить к редактированию заданий</a>
+				<div class="information-spans" >
+					<span>Ваш уникальный ID: <?php echo $userRow['userId']; ?></span><br>
+					<span>Ваш логин: <?php echo $userRow['userName']; ?></span><br>
+					<span>Ваша почта: <?php echo $userRow['userEmail']; ?></span><br>
+						<? 
+						
+							if ($userRow['statusID'] == 1) {
+								$status = "ученик"; 
+							} else if ($userRow['statusID'] == 2) {
+								$status = "учитель";
+							} else if ($userRow['statusID'] == 3) {
+								$status = "школьный администратор";
+							} else if ($userRow['statusID'] == 4) {
+								$status = "разработчик";
+							}
+						
+						?>
 				</div>
-				<? } ?>
 			</div>
 			<? } ?>
 			<div class="profile-avatar" >
