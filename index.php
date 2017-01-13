@@ -17,10 +17,23 @@
 	<meta name="theme-color" content="#1e6d74">
     <title>Справочно-обучающее электронное пособие по математике</title>
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/calendar.css">
 	
 	<!-- JQuery -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+	<!-- Calendar -->
+	<script type="text/javascript" src="js/prototype.js"></script>
+	<script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        Calendar.setup({
+          dateField     : 'date',
+          parentElement : 'calendar'
+        })
+      }
+    </script>
 	
 </head>
 
@@ -67,7 +80,8 @@
 			<img style="float: right; padding-top: 330px; margin-left: 240px; right: 20px; position: absolute;" src="img/elements/backpack.png">
 			
 			<img style="float: left; margin-top: 422px;" src="img/elements/cat.png">
-			<img style="float: left; margin-top: 40px;" src="img/elements/clock.png">
+			<img style="float: left;" src="img/elements/clock.png">
+			<div id="calendar" style="padding-top: 180px; right: 1470px; position: absolute;"> </div>
 			
 		</div>
 		<? } else { ?>
@@ -77,7 +91,9 @@
 			<img style="float: right; padding-top: 420px; margin-left: 240px; right: 20px; position: absolute;" src="img/elements/backpack.png">
 			
 			<img style="float: left; margin-top: 511px;" src="img/elements/cat.png">
-			<img style="float: left; margin-top: 40px;" src="img/elements/clock.png">
+			<img style="float: left;" src="img/elements/clock.png"><br>
+			
+			<div id="calendar" style="padding-top: 200px; right: 1470px; position: absolute;"> </div>
 			
 		</div>
 		<? } ?>
