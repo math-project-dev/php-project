@@ -57,12 +57,6 @@
 					?>
 					
 				<span>Ваш статус: <?php echo $status; ?></span><br>
-				
-				<? if ($userRow['statusID'] != 1) { ?>
-				<div class="edit-panel">
-					<a class="edit-button" href="/pages/user/panel/list.php">приступить к редактированию</a>
-				</div>
-				<? } ?>
 			</div>
 			<? } else { ?>
 			<div class="user-information" >

@@ -4,6 +4,11 @@
 	ob_start();
 	session_start();
 	require_once 'config.php'; 
+	if ($_SESSION['user'] != null)
+	{
+		$res = mysql_query("SELECT * FROM users WHERE userId=". $_SESSION['user']);
+		$userRow = mysql_fetch_assoc($res);
+	}
 ?>
 
 <head>
@@ -38,7 +43,7 @@
 	</header>
 		
 	<main>
-		<? if ($userRow['statusID'] != 1) { ?>
+		<? if ($userRow['statusID'] >= 2) { ?>
 		<div class="edit-panel">
 			<a class="edit-button" href="/pages/user/panel/list.php">РЕЖИМ РЕДАКТИРОВАНИЯ</a>
 		</div>
@@ -54,6 +59,8 @@
 				<img src="img/olimp.png" alt="олимпиады"> олимпиады
 		   </a>
 		</div>
+		
+		<? if ($userRow['statusID'] >= 2) { ?>
 		<div class="main-sides">
 		
 			<img style="float: right; width: 23%; margin-right: 20px;" src="img/elements/login.png"><br>
@@ -63,6 +70,17 @@
 			<img style="float: left; margin-top: 40px;" src="img/elements/clock.png">
 			
 		</div>
+		<? } else { ?>
+		<div class="main-sides">
+		
+			<img style="float: right; width: 23%; margin-right: 20px;" src="img/elements/login.png"><br>
+			<img style="float: right; padding-top: 420px; margin-left: 240px; right: 20px; position: absolute;" src="img/elements/backpack.png">
+			
+			<img style="float: left; margin-top: 511px;" src="img/elements/cat.png">
+			<img style="float: left; margin-top: 40px;" src="img/elements/clock.png">
+			
+		</div>
+		<? } ?>
 	</main>
 </body>
 
