@@ -17,11 +17,12 @@
 	}  
 	
 	
-	$query = mysql_query('SELECT tableID, id, tasks, answer FROM answers WHERE `type` = 1  ORDER BY CAST(id as SIGNED INTEGER), tasks'); 
-	$rows = array();
+	$query[0] = mysql_query('SELECT * FROM answers WHERE type = 1  ORDER BY CAST(id as SIGNED INTEGER), tasks'); 
+	$rows[0] = array();
 
-	$query_type = mysql_query('SELECT tableID, id, tasks, answer FROM answers WHERE `type` = 2 ORDER BY CAST(id as SIGNED INTEGER), tasks'); 
-	$rows_type = array(); ?>
+	$query[1] = mysql_query('SELECT * FROM answers WHERE type = 2 ORDER BY CAST(id as SIGNED INTEGER),tasks '); 
+	$rows[1] = array(); ?>
+	
 	<!DOCTYPE html>
 	<html style="background: #b9e9e8;">
 		<head>
@@ -44,14 +45,14 @@
 				<ul class="ul-list">
 					
 					<? 
-						while ($row = mysql_fetch_array($query)) 
+						while ($row_low = mysql_fetch_array($query[0])) 
 						{ ?>
-							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row[tableID]?>">ЗАДАНИЕ # <?=$row[id] ?> / ПОЗИЦИЯ # <?=$row[tasks] ?></a></li>
+							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row_low[tableID]?>">ЗАДАНИЕ # <?=$row_low[id] ?> / ПОЗИЦИЯ # <?=$row_low[tasks] ?></a></li>
 						<?} 
 						
-						while ($row_type = mysql_fetch_array($query_type)) 
+						while ($row_high = mysql_fetch_array($query[1])) 
 						{ ?>
-							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row_type[tableID]?>">ЗАДАНИЕ # <?=$row_type[id] ?> / ПОЗИЦИЯ # <?=$row_type[tasks] ?></a></li>
+							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row_high[tableID]?>">ЗАДАНИЕ # <?=$row_high[id] ?> / ПОЗИЦИЯ # <?=$row_high[tasks] ?></a></li>
 						<?} 
 					?>
 					

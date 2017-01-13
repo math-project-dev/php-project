@@ -55,10 +55,10 @@
 			</header>
 				<main style="background: none;">
 					<div class="preview">
-					<? if ($row['tasks'] == 1) {
-					   $type = "БАЗОВЫЙ";
+					<? if ($row['type'] == 1) {
+						$type = "БАЗОВЫЙ";
 					   } else {
-					   $type = "ПРОФИЛЬНЫЙ";
+						$type = "ПРОФИЛЬНЫЙ";
 					   }?>
 					<div class="task-name"><?=$type?> УРОВЕНЬ / ПОЗИЦИЯ: #<?=$row['tasks'] ?><br>ЗАДАНИЕ #<?=$row['id'] ?></div>
 					<div class="preview-task">
