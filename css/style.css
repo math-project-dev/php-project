@@ -428,6 +428,7 @@ header span {
     	text-decoration: none;
     	background-color: #1e6d74;
 	margin-top 10px;
+wi
 	font-size: 20px;
    	font-weight: 700;
 	color: #fff;
@@ -453,7 +454,11 @@ header span {
 	font-size: 1.1rem;
    	font-weight: 700;
         margin-right:10px;
-	height: 25px;
+
+	display: inline-block;
+    	float: left;
+    	height: 25px;
+    	width: 49%;
 }
 .upload-text {
 	font-size: 1.1rem;

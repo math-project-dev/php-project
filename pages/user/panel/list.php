@@ -1,4 +1,4 @@
-﻿<?php
+﻿<?php 
 	ob_start();
 	session_start();
 	require_once '../../../config.php';
@@ -14,10 +14,14 @@
 	if ($userRow['statusID'] < 2 ) {
 		header("Location: http://174.129.143.211/");
 		exit;
-	}
+	}  
 	
-	$query = mysql_query('SELECT tableID, id, type, tasks, answer  FROM answers ORDER BY CAST(id as SIGNED INTEGER), tasks, type'); 
-	$rows = array(); ?>
+	
+	$query = mysql_query('SELECT tableID, id, tasks, answer FROM answers WHERE `type` = 1  ORDER BY CAST(id as SIGNED INTEGER), tasks'); 
+	$rows = array();
+
+	$query_type = mysql_query('SELECT tableID, id, tasks, answer FROM answers WHERE `type` = 2 ORDER BY CAST(id as SIGNED INTEGER), tasks'); 
+	$rows_type = array(); ?>
 	<!DOCTYPE html>
 	<html style="background: #b9e9e8;">
 		<head>
@@ -40,9 +44,14 @@
 				<ul class="ul-list">
 					
 					<? 
-						while ($row = mysql_fetch_assoc($query)) 
+						while ($row = mysql_fetch_array($query)) 
 						{ ?>
-							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row[tableID]?>">ЗАДАНИЕ # <?=$row[id] ?> / ПОЗИЦИЯ # <?=$row[tasks] ?> / УРОВЕНЬ <?=$row[type] ?></a>
+							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row[tableID]?>">ЗАДАНИЕ # <?=$row[id] ?> / ПОЗИЦИЯ # <?=$row[tasks] ?></a></li>
+						<?} 
+						
+						while ($row_type = mysql_fetch_array($query_type)) 
+						{ ?>
+							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row_type[tableID]?>">ЗАДАНИЕ # <?=$row_type[id] ?> / ПОЗИЦИЯ # <?=$row_type[tasks] ?></a></li>
 						<?} 
 					?>
 					

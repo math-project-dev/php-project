@@ -57,11 +57,13 @@
 		
 	<main>
 		<? if ($userRow['statusID'] >= 2) { ?>
-		<div class="edit-panel">
-			<a class="edit-button" href="/pages/user/panel/list.php">РЕЖИМ РЕДАКТИРОВАНИЯ</a>
-		</div>
 		<? } ?>
 		<div class="menu">
+			<? if ($userRow['statusID'] >= 2) { ?>
+			<div class="edit-panel">
+				<a class="edit-button" style="color: white" href="/pages/user/panel/list.php">РЕЖИМ РЕДАКТИРОВАНИЯ</a>
+			</div>
+			<? } ?>
 		   <a href="#">
 				<img src="img/schoolcourse.png" alt="школьный курс"> школьный курс
 		   </a>
@@ -73,30 +75,18 @@
 		   </a>
 		</div>
 		
-		<? if ($userRow['statusID'] >= 2) { ?>
 		<div class="main-sides">
 		
 			<img style="float: right; width: 23%; margin-right: 20px;" src="img/elements/login.png"><br>
-			<img style="float: right; padding-top: 330px; margin-left: 240px; right: 20px; position: absolute;" src="img/elements/backpack.png">
+			<img style="float: right; padding-top: 420px; margin-left: 240px; right: 100px; position: absolute;" src="img/elements/backpack.png">
 			
-			<img style="float: left; margin-top: 422px;" src="img/elements/cat.png">
-			<img style="float: left;" src="img/elements/clock.png">
-			<div id="calendar" style="padding-top: 180px; right: 1470px; position: absolute;"> </div>
+			<img style="float: left; margin-top: 511px; padding-left: 100px" src="img/elements/cat.png">
+			<img style="float: left; right: 1605px; position: absolute;" src="img/elements/clock.png"><br>
+			
+			<div id="calendar" style="padding-top: 200px; right: 1560px; position: absolute;"> </div>
 			
 		</div>
-		<? } else { ?>
-		<div class="main-sides">
 		
-			<img style="float: right; width: 23%; margin-right: 20px;" src="img/elements/login.png"><br>
-			<img style="float: right; padding-top: 420px; margin-left: 240px; right: 20px; position: absolute;" src="img/elements/backpack.png">
-			
-			<img style="float: left; margin-top: 511px;" src="img/elements/cat.png">
-			<img style="float: left;" src="img/elements/clock.png"><br>
-			
-			<div id="calendar" style="padding-top: 200px; right: 1470px; position: absolute;"> </div>
-			
-		</div>
-		<? } ?>
 	</main>
 </body>
 
