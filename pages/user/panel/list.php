@@ -17,11 +17,11 @@
 	}  
 	
 	
-	$query[0] = mysql_query('SELECT * FROM answers WHERE type = 1  ORDER BY CAST(id as SIGNED INTEGER), tasks'); 
-	$rows[0] = array();
+	$query_q = mysql_query('SELECT * FROM answers WHERE type = 2  ORDER BY CAST(id as SIGNED INTEGER), tasks '); 
+	$rows_q = array();
 
-	$query[1] = mysql_query('SELECT * FROM answers WHERE type = 2 ORDER BY CAST(id as SIGNED INTEGER),tasks '); 
-	$rows[1] = array(); ?>
+	$query_w = mysql_query('SELECT * FROM answers WHERE type = 1 ORDER BY CAST(id as SIGNED INTEGER), tasks '); 
+	$rows_w = array(); ?>
 	
 	<!DOCTYPE html>
 	<html style="background: #b9e9e8;">
@@ -42,21 +42,28 @@
 				 <br>СПИСОК ЗАДАНИЙ</span>	
 			</header>
 			<main style="background: none; text-align:center"> 
-				<ul class="ul-list">
-					
-					<? 
-						while ($row_low = mysql_fetch_array($query[0])) 
-						{ ?>
-							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row_low[tableID]?>">ЗАДАНИЕ # <?=$row_low[id] ?> / ПОЗИЦИЯ # <?=$row_low[tasks] ?></a></li>
-						<?} 
-						
-						while ($row_high = mysql_fetch_array($query[1])) 
-						{ ?>
-							<li class="li-list"> <a class="task-list" href="edit.php?id=<?=$row_high[tableID]?>">ЗАДАНИЕ # <?=$row_high[id] ?> / ПОЗИЦИЯ # <?=$row_high[tasks] ?></a></li>
-						<?} 
-					?>
-					
-				</ul>
+				
+				<h1 class="left-header">БАЗОВЫЙ УРОВЕНЬ<h1>
+				<h1 class="right-header">ПРОФИЛЬНЫЙ УРОВЕНЬ<h1>
+				
+				<table style="margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 1.4rem;"> 
+					<tbody> 
+						<tr> 
+							<td style="width: 400px; height: 20px; float: right ">
+							<?while ($row_low = mysql_fetch_array($query_q, MYSQL_ASSOC)) 
+							{ ?>
+								<a class="task-list" href="edit.php?id=<?=$row_low['tableID']?>">ПОЗИЦИЯ # <?=$row_low['tasks'] ?> / ЗАДАНИЕ # <?=$row_low['id'] ?></a>			
+							<? } ?>
+							</td>
+							<td style="width: 400px; height: 20px; float: left;">
+							<?while ($row_high = mysql_fetch_array($query_w, MYSQL_ASSOC)) 
+							{ ?>
+								<a class="task-list" href="edit.php?id=<?=$row_high['tableID']?>">ПОЗИЦИЯ # <?=$row_high['tasks'] ?> / ЗАДАНИЕ # <?=$row_high['id'] ?></a>			
+							<? } ?>
+							</td>
+						</tr> 
+					</tbody> 
+				</table>
 			</main>
 		</body>
 	</html>

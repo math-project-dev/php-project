@@ -39,17 +39,7 @@
 
 <body>
 	<header>
-		   <? if (isset($_SESSION['user']) != "") { ?>
-		   <div class="user-reg">
-			  <a href="/pages/user/logout.php?logout" class="reg-link fa fa-sign-out"></a>
-			  <a href="/pages/user/" class="reg-link fa fa-user"></a>
-		   </div>
-		   <? } else if (isset($_SESSION['user']) == "") { ?>
-		   <div class="user-reg">
-			  <a href="/pages/user/login.php" class="reg-link fa fa-sign-in"></a>
-		   </div>
-		   <? } ?>
-		   
+		  
 		   <span>СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
 		   <br> ПОСОБИЕ ПО МАТЕМАТИКЕ</span>
 		   
@@ -76,7 +66,12 @@
 		</div>
 		
 		<div class="main-sides">
-		
+			<? if (isset($_SESSION['user']) != "") { ?>
+				<a class="edit-button" style="float: right; position: absolute; right: 132px; top: 120px; z-index: 1" href="/pages/user/">ЛИЧНЫЙ КАБИНЕТ</a>
+				<a class="edit-button" style="float: right; position: absolute; right: 196px; top: 180px; z-index: 1" href="/pages/user/logout.php?logout">ВЫХОД</a>
+			<? } else if (isset($_SESSION['user']) == "") { ?>
+				<a class="edit-button" style="float: right; position: absolute; right: 131px; top: 120px; z-index: 1" href="/pages/user/login.php">ВОЙТИ В АККАУНТ</a>
+			<? } ?>
 			<img style="float: right; width: 23%; margin-right: 20px;" src="img/elements/login.png"><br>
 			<img style="float: right; padding-top: 420px; margin-left: 240px; right: 100px; position: absolute;" src="img/elements/backpack.png">
 			

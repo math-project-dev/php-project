@@ -101,6 +101,24 @@
 						  <span class="upload-text" Файл <?  echo basename( $_FILES['uploadedfile']['name']) ?> был упешно загружен! </span>
 						  <? } ?>
 						  
+						 <form action="<?=$_SERVER['PHP_SELF']; ?>" method="post">
+							<fieldset>
+								<div data-role="fieldcontain">
+									<label for="status" style="text-size: 1rem">Ответ к заданию:</label>
+										<textarea name="status"></textarea>
+									</select>
+								</div>
+								<input type="submit" data-theme="a" name="submit" value="Отправить"></input>
+							</fieldset>
+						</form>
+						
+						<?
+							if(isset($_POST['submit'])) {
+								$query_w = "UPDATE answers SET answer = '". $_POST['status']."' WHERE tableID = ". (int) $_GET['id'] ."";
+								mysql_query($query_w);
+							}
+						?>
+						  
 					   </div>
 					</div>
 				</div>

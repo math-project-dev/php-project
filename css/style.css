@@ -428,7 +428,6 @@ header span {
     	text-decoration: none;
     	background-color: #1e6d74;
 	margin-top 10px;
-wi
 	font-size: 20px;
    	font-weight: 700;
 	color: #fff;
@@ -450,13 +449,21 @@ wi
 	text-decoration: none;
 	color: #1e6d74;
 }
-.li-list {
-	font-size: 1.1rem;
+.li-list-type-1 {
+	font-size: 1.4rem;
    	font-weight: 700;
         margin-right:10px;
-
-	display: inline-block;
+	display: block;
     	float: left;
+    	height: 25px;
+    	width: 49%;
+}
+.li-list-type-2 {
+	font-size: 1.4rem;
+   	font-weight: 700;
+        margin-right: 10px;
+	display: block;
+    	float: right;
     	height: 25px;
     	width: 49%;
 }
@@ -477,4 +484,31 @@ wi
     	font-size: 25px;
     	font-weight: 700;
     	color: #1e6d74;
+}
+.left-header {
+	float: left;
+	position: absolute;
+    	left: 660px;
+	background-color: #1e6d74;
+    	font-size: 1.0rem;
+	font-weight: 700;
+	padding: 9px;
+}
+
+.right-header {
+	float: right;
+	background-color: #1e6d74;
+	position: absolute;
+    	right: 650px;
+    	font-size: 1.0rem;
+	font-weight: 700;
+	padding: 9px;
+}
+.headers-div {
+	padding-bottom: 50px;
+}
+.ul-list { 
+  	columns: 2;
+  	-webkit-columns: 2;
+  	-moz-columns: 2;
 }
