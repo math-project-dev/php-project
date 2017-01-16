@@ -15,16 +15,10 @@
 		header("Location: http://174.129.143.211/");
 		exit;
 	}  
-	
-	
-	$query_q = mysql_query('SELECT * FROM answers WHERE type = 2  ORDER BY CAST(id as SIGNED INTEGER), tasks '); 
-	$rows_q = array();
-
-	$query_w = mysql_query('SELECT * FROM answers WHERE type = 1 ORDER BY CAST(id as SIGNED INTEGER), tasks '); 
-	$rows_w = array(); ?>
+	?>
 	
 	<!DOCTYPE html>
-	<html style="background: #b9e9e8;">
+	<html style="background: #b9e9e8;" class="app">
 		<head>
 			<meta charset="utf-8">
 			<title>Справочно-обучающее электронное пособие по математике</title>
@@ -35,10 +29,13 @@
 		</head>
 		<body>
 			<header>
-				 <div class="user-reg">
-					<a href="/pages/user/logout.php?logout" class="reg-link fa fa-sign-out"></a>
-				 </div>
-				 <span style="padding: 4px;">РЕДАКТИРОВАНИЕ ЗАДАНИЙ
+				<div class="logo" >
+					<a href="http://174.129.143.211/pages/user/panel" alt="Вернуться назад">
+					  <img src="../../../../img/ege.png" alt="">
+					</a>
+					<span>егэ 2017</span>
+				</div>
+				<span style="top: 50px; position: absolute; right: 0px; padding-right: 700px; font-size: 2rem;">РЕЖИМ РЕДАКТИРОВАНИЯ
 				 <br>СПИСОК ЗАДАНИЙ</span>	
 			</header>
 			<main style="background: none; text-align:center"> 
@@ -48,18 +45,45 @@
 				
 				<table style="margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 1.4rem;"> 
 					<tbody> 
-						<tr> 
-							<td style="width: 400px; height: 20px; float: right ">
-							<?while ($row_low = mysql_fetch_array($query_q, MYSQL_ASSOC)) 
-							{ ?>
-								<a class="task-list" href="edit.php?id=<?=$row_low['tableID']?>">ПОЗИЦИЯ # <?=$row_low['tasks'] ?> / ЗАДАНИЕ # <?=$row_low['id'] ?></a>			
-							<? } ?>
+						<tr>
+							<td style="width: 400px; height: 20px; float: right; padding: 0 150px 0 150px; ">
+								<? for( $i = 1; $i <= 19; $i++)
+								{ ?>
+									<div style="padding: 20px">
+										<a href="#" class="edit-button" id="b1-<?=$i?>-type-2" style="padding: 9px 40px;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display=''; document.getElementById('b1-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<a href="#" class="edit-button" id="b2-<?=$i?>-type-2" style="padding: 9px 40px; display: none;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='none'; document.getElementById('b1-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<div class="content-<?=$i?>" id="content-<?=$i?>-type-2" style="display: none;">
+											<? for ($d = 1; $d <= 19; $d++) { 
+												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 2 AND tasks = '. $i .'  AND id = '. $d .' '); 
+												while ($row = mysql_fetch_assoc($query_w)) { ?>
+												<div class="select-block">
+													<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
+												</div>
+												<? }
+											 } ?>
+										</div>
+									</div>
+								<? } ?>
 							</td>
-							<td style="width: 400px; height: 20px; float: left;">
-							<?while ($row_high = mysql_fetch_array($query_w, MYSQL_ASSOC)) 
-							{ ?>
-								<a class="task-list" href="edit.php?id=<?=$row_high['tableID']?>">ПОЗИЦИЯ # <?=$row_high['tasks'] ?> / ЗАДАНИЕ # <?=$row_high['id'] ?></a>			
-							<? } ?>
+							<td style="width: 400px; height: 20px; float: left; padding:0 150px 0 150px;">
+								<? for( $i = 1; $i <= 20; $i++)
+								{ ?>
+									<div style="padding: 20px">
+										<a href="#" class="edit-button" id="b1-<?=$i?>-type-1" style="padding: 9px 40px;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display=''; document.getElementById('b1-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<a href="#" class="edit-button" id="b2-<?=$i?>-type-1" style="padding: 9px 40px; display: none;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='none'; document.getElementById('b1-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a>
+
+										<div class="content-<?=$i?>" id="content-<?=$i?>-type-1" style="display: none;">
+											<? for ($d = 1; $d <= 20; $d++) { 
+												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 1 AND tasks = '. $i .'  AND id = '. $d .' '); 
+												while ($row = mysql_fetch_assoc($query_w)) { ?>
+													<div class="select-block">
+														<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
+													</div>
+												<? }
+											} ?>
+										</div>
+									</div>
+								<? } ?>
 							</td>
 						</tr> 
 					</tbody> 

@@ -51,7 +51,7 @@
 		<div class="menu">
 			<? if ($userRow['statusID'] >= 2) { ?>
 			<div class="edit-panel">
-				<a class="edit-button" style="color: white" href="/pages/user/panel/list.php">РЕЖИМ РЕДАКТИРОВАНИЯ</a>
+				<a class="edit-button" style="color: white" href="/pages/user/panel/">РЕЖИМ РЕДАКТИРОВАНИЯ</a>
 			</div>
 			<? } ?>
 		   <a href="#">

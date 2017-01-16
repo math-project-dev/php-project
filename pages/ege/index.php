@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="../../css/style.css">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	
     <script src="../../js/app.js" charset="utf-8"></script>
 </head>
@@ -24,56 +23,7 @@
             </a>
             <span>егэ 2017</span>
         </div>
-		
-        <div class="tab-wrapper">
-
-            <ul class="tab-menu" style="margin-right: 1000px;">
-				<? $selectType = (int) $_GET['type'];
-				if ($selectType == 0) { ?>
-					<li class="active">Уровень</li>
-				<?} else { ?>
-					<li class="active">Позиция</li>
-				<? } ?>
-				<div class="go-back" > 
-					<a class="go-back-label" href="http://174.129.143.211/pages/ege/" >Назад</a>
-				</div>
-            </ul>
-            <div class="tab-content">
-              <? $selectType = (int) $_GET['type'];
-              if ($selectType == 0) { ?><div>
-                    <div class="level-blocks">
-                        <a class="level-buttons" style="display:block" href="?type=1">Базовый</a>
-                    </div>
-                    <div class="level-blocks">
-                        <a class="level-buttons" style="display:block" href="?type=2">Профильный</a>
-                    </div>
-                </div>
-                <?}?>
-				
-                <div class="long">
-					<? $selectType = (int) $_GET['type'];
-					if ($selectType == 1) 
-					{
-						for ($i = 1; $i <= 20; $i++)
-							{?>
-							<div class="block" >
-								<a class="buttons" style="display:block" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
-							</div>
-						<?}
-					}
-					if ($selectType == 2) 
-					{
-						for ($i = 1; $i <= 19; $i++)
-						{?>
-							<div class="block" >
-								<a class="buttons" style="display:block" href="?type=<?=$selectType?>&tasks=<?=$i?>"><?=$i?></a>
-							</div>
-						<?}
-					}?>
-                </div>
-				
-            </div>
-        </div>
+	
     </header>
     
 	<main>
@@ -136,7 +86,7 @@
 									}
 									document.getElementById("result-<? echo $i;?>").innerHTML = text;
 								}
-								</script>
+							</script>
 							<span class="anytext">Ваш ответ:</span>
 							<input id="numb-<? echo $i;?>" >
 	

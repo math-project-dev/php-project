@@ -23,29 +23,6 @@
             </a>
             <span>егэ 2017</span>
         </div>
-		
-        <div class="tab-wrapper">
-
-            <ul class="tab-menu" style="margin-right: 1000px;">
-				<li class="active">Уровень</li>
-				
-				<div class="go-back" > 
-					<a class="go-back-label" href="http://174.129.143.211/pages/ege/" >Назад</a>
-				</div>
-            </ul>
-            <div class="tab-content">
-			
-				<div>
-                    <div class="level-blocks">
-                        <a class="level-buttons" style="display:block" href="?type=1">Базовый</a>
-                    </div>
-                    <div class="level-blocks">
-                        <a class="level-buttons" style="display:block" href="?type=2">Профильный</a>
-                    </div>
-                </div>
-				
-            </div>
-        </div>
     </header>
     
 	<main>
@@ -79,7 +56,7 @@
 											echo implode(",", $rows);?>];
 											
 										x = document.getElementById("numb-<? echo $i;?>").value;
-										if (x != "" || x != null) 
+										if (x != null) 
 										{
 												
 											if ( x == query[0] || x == query[1] || x == query[2] || x == query[3]) 

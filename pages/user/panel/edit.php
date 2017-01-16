@@ -37,7 +37,7 @@
 ?>
 	
 	<!DOCTYPE html>
-	<html style="background: #b9e9e8;">
+	<html style="background: #b9e9e8;" class="app">
 		<head>
 			<meta charset="utf-8">
 			<title>Справочно-обучающее электронное пособие по математике</title>
@@ -47,10 +47,13 @@
 		</head>
 		<body>
 			<header>
-				 <div class="user-reg">
-					<a href="/pages/user/logout.php?logout" class="reg-link fa fa-sign-out"></a>
-				 </div>
-				 <span style="padding: 4px;">РЕЖИМ РЕДАКТИРОВАНИЯ
+					<div class="logo">
+						<a href="http://174.129.143.211/pages/user/panel/list.php" alt="Вернуться назад" style="z-index: 1;">
+						  <img src="../../../../../img/ege.png" alt="">
+						</a>
+						<span>егэ 2017</span>
+					</div>
+				 <span style="top: 50px; position: absolute; right: 0px; padding-right: 700px; font-size: 2rem;">РЕЖИМ РЕДАКТИРОВАНИЯ
 				 <br>ЗАДАНИЙ</span>	
 			</header>
 				<main style="background: none;">
@@ -78,7 +81,7 @@
 									
 							 if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) 
 							 { ?>
-						  <span class="upload-text" Файл <?  echo basename( $_FILES['uploadedfile']['name']) ?> был упешно загружен! </span>
+								<span class="upload-text" Файл <?  echo basename( $_FILES['uploadedfile']['name']) ?> был упешно загружен! </span>
 						  <? } ?>
 						  
 					   </div>
