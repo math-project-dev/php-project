@@ -24,8 +24,10 @@
             <span>егэ 2017</span>
         </div>
     </header>
-    
+    <? $selectType = $_GET['type']; ?>
 	<main>
+	<? if( $selectType != 0 )
+	{ ?>
         <div class="allTasks">
     		<? $selectType = $_GET['type']; ?>
 			<? if ($selectType == 1) {
@@ -164,6 +166,13 @@
 				}
 			?>
         </div>
+		<? } else { ?>
+		<div class="choose-your-variant">
+			<div style="margin: 20px;"><i>ВЫБЕРИТЕ НУЖНЫЙ УРОВЕНЬ ЭКЗАМЕНА:</i> </div>
+			<a href="?type=1">БАЗОВЫЙ УРОВЕНЬ</a>
+			<a href="?type=2">ПРОФИЛЬНЫЙ УРОВЕНЬ</a>
+		<? } ?>
+		</div>
     </main>
 </body>
 

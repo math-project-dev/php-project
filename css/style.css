@@ -319,68 +319,20 @@ header span {
 	}
 }
 .level-blocks {
-	display: inline-block !important;
-    	width: 140px;
-    	height: 75px;
-    	line-height: 75px;
+    	display: inline-block;
+    	width: 100px;
     	text-align: center;
-    	background: #fff;
-    	font-size: 2rem;
-    	font-weight: 900;
-    	color: #028e9b;
-    	border: 4px solid #fff;
-   	margin-right: 5px;
-	float: left;
+    	background: #154c51;
+    	font-size: 0.9rem;
+    	font-weight: 800;
+    	padding-top: 10px;
+    	padding-bottom: 10px;
+	cursor: pointer;
 }
 .level-buttons {
-    text-decoration: none;
-    color: #1e6d74;
-    font-size: 22px;
-}
-.go-back { 
-	text-decoration: none;
-	display: inline;
-	background-color: #fff;
-	color: #028e9b;
-	padding: 12px;
-}
-
-.go-back-label {
-	padding: 10px; 
-	text-decoration: none;
-	color: #028e9b;
-}
-.generate-own {
-	margin-top: 30px;
-}
-.generate-own a {
-	text-decoration: none;
-	display: inline;
-	font-size: 1.1rem;
-	font-weight: 700;
-	background-color: #1e6d74;
-	color: #fff;
-	padding: 12px;
-}
-.user-reg {
-	display: inline;
-    	float: right;
-    	margin-top: 13px;
-}
-.reg-link {
-	text-decoration: none;
-	color: #fff;
-}
-.register-new-user {
-	text-decoration: none;
-	margin-top: 240px;
-	font-size: 1.3rem;
-	font-weight: 700;
-}
-.acc-enter {
-	text-decoration: none;
-	font-weight: 700;
-	color: #fff;
+    	text-decoration: none;
+    	color: #1e6d74;
+    	font-size: 22px;
 }
 .profile-buttons {
     	text-decoration: none;
@@ -544,4 +496,83 @@ header span {
 }
 .select-block {
 	margin-top: 10px;
+}
+.sidenav {
+         height: 100%;
+         width: 0;
+         position: fixed;
+         z-index: 1;
+         top: 0;
+         left: 0;
+         background-color: #1e6d74;
+         overflow-x: hidden;
+         transition: 0.5s;
+         padding-top: 60px;
+ 	 -webkit-box-shadow: 10px 0 10px -2px rgba(0,0,0,0.5);
+          box-shadow: 10px 0 10px -2px rgba(0,0,0,0.5);
+}
+.sidenav a {
+         text-decoration: none;
+	 margin: 5px;
+	 color: #fff;
+         transition: 0.3s
+}
+.sidenav h1 {
+	font-size: 20px;
+	color: #154c51;
+	font-weight: 800;
+	left: 5px;
+    	position: relative;
+}
+.sidenav a:hover, .offcanvas a:focus {
+         color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+         position: absolute;
+         top: 0;
+         right: 25px;
+         font-size: 36px;
+         margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+         .sidenav {padding-top: 15px;}
+         .sidenav a {font-size: 18px;}
+}
+.make-own {
+	background-color: #154c51;
+	padding: 10px;
+	margin-top: 20px;
+	font-weight: 800;
+	font-size: 1.2rem;
+}
+.NavButton {
+	font-size: 30px; 
+	cursor: pointer;
+    	width: 20px; 
+	float: left; 
+	top: 50%; 
+	left: 0.2%;
+	position: fixed; 
+	height: 35px;
+	z-index: 10000; 
+	background-color: #1e6d74;
+	padding: 2px;
+    	border-radius: 10px 10px 10px 10px; 
+}
+.choose-your-variant {
+	margin-top: 100px;
+}
+.choose-your-variant i {
+	font-size: 1.1rem;
+	font-weight: 800;
+	color: #1e6d74;
+}
+.choose-your-variant a {
+	font-size: 1.1rem;
+	font-weight: 800;
+	background-color: #1e6d74;	
+	padding: 10px;
+	text-decoration: none;
+	color: #fff;
 }

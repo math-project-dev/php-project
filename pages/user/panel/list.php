@@ -50,8 +50,8 @@
 								<? for( $i = 1; $i <= 19; $i++)
 								{ ?>
 									<div style="padding: 20px">
-										<a href="#" class="edit-button" id="b1-<?=$i?>-type-2" style="padding: 9px 40px;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display=''; document.getElementById('b1-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
-										<a href="#" class="edit-button" id="b2-<?=$i?>-type-2" style="padding: 9px 40px; display: none;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='none'; document.getElementById('b1-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<a  class="edit-button" id="b1-<?=$i?>-type-2" style="padding: 9px 40px;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display=''; document.getElementById('b1-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<a  class="edit-button" id="b2-<?=$i?>-type-2" style="padding: 9px 40px; display: none;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='none'; document.getElementById('b1-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
 										<div class="content-<?=$i?>" id="content-<?=$i?>-type-2" style="display: none;">
 											<? for ($d = 1; $d <= 19; $d++) { 
 												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 2 AND tasks = '. $i .'  AND id = '. $d .' '); 
@@ -65,12 +65,12 @@
 									</div>
 								<? } ?>
 							</td>
-							<td style="width: 400px; height: 20px; float: left; padding:0 150px 0 150px;">
+							<td style="width: 400px; height: 20px; float: left; padding: 0 150px 0 150px;">
 								<? for( $i = 1; $i <= 20; $i++)
 								{ ?>
 									<div style="padding: 20px">
-										<a href="#" class="edit-button" id="b1-<?=$i?>-type-1" style="padding: 9px 40px;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display=''; document.getElementById('b1-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
-										<a href="#" class="edit-button" id="b2-<?=$i?>-type-1" style="padding: 9px 40px; display: none;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='none'; document.getElementById('b1-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a>
+										<a  class="edit-button" id="b1-<?=$i?>-type-1" style="padding: 9px 40px;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display=''; document.getElementById('b1-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<a  class="edit-button" id="b2-<?=$i?>-type-1" style="padding: 9px 40px; display: none;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='none'; document.getElementById('b1-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a>
 
 										<div class="content-<?=$i?>" id="content-<?=$i?>-type-1" style="display: none;">
 											<? for ($d = 1; $d <= 20; $d++) { 
