@@ -76,8 +76,10 @@
 						  
 						  <?
 							 $target_path = "../../../pages/ege/tasks/type-". $row['type'] ."/0". $row['tasks'] ."/";
-									
-							 $target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
+							 
+							 $filename = "0". $row['tasks']. "_0". $row['id'] .".PNG";
+
+							 $target_path = $target_path . basename( $filename ); 
 									
 							 if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) 
 							 { ?>
@@ -96,8 +98,10 @@
 						  
 						  <?
 							 $target_path = "../../../pages/ege/tasks/type-". $row['type'] ."/answer/0". $row['tasks'] ."/";
-								
-							 $target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
+							 
+							 $filename = "0". $row['tasks']. "_0". $row['id'] .".PNG";
+
+							 $target_path = $target_path . basename( $filename ); 
 								
 							 if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) 
 							 { ?>
