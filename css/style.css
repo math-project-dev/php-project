@@ -170,7 +170,6 @@ header span {
   font-size: 2rem;
   font-weight: 900;
   color: #028e9b;
-  border: 4px solid #fff;
   margin-right: 5px;
 }
 .app main {
@@ -370,7 +369,7 @@ header span {
 	width: 50%;
     	margin: 0 auto;
 	padding: 5px;
-	margin-top: 67px;
+	margin-top: 5%;
 }
 .user-information span {
 	height: 10px;
@@ -508,7 +507,7 @@ header span {
          overflow-x: hidden;
          transition: 0.5s;
          padding-top: 60px;
- 	 -webkit-box-shadow: 10px 0 10px -2px rgba(0,0,0,0.5);
+ 	 box-shadow: 10px 0 10px -2px rgba(0,0,0,0.5);
           box-shadow: 10px 0 10px -2px rgba(0,0,0,0.5);
 }
 .sidenav a {
@@ -574,5 +573,22 @@ header span {
 	background-color: #1e6d74;	
 	padding: 10px;
 	text-decoration: none;
+	color: #fff;
+}
+#login-form {
+    	margin-top: 25%;
+    	position: relative;
+}
+#login-form a {
+	text-decoration: none;
+	font-size: 0.9rem;
+	font-weight: 800;
+	color: #fff;
+}
+
+#login-form h2 {
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 800;
 	color: #fff;
 }

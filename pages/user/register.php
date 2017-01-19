@@ -89,9 +89,6 @@ if (isset($_POST['btn-signup'])) {
    </head>
    <body>
    		<header>
-			<div class="user-reg">
-				<a href="/pages/user/login.php" class="reg-link fa fa-sign-in"></a>
-			</div>
 			<span style="padding: 5px;">РЕГИСТРАЦИЯ НОВОГО<br>
 			ПОЛЬЗОВАТЕЛЯ</span>
 		</header>

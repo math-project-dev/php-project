@@ -30,9 +30,6 @@
    
    <body>
 		<header>
-			<div class="user-reg">
-				<a href="/pages/user/logout.php?logout" class="reg-link fa fa-sign-out"></a>
-			</div>
 			<span style="padding: 4px;">ЛИЧНЫЙ КАБИНЕТ
 			<br>ПОЛЬЗОВАТЕЛЯ</span>
 		</header>
