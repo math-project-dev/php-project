@@ -57,9 +57,9 @@
             <a href="http://174.129.143.211/" alt="Вернуться назад">
               <img src="../../img/ege.png" alt="">
             </a>
-            <span>егэ 2017</span>
         </div>
-	
+		<div style="padding: 4px; margin-top: 50px; margin-right: 240px;">ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ
+				<br>ЭКЗАМЕН</div>
     </header>
     
 	<main>
@@ -83,7 +83,7 @@
 		<span class="NavButton" id="NavButton" onclick="openNav()">&#187;</i></span>
 		
 		<div id="output">
-			 
+			 <div class="welcome-output">Вы попали на страницу с выбором уровня и позиции!<br> Для того, чтобы начать решать задания, нажмите на стрелочку слева и выберите нужную позицию!</div>
 		</div>
 		
     </main>
