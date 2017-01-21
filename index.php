@@ -54,7 +54,7 @@
 				<a class="edit-button" style="color: white" href="/pages/user/panel/">РЕЖИМ РЕДАКТИРОВАНИЯ</a>
 			</div>
 			<? } ?>
-		   <a href="#">
+		   <a href="pages/school/">
 				<img src="img/schoolcourse.png" alt="школьный курс"> школьный курс
 		   </a>
 		   <a href="pages/ege/">
@@ -67,8 +67,8 @@
 		
 		<div class="main-sides">
 			<? if (isset($_SESSION['user']) != "") { ?>
-				<a class="edit-button" style="float: right; position: absolute; right: 132px; top: 120px; z-index: 1" href="/pages/user/">ЛИЧНЫЙ КАБИНЕТ</a>
-				<a class="edit-button" style="float: right; position: absolute; right: 196px; top: 180px; z-index: 1" href="/pages/user/logout.php?logout">ВЫХОД</a>
+				<a class="edit-button" style="float: right; position: absolute; right: 127px; top: 120px; z-index: 1" href="/pages/user/">ЛИЧНЫЙ КАБИНЕТ</a>
+				<a class="edit-button" style="float: right; position: absolute; right: 194px; top: 180px; z-index: 1" href="/pages/user/logout.php?logout">ВЫХОД</a>
 			<? } else if (isset($_SESSION['user']) == "") { ?>
 				<a class="edit-button" style="float: right; position: absolute; right: 131px; top: 120px; z-index: 1" href="/pages/user/login.php">ВОЙТИ В АККАУНТ</a>
 			<? } ?>
