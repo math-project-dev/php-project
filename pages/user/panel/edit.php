@@ -51,7 +51,6 @@
 						<a href="http://174.129.143.211/pages/user/panel/list.php" alt="Вернуться назад" style="z-index: 1;">
 						  <img src="../../../../../img/ege.png" alt="">
 						</a>
-						<span>егэ 2017</span>
 					</div>
 				 <span style="top: 50px; position: absolute; right: 0px; padding-right: 700px; font-size: 2rem;">РЕЖИМ РЕДАКТИРОВАНИЯ
 				 <br>ЗАДАНИЙ</span>	

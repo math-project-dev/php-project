@@ -98,18 +98,15 @@ if (isset($_POST['btn-signup'])) {
                   <div class="form-group">
                      <h2 class="register-new-user">Регистрация нового пользователя</h2>
                   </div>
-                  <?php
+                  <?
                      if ( isset($errMSG) ) 
-					 { 
-                      ?>
-                  <div class="form-group">
-                     <div class="alert alert-<?php echo ($errTyp=="success") ? "success" : $errTyp; ?>">
-                        <span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
-                     </div>
-                  </div>
-                  <?php
-                     }
-                     ?>
+					 {  ?>
+					  <div class="form-group">
+						 <div class="alert alert-<?php echo ($errTyp=="success") ? "success" : $errTyp; ?>">
+							<span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
+						 </div>
+					  </div>
+                  <? } ?>
                   <div class="form-group">
                      <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
@@ -117,6 +114,7 @@ if (isset($_POST['btn-signup'])) {
                      </div>
                      <span class="text-danger"><?php echo $nameError; ?></span>
                   </div>
+				  
                   <div class="form-group">
                      <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
