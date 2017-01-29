@@ -1,41 +1,16 @@
 ﻿<?php
-
+    // getType
 	ob_start();
 	session_start();
 	require_once '../../config.php';
-	$charpter = (int) $_GET['charpter'];
-	$mathType = (int) $_GET['mathType']; 
+	$m_ID = (int) $_GET['charpter'];
 ?>
 
 	<link rel="stylesheet" href="../../css/style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
 
-	
-	<div class="allTasks">
-		<?
+    <?
 
-			if ($mathType == 0) {
-						
-				$type = "АЛГЕБРА";
-				
-			} else {
-						
-				$type = "ГЕОМЕТРИЯ";
-			}
-			$result = mysql_query("SELECT * FROM themes WHERE ID = ". $charpter ." AND math_type = ". $mathType ."");
-
-			while ($row = mysql_fetch_array($result, MYSQL_BOTH)) {
-				$rows[] = $row["math_charpter"];
-				$rows[] = $row["math_topic"];
-				$rows[] = $row["definition"];
-			}  ?>
-			
-			<div class="positionTasks animated fadeInDown"><?=$type?> / <?=$rows[0]?><br> <span style="font-size: 1.2rem"><?=$rows[1]?><span></div>
-			<div class="answerDiv">
-				<div class="tasks">
-				   
-				<div class="about-theme"><strong>Определение: </strong><?=$rows[2]?></div>
-				</div>
-			</div>
-
-	</div>
+	$result = mysql_query("SELECT math_topic AS m_topic, ID AS m_ID FROM themes WHERE math_ID = ". $m_ID ." ");
+	while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
+		<a class="theme-blocks" onclick="getMathChar('<?=$row["m_ID"]?>', '0')"><?=$row["m_topic"]?></a>
+	<? } ?>

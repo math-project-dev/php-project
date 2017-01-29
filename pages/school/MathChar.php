@@ -7,7 +7,6 @@
 ?>
 
 	<link rel="stylesheet" href="../../css/style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
 	
 <? if ($object >= 0) 
 {

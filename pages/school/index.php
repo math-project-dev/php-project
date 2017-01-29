@@ -16,17 +16,27 @@
 	<!-- ajax -->
 	<script type="text/javascript">
          function getType(charpter, mathType) {
-         	$('#output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
+         	$('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
          	jQuery.ajax({
          		url: "MathType.php",
          		data:'charpter=' + charpter + '&mathType=' + mathType,
          		type: "GET",
-         		success:function(data) {
-					
-					setTimeout(function() { 
-							$('#output').html(data); 
-						},1000);
-						
+         		success: function(data) {
+					$('#side-output').html(data);
+         		}
+         	});
+         }
+    </script>
+	
+	<script type="text/javascript">
+         function getMathChar(charpter, mathType) {
+         	$('#output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
+         	jQuery.ajax({
+         		url: "MathCharpter.php",
+         		data:'charpter=' + charpter + '&mathType=' + mathType,
+         		type: "GET",
+         		success: function(data) {	
+					$('#output').html(data); 		
          		}
          	});
 			closeNav();
@@ -40,12 +50,8 @@
          		url: "MathChar.php",
          		data:'object=' + object,
          		type: "GET",
-         		success:function(data) {
-					
-					setTimeout(function() { 
-							$('#side-output').html(data); 
-						},1000);
-						
+         		success: function(data) {
+					$('#side-output').html(data); 	
          		}
          	});
          }
@@ -70,6 +76,7 @@
           <a href="http://174.129.143.211/" alt="Вернуться назад">
             <img src="../../img/schoolcourse.png" alt="">
           </a>
+		  <div>НАЗАД</div>
         </div>
 		<div style="padding: 4px; margin-top: 50px; margin-right: 240px;">ШКОЛЬНЫЙ
 				<br>КУРС</header>
