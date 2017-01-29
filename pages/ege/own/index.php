@@ -16,7 +16,6 @@
 	<? require_once('/../../../config.php'); ?>
 <body>
     <header>
-	
         <div class="logo">
             <a href="http://174.129.143.211/" alt="Вернуться назад">
               <img src="../../../img/ege.png" alt="">

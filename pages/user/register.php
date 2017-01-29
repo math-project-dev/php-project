@@ -63,6 +63,7 @@ if (isset($_POST['btn-signup'])) {
         if ($res) {
             $errTyp = "success";
             $errMSG = "Вы успешно зарегистрированы, теперь вы можете войти!";
+			header('Refresh: 3; URL=http://174.129.143.211/pages/user/login.php');
             unset($name);
             unset($email);
             unset($pass);
@@ -106,7 +107,7 @@ if (isset($_POST['btn-signup'])) {
                      if ( isset($errMSG) ) 
 					 {  ?>
 					  <div class="form-group">
-						 <div class="alert alert-<?php echo ($errTyp=="success") ? "success" : $errTyp; ?>">
+						 <div class="alert alert-<?php echo ($errTyp=="success") ? "success" : $errTyp; ?>" style="margin: 0 auto; text-align: center; width: 40%;">
 							<span class="glyphicon glyphicon-info-sign"></span> <?php echo $errMSG; ?>
 						 </div>
 					  </div>

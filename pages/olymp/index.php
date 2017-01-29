@@ -15,64 +15,9 @@
           <a href="http://174.129.143.211/" alt="Вернуться назад">
             <img src="../../img/olimp.png" alt="">
           </a>
-            <span>школьный курс</span>
+           <div>НАЗАД</div> 
         </div>
-        <div class="tab-wrapper">
 
-            <ul class="tab-menu">
-                <li class="active">класс</li>
-                <li>курс</li>
-                <li>раздел</li>
-                <li>тема</li>
-            </ul>
-
-            <div class="tab-content">
-                <div>
-                    <div class="block">
-                        <span>9</span>
-                    </div>
-                    <div class="block">
-                        <span>10</span>
-                    </div>
-                    <div class="block">
-                        <span>11</span>
-                    </div>
-                </div>
-                <div>
-                    <div class="block">
-                        <span>9</span>
-                    </div>
-                    <div class="block">
-                        <span>10</span>
-                    </div>
-                    <div class="block">
-                        <span>11</span>
-                    </div>
-                </div>
-                <div>
-                    <div class="block">
-                        <span>9</span>
-                    </div>
-                    <div class="block">
-                        <span>10</span>
-                    </div>
-                    <div class="block">
-                        <span>11</span>
-                    </div>
-                </div>
-                <div>
-                    <div class="block">
-                        <span>9</span>
-                    </div>
-                    <div class="block">
-                        <span>10</span>
-                    </div>
-                    <div class="block">
-                        <span>11</span>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
     <main>
     </main>
