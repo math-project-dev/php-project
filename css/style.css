@@ -95,7 +95,7 @@ main .menu a:hover img {
 }
 .app header {
     z-index: 999;
-	height: 142px;
+    height: 155px;
 }
 .app header .logo,
 .app header .tabs {
@@ -113,6 +113,14 @@ main .menu a:hover img {
     font-size: .6em;
     text-transform: uppercase;
     font-weight: 900;
+    margin-right: 75px;
+}
+.app header .logo div {
+    font-size: .6em;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-right: 75px;
+    margin-top: 6px;
 }
 .app main {
     background: none;
