@@ -606,3 +606,21 @@ header span {
     padding-bottom: 10px;
     cursor: pointer;
 }
+.prev-page {
+    font-size: 1.2rem;
+    float: left;
+    width: 20%;
+}
+.prev-page a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+	float: left;
+    margin-top: 5%;
+}
+.name-page {
+	float: left;
+    border-style: solid; 
+    width: 60%;
+    text-align: center;
+}

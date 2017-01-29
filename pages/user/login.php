@@ -64,9 +64,13 @@ if (isset($_POST['btn-login'])) {
    </head>
    <body>
 		<header>
-			<span style="padding: 0px;">ВОЙТИ В<br>
-			АККАУНТ</span>
-		</header>
+			<div class="prev-page">
+				<a href="/">НАЗАД</a>
+			</div>
+			<div class="name-page">ВОЙТИ В<br>
+			АККАУНТ</div>
+			<div style="width: 20%; clear:left;"> </div>
+		</header> 
       <div class="container">
          <div id="login-form">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">

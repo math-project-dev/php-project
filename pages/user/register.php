@@ -89,8 +89,12 @@ if (isset($_POST['btn-signup'])) {
    </head>
    <body>
    		<header>
-			<span style="padding: 5px;">РЕГИСТРАЦИЯ НОВОГО<br>
-			ПОЛЬЗОВАТЕЛЯ</span>
+			<div class="prev-page">
+				<a href="/">НАЗАД</a>
+			</div>
+			<div class="name-page">РЕГИСТРАЦИЯ<br>
+			НОВОГО ПОЛЬЗОВАТЕЛЯ</div>
+			<div style="width: 20%; clear:left;"> </div>
 		</header>
       <div class="container">
          <div id="login-form">

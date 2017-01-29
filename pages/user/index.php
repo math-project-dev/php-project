@@ -30,8 +30,12 @@
    
    <body>
 		<header>
-			<span style="padding: 4px;">ЛИЧНЫЙ КАБИНЕТ
-			<br>ПОЛЬЗОВАТЕЛЯ</span>
+			<div class="prev-page">
+				<a href="/">НАЗАД</a>
+			</div>
+			<div class="name-page">ЛИЧНЫЙ КАБИНЕТ<br>
+			ПОЛЬЗОВАТЕЛЯ</div>
+			<div style="width: 20%; clear:left;"> </div>
 		</header>
 		<main style="background: none">
 			<? if (empty($_GET['id']) ) { ?>

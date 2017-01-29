@@ -30,8 +30,12 @@
 	</head>
 	<body>
 		<header>
-			<span style="padding: 4px;">РЕЖИМ РЕДАКТИРОВАНИЯ
-			<br>ВЫБОР РАЗДЕЛА</span>	
+			<div class="prev-page">
+				<a href="/">НАЗАД</a>
+			</div>
+			<div class="name-page">РЕЖИМ РЕДАКТИРОВАНИЯ<br>
+			ВЫБОР РАЗДЕЛА</div>
+			<div style="width: 20%; clear:left;"> </div>
 		</header>
 			
 		<main style="background: none; text-align:center"> 

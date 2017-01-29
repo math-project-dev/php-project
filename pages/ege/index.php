@@ -57,6 +57,7 @@
             <a href="http://174.129.143.211/" alt="Вернуться назад">
               <img src="../../img/ege.png" alt="">
             </a>
+			<div>НАЗАД</div>
         </div>
 		<div style="padding: 4px; margin-top: 50px; margin-right: 240px;">ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ
 				<br>ЭКЗАМЕН</div>

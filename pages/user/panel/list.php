@@ -33,6 +33,7 @@
 					<a href="http://174.129.143.211/pages/user/panel" alt="Вернуться назад">
 					  <img src="../../../../img/ege.png" alt="">
 					</a>
+					<div>НАЗАД</div>
 				</div>
 				<span style="top: 50px; position: absolute; right: 0px; padding-right: 700px; font-size: 2rem;">РЕЖИМ РЕДАКТИРОВАНИЯ
 				 <br>СПИСОК ЗАДАНИЙ</span>	
