@@ -51,6 +51,7 @@
 						<a href="http://174.129.143.211/pages/user/panel/list.php" alt="Вернуться назад" style="z-index: 1;">
 						  <img src="../../../../../img/ege.png" alt="">
 						</a>
+						<div>НАЗАД</div>
 					</div>
 				 <span style="top: 50px; position: absolute; right: 0px; padding-right: 700px; font-size: 2rem;">РЕЖИМ РЕДАКТИРОВАНИЯ
 				 <br>ЗАДАНИЙ</span>	
@@ -76,7 +77,7 @@
 						  <?
 							 $target_path = "../../../pages/ege/tasks/type-". $row['type'] ."/0". $row['tasks'] ."/";
 							 
-							 $filename = "0". $row['tasks']. "_0". $row['id'] .".PNG";
+							 $filename = "0". $row['tasks']. "_0". $row['id'] .".png";
 
 							 $target_path = $target_path . basename( $filename ); 
 									
@@ -98,7 +99,7 @@
 						  <?
 							 $target_path = "../../../pages/ege/tasks/type-". $row['type'] ."/answer/0". $row['tasks'] ."/";
 							 
-							 $filename = "0". $row['tasks']. "_0". $row['id'] .".PNG";
+							 $filename = "0". $row['tasks']. "_0". $row['id'] .".png";
 
 							 $target_path = $target_path . basename( $filename ); 
 								
