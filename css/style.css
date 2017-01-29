@@ -177,7 +177,7 @@ header span {
     margin-right: 5px;
 }
 .app main {
-    top: 235px;
+    top: 185px;
     height: calc(100vh - 235px);
 }
 ::-webkit-scrollbar {
@@ -545,14 +545,13 @@ header span {
     cursor: pointer;
     width: 20px;
     float: left;
-    top: 50%;
-    left: 0.1%;
+    left: 0;
     position: fixed;
-    height: 35px;
+    height: 100vh;
     z-index: 10000;
+    opacity: 0.6;
     background-color: #1e6d74;
     padding: 11px;
-    border-radius: 20px 20px 20px 20px;
 }
 .choose-your-variant {
     margin-top: 100px;
@@ -615,11 +614,11 @@ header span {
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
-	float: left;
+    float: left;
     margin-top: 5%;
 }
 .name-page {
-	float: left;
+    float: left;
     border-style: solid; 
     width: 60%;
     text-align: center;
