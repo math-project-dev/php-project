@@ -7,9 +7,6 @@
 	$mathType = (int) $_GET['mathType']; 
 ?>
 
-	<link rel="stylesheet" href="../../css/style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js"></script>
-
 	
 	<div class="allTasks">
 		<?
@@ -26,14 +23,13 @@
 			while ($row = mysql_fetch_array($result, MYSQL_BOTH)) {
 				$rows[] = $row["math_charpter"];
 				$rows[] = $row["math_topic"];
-				$rows[] = $row["definition"];
+				$rows[] = $row["math_ID"];
 			}  ?>
 			
 			<div class="positionTasks animated fadeInDown"><?=$type?> / <?=$rows[0]?><br> <span style="font-size: 1.2rem"><?=$rows[1]?><span></div>
 			<div class="answerDiv">
-				<div class="tasks">
-				   
-				<div class="about-theme"></div>
+				<div class="tasks" >
+				   <img style="margin: 20px;" src="images/type-<?=$mathType?>/0<?=$rows[2]?>/0<?=$charpter?>/1.png" alt="Тема '<?=$rows[1]?>'">
 				</div>
 			</div>
 

@@ -6,7 +6,6 @@
 	$m_ID = (int) $_GET['charpter'];
 ?>
 
-	<link rel="stylesheet" href="../../css/style.css">
 
     <?
 

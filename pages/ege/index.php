@@ -81,7 +81,7 @@
 			</div>
 		</div>
 		
-		<span class="NavButton" id="NavButton" onclick="openNav()">&#187;</i></span>
+		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 35%; position: absolute;">&#187;</div></i></span>
 		
 		<div id="output">
 			 <div class="welcome-output">Вы попали на страницу с выбором уровня и позиции!<br> Для того, чтобы начать решать задания, нажмите на стрелочку слева и выберите нужную позицию!</div>

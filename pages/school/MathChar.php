@@ -6,7 +6,6 @@
 	$object = (int) $_GET['object'];
 ?>
 
-	<link rel="stylesheet" href="../../css/style.css">
 	
 <? if ($object >= 0) 
 {

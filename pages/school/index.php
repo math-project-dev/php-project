@@ -10,10 +10,8 @@
     <script src="../../js/app.js" charset="utf-8"></script>
 </head>
 
-	<!-- mysql -->
 	<? require_once('/../../config.php'); ?>
 	
-	<!-- ajax -->
 	<script type="text/javascript">
          function getType(charpter, mathType) {
          	$('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
@@ -57,23 +55,23 @@
          }
     </script>
 	
-	<!-- open and close NavBar -->
 	<script>
-         function openNav() {
+	
+        function openNav() {
              document.getElementById("sideBar").style.width = "450px";
 			 document.getElementById("NavButton").style.display = "none";
-         }
-         
-         function closeNav() {
+        }
+        function closeNav() {
              document.getElementById("sideBar").style.width = "0";
 			 document.getElementById("NavButton").style.display = "";
-         }
+        }
+		
     </script>
 
 <body>
     <header>
         <div class="logo">
-          <a href="http://174.129.143.211/" alt="Вернуться назад">
+          <a href="/" alt="Вернуться назад">
             <img src="../../img/schoolcourse.png" alt="">
           </a>
 		  <div>НАЗАД</div>
@@ -90,7 +88,7 @@
 			</div>
 		</div>
 		
-		<span class="NavButton" id="NavButton" onclick="openNav()">&#187;</i></span>
+		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 35%; position: absolute;">&#187;</div></i></span>
 		
 		<div id="output">
 			
