@@ -42,7 +42,7 @@
 					{ 
 						$random = rand(1, 20);?>
 						<div class="tasks animated fadeInDown">
-							<div class="title">Позиция #<?=$i?></div></br>
+							<div class="title">Задание #<?=$i?></div></br>
 							<img class="task" src="../tasks/type-<?=$selectType?>/0<?=$i?>/0<?=$i?>_0<?=$random?>.png" />
 							<div class="answerDiv">
 							<div>
@@ -106,7 +106,7 @@
 					{ 
 						$random = rand(1, 19);?>
 						<div class="tasks animated fadeInDown">
-							<div class="title">Позиция #<?=$i?></div></br>
+							<div class="title">Задание #<?=$i?></div></br>
 							<img class="task" src="../tasks/type-<?=$selectType?>/0<?=$i?>/0<?=$i?>_0<?=$random?>.png" />
 							<div class="answerDiv">
 							<div>

@@ -25,12 +25,8 @@
          		url: "settings.php",
          		data:'id=' + id + '&task=' + task,
          		type: "GET",
-         		success:function(data) {
-					
-					setTimeout(function() { 
-							$('#output').html(data); 
-						},1000);
-						
+         		success: function(data) {	
+					$('#output').html(data); 
          		}
          	});
 			closeNav();
@@ -81,7 +77,7 @@
 			</div>
 		</div>
 		
-		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 35%; position: absolute;">&#187;</div></i></span>
+		<span	 class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 35%; position: absolute;">&#187;</div></i></span>
 		
 		<div id="output">
 			 <div class="welcome-output">Вы попали на страницу с выбором уровня и позиции!<br> Для того, чтобы начать решать задания, нажмите на стрелочку слева и выберите нужную позицию!</div>

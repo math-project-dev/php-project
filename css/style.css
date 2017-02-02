@@ -545,13 +545,14 @@ header span {
     cursor: pointer;
     width: 20px;
     float: left;
-    left: 0;
+    top: 50%;
+    left: 0.1%;
     position: fixed;
-    height: 100vh;
+    height: 85px;
     z-index: 10000;
-    opacity: 0.6;
     background-color: #1e6d74;
     padding: 11px;
+    border-radius: 20px 20px 20px 20px;
 }
 .choose-your-variant {
     margin-top: 100px;
