@@ -228,7 +228,7 @@ Calendar.setup = function(params)
       calendar.setDateFormat(params.dateFormat)
     if (params.dateField) {
       calendar.setDateField(params.dateField)
-      calendar.parseDate(calendar.dateField.innerHTML || calendar.dateField.value)
+      //calendar.parseDate(calendar.dateField.innerHTML || calendar.dateField.value)
     }
     calendar.show()
     return calendar

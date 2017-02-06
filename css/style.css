@@ -30,7 +30,9 @@ main .menu {
 main .menu a {
     display: inline-block;
     margin: 10px;
+    position: relative;
     font-size: 1.0rem;
+    right: 10px;
     margin-bottom: 35px;
     text-transform: uppercase;
     font-weight: 900;
@@ -95,7 +97,10 @@ main .menu a:hover img {
 }
 .app header {
     z-index: 999;
-    height: 155px;
+    height: 83px;
+    position: fixed;
+    width: 100%;
+    z-index: -5;
 }
 .app header .logo,
 .app header .tabs {
@@ -106,8 +111,11 @@ main .menu a:hover img {
     float: left;
 }
 .app header .logo img {
-    width: 65%;
+    width: 42%;
     display: block;
+    position: relative;
+    bottom: 10px;
+    right: 10px;
 }
 .app header .logo span {
     font-size: .6em;
@@ -140,9 +148,6 @@ main .menu a:hover img {
     cursor: pointer;
     z-index: 0;
     transition: all .3s;
-}
-header span {
-    padding: 20px;
 }
 .tab-menu li.active {
     color: #464646;
@@ -505,14 +510,17 @@ header span {
     text-decoration: none;
     margin: 5px;
     color: #fff;
-    transition: 0.3s
 }
 .sidenav h1 {
-    font-size: 20px;
-    color: #154c51;
+    font-size: 25px;
+    color: #fff;
     font-weight: 800;
     left: 5px;
     position: relative;
+    margin: 15px;
+}
+.h1-class {
+    font-size: 25px;
 }
 .sidenav a:hover,
 .offcanvas a:focus {
@@ -545,15 +553,25 @@ header span {
     cursor: pointer;
     width: 20px;
     float: left;
-    top: 50%;
-    left: 0.1%;
+    top: 40%;
+    left: 0;
     position: fixed;
-    height: 85px;
+    height: 200px;
+    opacity: 0.6;
     z-index: 10000;
     background-color: #1e6d74;
-    padding: 11px;
-    border-radius: 20px 20px 20px 20px;
+    padding: 20px;
+    border-radius: 0px 20px 20px 0px;
 }
+.NavButton:not(:hover) {
+    opacity: 0.6;
+    transition: 0.4s
+}
+.NavButton:hover {
+    opacity: 1;
+    transition: 0.4s
+}
+
 .choose-your-variant {
     margin-top: 100px;
 }
@@ -623,4 +641,9 @@ header span {
     border-style: solid; 
     width: 60%;
     text-align: center;
+}
+.back-button {
+    position: relative;
+    bottom: 15px;
+    right: 35px;
 }

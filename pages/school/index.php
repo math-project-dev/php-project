@@ -69,26 +69,31 @@
     </script>
 
 <body>
+
     <header>
+	
         <div class="logo">
-          <a href="/" alt="Вернуться назад">
-            <img src="../../img/schoolcourse.png" alt="">
-          </a>
-		  <div>НАЗАД</div>
+            <a href="http://174.129.143.211/" alt="Вернуться назад">
+              <img src="../../img/schoolcourse.png" alt="">
+            </a>
+			<div class="back-button">НАЗАД</div>
         </div>
-		<div style="padding: 4px; margin-top: 50px; margin-right: 240px;">ШКОЛЬНЫЙ
+		
+		<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">ШКОЛЬНЫЙ
 				<br>КУРС</header>
     <main>
 	
 		<div id="sideBar" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<div id="side-output">
-				<a class="level-blocks" onclick="getChar('0')">Алгебра</a>
-				<a class="level-blocks" onclick="getChar('1')">Геометрия</a>
+			<? $result = mysql_query("SELECT MAX(math_charpter) AS m_char, MAX(math_ID) AS m_ID FROM themes GROUP BY  math_ID");
+			while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
+				<a class="theme-blocks" onclick="getType('<?=$row["m_ID"]?>', '0')"><?=$row["m_char"]?></a>
+			<? } ?>
 			</div>
 		</div>
 		
-		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 35%; position: absolute;">&#187;</div></i></span>
+		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 43%; position: absolute; font-size: 40px;">&#187;</div></i></span>
 		
 		<div id="output">
 			

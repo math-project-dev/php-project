@@ -14,10 +14,8 @@
     <script src="../../js/app.js" charset="utf-8"></script>
 </head>
 
-	<!-- mysql -->
 	<? require_once('/../../config.php'); ?>
 	
-	<!-- ajax -->
 	<script type="text/javascript">
          function getType(id, task) {
          	$('#output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
@@ -33,7 +31,6 @@
          }
     </script>
 	
-	<!-- open and close NavBar -->
 	<script>
          function openNav() {
              document.getElementById("sideBar").style.width = "450px";
@@ -53,9 +50,9 @@
             <a href="http://174.129.143.211/" alt="Вернуться назад">
               <img src="../../img/ege.png" alt="">
             </a>
-			<div>НАЗАД</div>
+			<div class="back-button">НАЗАД</div>
         </div>
-		<div style="padding: 4px; margin-top: 50px; margin-right: 240px;">ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ
+		<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ
 				<br>ЭКЗАМЕН</div>
     </header>
     
@@ -73,11 +70,11 @@
 				<a class="level-blocks" onclick="getType('2', '<?=$i?>')">ПОЗИЦИЯ <?=$i?></a>
 			<? } ?>
 			<div class="make-own">
-				<a href="own/">СОЗДАТЬ СВОЙ ВАРИАНТ</a>
+				<a class="h1-class" href="own/">СОЗДАТЬ СВОЙ ВАРИАНТ</a>
 			</div>
 		</div>
 		
-		<span	 class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 35%; position: absolute;">&#187;</div></i></span>
+		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 43%; position: absolute; font-size: 40px;">&#187;</div></i></span>
 		
 		<div id="output">
 			 <div class="welcome-output">Вы попали на страницу с выбором уровня и позиции!<br> Для того, чтобы начать решать задания, нажмите на стрелочку слева и выберите нужную позицию!</div>
