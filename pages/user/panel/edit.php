@@ -27,7 +27,7 @@
 		else 
 	{
 		
-		header("Location: http://174.129.143.211/pages/user/panel/list.php");
+		header("Location: http://184.72.196.215/pages/user/panel/list.php");
 		exit;
 	}
 	

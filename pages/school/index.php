@@ -58,7 +58,7 @@
 	<script>
 	
         function openNav() {
-             document.getElementById("sideBar").style.width = "450px";
+             document.getElementById("sideBar").style.width = "23%";
 			 document.getElementById("NavButton").style.display = "none";
         }
         function closeNav() {
@@ -73,7 +73,7 @@
     <header>
 	
         <div class="logo">
-            <a href="http://174.129.143.211/" alt="Вернуться назад">
+            <a href="http://184.72.196.215/" alt="Вернуться назад">
               <img src="../../img/schoolcourse.png" alt="">
             </a>
 			<div class="back-button">НАЗАД</div>

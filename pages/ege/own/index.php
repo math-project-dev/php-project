@@ -18,7 +18,7 @@
     <header>
 	
         <div class="logo">
-            <a href="http://174.129.143.211/" alt="Вернуться назад">
+            <a href="http://184.72.196.215/" alt="Вернуться назад">
               <img src="../../../img/ege.png" alt="">
             </a>
 			<div>НАЗАД</div>
