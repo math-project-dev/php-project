@@ -2,17 +2,9 @@
 
 [![Build Status](https://travis-ci.org/school-math-project/php-project.svg?branch=master)](https://travis-ci.org/school-math-project/php-project)
 
-Планы на будущее:
-- [x] Первая страница с выбором 
-- [x] Страница со школьным материалом
-- [x] Страница с ЕГЭ
-- [x] База данных и сохранение заданий
-- [x] Автоматическое обновление базы данных
-- [x] Генерация рандомных вариантов
-- [ ] Страница с Олимпиадами
-- [ ] Страница со Школьным курсом 
 
->   PHP-Math-Project
+>   **PHP-Math-Project**
+>
 >   Copyright 2016 by school-math-project (0xe06d7363)
 >
 >   Licensed under the Apache License, Version 2.0 (the "License");
