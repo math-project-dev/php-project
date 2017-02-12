@@ -14,7 +14,7 @@
 	
 	<script type="text/javascript">
          function setAjaxState(arg, ajaxState) {
-         	$('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
+         	if(ajaxState != 2) $('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
          	jQuery.ajax( {
          		url: "ajaxState.php",
          		data:'arg=' + arg + '&ajaxState=' + ajaxState,
