@@ -18,14 +18,15 @@
     <header>
 	
         <div class="logo">
-            <a href="http://184.72.196.215/" alt="Вернуться назад">
+            <a href="/" alt="Вернуться назад">
               <img src="../../../img/ege.png" alt="">
             </a>
-			<div>НАЗАД</div>
+			<div class="back-button">НАЗАД</div>
         </div>
-		<div style="padding: 4px; margin-top: 50px; margin-right: 240px;">ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ
+		<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ
 				<br>ЭКЗАМЕН</div>
     </header>
+	
     <? $selectType = $_GET['type']; ?>
 	<main>
 	<? if( $selectType != 0 )

@@ -100,7 +100,7 @@ main .menu a:hover img {
     height: 83px;
     position: fixed;
     width: 100%;
-    z-index: -5;
+    z-index: 5;
 }
 .app header .logo,
 .app header .tabs {
@@ -197,6 +197,7 @@ main .menu a:hover img {
     padding-bottom: 20px;
     margin: 0 auto;
     width: 45%;
+	z-index: 4;
 }
 .tasks {
     margin-top: 15px;
@@ -496,7 +497,7 @@ main .menu a:hover img {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: 0;
     left: 0;
     background-color: #1e6d74;

@@ -29,14 +29,15 @@
 		</head>
 		<body>
 			<header>
-				<div class="logo" >
-					<a href="http://184.72.196.215/pages/user/panel" alt="Вернуться назад">
-					  <img src="../../../../img/ege.png" alt="">
+			
+				<div class="logo">
+					<a href="/" alt="Вернуться назад">
+					  <img src="../../../img/ege.png" alt="">
 					</a>
-					<div>НАЗАД</div>
+					<div class="back-button">НАЗАД</div>
 				</div>
-				<span style="top: 50px; position: absolute; right: 0px; padding-right: 700px; font-size: 2rem;">РЕЖИМ РЕДАКТИРОВАНИЯ
-				 <br>СПИСОК ЗАДАНИЙ</span>	
+				<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">РЕЖИМ РЕДАКТИРОВАНИЯ
+						<br>СПИСОК ЗАДАНИЙ</div>
 			</header>
 			<main style="background: none; text-align:center"> 
 				
