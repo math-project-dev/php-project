@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 if (isset($_SESSION['user']) != "") {
-    header("Location: http://174.129.143.211/");
+    header("Location: /");
 }
 include_once '../../config.php';
 
@@ -63,7 +63,7 @@ if (isset($_POST['btn-signup'])) {
         if ($res) {
             $errTyp = "success";
             $errMSG = "Вы успешно зарегистрированы, теперь вы можете войти!";
-			header('Refresh: 3; URL=http://174.129.143.211/pages/user/login.php');
+			header('Refresh: 3; URL=http://184.72.196.215/pages/user/login.php');
             unset($name);
             unset($email);
             unset($pass);

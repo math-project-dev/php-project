@@ -4,7 +4,7 @@
 	require_once '../../../config.php';
 
 	if (!isset($_SESSION['user']) ) {
-		header("Location: http://174.129.143.211/pages/user/login.php");
+		header("Location: http://184.72.196.215/pages/user/login.php");
 		exit;
 	}
 	
@@ -30,7 +30,7 @@
 		<body>
 			<header>
 				<div class="logo" >
-					<a href="http://174.129.143.211/pages/user/panel" alt="Вернуться назад">
+					<a href="http://184.72.196.215/pages/user/panel" alt="Вернуться назад">
 					  <img src="../../../../img/ege.png" alt="">
 					</a>
 					<div>НАЗАД</div>
