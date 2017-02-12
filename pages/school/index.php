@@ -13,47 +13,26 @@
 	<? require_once('/../../config.php'); ?>
 	
 	<script type="text/javascript">
-         function getType(charpter, mathType) {
+         function setAjaxState(arg, ajaxState) {
          	$('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
-         	jQuery.ajax({
-         		url: "MathType.php",
-         		data:'charpter=' + charpter + '&mathType=' + mathType,
+         	jQuery.ajax( {
+         		url: "ajaxState.php",
+         		data:'arg=' + arg + '&ajaxState=' + ajaxState,
          		type: "GET",
          		success: function(data) {
-					$('#side-output').html(data);
+					
+					if(ajaxState == 2) {
+						$('#output').html(data);
+						closeNav();
+					} else {
+						$('#side-output').html(data);
+					}
+
          		}
          	});
          }
     </script>
 	
-	<script type="text/javascript">
-         function getMathChar(charpter, mathType) {
-         	$('#output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
-         	jQuery.ajax({
-         		url: "MathCharpter.php",
-         		data:'charpter=' + charpter + '&mathType=' + mathType,
-         		type: "GET",
-         		success: function(data) {	
-					$('#output').html(data); 		
-         		}
-         	});
-			closeNav();
-         }
-    </script>
-	
-	<script type="text/javascript">
-         function getChar(object) {
-         	$('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
-         	jQuery.ajax({
-         		url: "MathChar.php",
-         		data:'object=' + object,
-         		type: "GET",
-         		success: function(data) {
-					$('#side-output').html(data); 	
-         		}
-         	});
-         }
-    </script>
 	
 	<script>
 	
@@ -88,7 +67,7 @@
 			<div id="side-output">
 			<? $result = mysql_query("SELECT MAX(math_charpter) AS m_char, MAX(math_ID) AS m_ID FROM themes GROUP BY  math_ID");
 			while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
-				<a class="theme-blocks" onclick="getType('<?=$row["m_ID"]?>', '0')"><?=$row["m_char"]?></a>
+				<a class="theme-blocks" onclick="setAjaxState('<?=$row["m_ID"]?>', '1')"><?=$row["m_char"]?></a>
 			<? } ?>
 			</div>
 		</div>
