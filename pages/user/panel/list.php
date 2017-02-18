@@ -39,6 +39,7 @@
 				<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">РЕЖИМ РЕДАКТИРОВАНИЯ
 						<br>СПИСОК ЗАДАНИЙ</div>
 			</header>
+			<? if($_GET['section'] == 1) { ?>
 			<main style="background: none; text-align:center"> 
 				
 				<h1 class="left-header">БАЗОВЫЙ УРОВЕНЬ<h1>
@@ -90,6 +91,113 @@
 					</tbody> 
 				</table>
 			</main>
+			
+			<? } else if($_GET['section'] == 2) { ?>
+			
+			<main style="background: none; text-align:center"> 
+				
+				<h1 class="left-header">БАЗОВЫЙ УРОВЕНЬ<h1>
+				<h1 class="right-header">ПРОФИЛЬНЫЙ УРОВЕНЬ<h1>
+				
+				<table style="margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 1.4rem;"> 
+					<tbody> 
+						<tr>
+							<td style="width: 400px; height: 20px; float: right; padding: 0 150px 0 150px; ">
+								<? for( $i = 1; $i <= 19; $i++)
+								{ ?>
+									<div style="padding: 20px">
+										<a  class="edit-button" id="b1-<?=$i?>-type-2" style="padding: 9px 40px; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display=''; document.getElementById('b1-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<a  class="edit-button" id="b2-<?=$i?>-type-2" style="padding: 9px 40px; display: none; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='none'; document.getElementById('b1-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<div class="content-<?=$i?>" id="content-<?=$i?>-type-2" style="display: none;">
+											<? for ($d = 1; $d <= 19; $d++) { 
+												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 2 AND tasks = '. $i .'  AND id = '. $d .' '); 
+												while ($row = mysql_fetch_assoc($query_w)) { ?>
+												<div class="select-block">
+													<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
+												</div>
+												<? }
+											 } ?>
+										</div>
+									</div>
+								<? } ?>
+							</td>
+							<td style="width: 400px; height: 20px; float: left; padding: 0 150px 0 150px;">
+								<? for( $i = 1; $i <= 20; $i++)
+								{ ?>
+									<div style="padding: 20px">
+										<a  class="edit-button" id="b1-<?=$i?>-type-1" style="padding: 9px 40px; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display=''; document.getElementById('b1-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<a  class="edit-button" id="b2-<?=$i?>-type-1" style="padding: 9px 40px; display: none; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='none'; document.getElementById('b1-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a>
+
+										<div class="content-<?=$i?>" id="content-<?=$i?>-type-1" style="display: none;">
+											<? for ($d = 1; $d <= 20; $d++) { 
+												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 1 AND tasks = '. $i .'  AND id = '. $d .' '); 
+												while ($row = mysql_fetch_assoc($query_w)) { ?>
+													<div class="select-block">
+														<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
+													</div>
+												<? }
+											} ?>
+										</div>
+									</div>
+								<? } ?>
+							</td>
+						</tr> 
+					</tbody> 
+				</table>
+			</main>
+			<? } else if ($_GET['section'] == 3) { ?>
+			<main style="background: none; text-align:center"> 
+				
+				<h1 class="left-header">БАЗОВЫЙ УРОВЕНЬ<h1>
+				<h1 class="right-header">ПРОФИЛЬНЫЙ УРОВЕНЬ<h1>
+				
+				<table style="margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 1.4rem;"> 
+					<tbody> 
+						<tr>
+							<td style="width: 400px; height: 20px; float: right; padding: 0 150px 0 150px; ">
+								<? for( $i = 1; $i <= 19; $i++)
+								{ ?>
+									<div style="padding: 20px">
+										<a  class="edit-button" id="b1-<?=$i?>-type-2" style="padding: 9px 40px; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display=''; document.getElementById('b1-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<a  class="edit-button" id="b2-<?=$i?>-type-2" style="padding: 9px 40px; display: none; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='none'; document.getElementById('b1-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<div class="content-<?=$i?>" id="content-<?=$i?>-type-2" style="display: none;">
+											<? for ($d = 1; $d <= 19; $d++) { 
+												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 2 AND tasks = '. $i .'  AND id = '. $d .' '); 
+												while ($row = mysql_fetch_assoc($query_w)) { ?>
+												<div class="select-block">
+													<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
+												</div>
+												<? }
+											 } ?>
+										</div>
+									</div>
+								<? } ?>
+							</td>
+							<td style="width: 400px; height: 20px; float: left; padding: 0 150px 0 150px;">
+								<? for( $i = 1; $i <= 20; $i++)
+								{ ?>
+									<div style="padding: 20px">
+										<a  class="edit-button" id="b1-<?=$i?>-type-1" style="padding: 9px 40px; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display=''; document.getElementById('b1-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
+										<a  class="edit-button" id="b2-<?=$i?>-type-1" style="padding: 9px 40px; display: none; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='none'; document.getElementById('b1-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a>
+
+										<div class="content-<?=$i?>" id="content-<?=$i?>-type-1" style="display: none;">
+											<? for ($d = 1; $d <= 20; $d++) { 
+												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 1 AND tasks = '. $i .'  AND id = '. $d .' '); 
+												while ($row = mysql_fetch_assoc($query_w)) { ?>
+													<div class="select-block">
+														<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
+													</div>
+												<? }
+											} ?>
+										</div>
+									</div>
+								<? } ?>
+							</td>
+						</tr> 
+					</tbody> 
+				</table>
+			</main>
+			<? } ?>
 		</body>
 	</html>
 

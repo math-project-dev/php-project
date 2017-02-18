@@ -1,4 +1,4 @@
- <?
+﻿ <?
     /* AJAX STATE */
 	session_start();
 	require_once '../../config.php';
@@ -10,8 +10,9 @@
 
 <?
 	if ($ajaxState == 1)
-	{
-		$result = mysql_query("SELECT math_topic AS m_topic, ID AS m_ID FROM themes WHERE math_ID = ". $argument ." ");
+	{ ?>
+		<h1>ВЫБЕРИТЕ ТЕМУ:</h1>
+		<? $result = mysql_query("SELECT math_topic AS m_topic, ID AS m_ID FROM themes WHERE math_ID = ". $argument ." ");
 		while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
 			<a class="theme-blocks" onclick="setAjaxState('<?=$row["m_ID"]?>', '2')"><?=$row["m_topic"]?></a>
 		<? }
@@ -32,7 +33,7 @@
 			<div class="positionTasks animated fadeInDown"><?=$rows[0]?><br> <span style="font-size: 1.2rem"><?=$rows[1]?><span></div>
 			<div class="answerDiv">
 				<div class="tasks" >
-				   <img style="margin: 20px;" src="images/<?=$rows[2]?>/<?=$rows[3]?>/1.png" alt="���� '<?=$rows[1]?>'">
+				   <img style="margin: 20px;" src="images/<?=$rows[2]?>/<?=$rows[3]?>/1.png" alt="РўРµРјР° '<?=$rows[1]?>'">
 				</div>
 			</div>
 

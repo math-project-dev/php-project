@@ -65,6 +65,7 @@
 		<div id="sideBar" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<div id="side-output">
+			<h1>ВЫБЕРИТЕ РАЗДЕЛ:</h1>
 			<? $result = mysql_query("SELECT MAX(math_charpter) AS m_char, MAX(math_ID) AS m_ID FROM themes GROUP BY  math_ID");
 			while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
 				<a class="theme-blocks" onclick="setAjaxState('<?=$row["m_ID"]?>', '1')"><?=$row["m_char"]?></a>
@@ -72,7 +73,7 @@
 			</div>
 		</div>
 		
-		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 43%; position: absolute; font-size: 40px;">&#187;</div></i></span>
+		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 28%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
 		
 		<div id="output">
 			
