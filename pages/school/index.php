@@ -44,7 +44,7 @@
              document.getElementById("sideBar").style.width = "0";
 			 document.getElementById("NavButton").style.display = "";
         }
-		
+
     </script>
 
 <body>
@@ -73,10 +73,7 @@
 				<? } ?>
 			</div>
 			
-			<? for($o = 1; $o <= 30; $o++){ ?>
-				<a class="theme-blocks" onclick="setAjaxState('<?=$row["m_ID"]?>', '1')">SDJHKJL;'</a>
-			<? } ?>
-		</div>
+		</div> 
 		
 		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 28%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
 		
