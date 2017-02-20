@@ -33,7 +33,7 @@
 	
 	<script>
          function openNav() {
-             document.getElementById("sideBar").style.width = "23%";
+             document.getElementById("sideBar").style.width = "380px";
 			 document.getElementById("NavButton").style.display = "none";
          }
          
