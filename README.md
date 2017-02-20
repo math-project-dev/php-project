@@ -1,6 +1,6 @@
 # Электронное пособие по математике:
 
-[![Build Status](https://travis-ci.org/school-math-project/php-project.svg?branch=master)](https://travis-ci.org/school-math-project/php-project)
+[![Build Status](https://travis-ci.org/math-project-dev/php-project.svg?branch=master)](https://travis-ci.org/math-project-dev/php-project)
 
 
 
