@@ -41,17 +41,16 @@
 		<main style="background: none; text-align:center"> 
 		
 			<div class="edit-menu">
-			   <a href="list.php?section=1" style="float: left; position: relative; left: 120px;">
+			   <a href="list.php?section=1" style="float: left; position: relative; left: 20%;">
 					<img src="../../../img/schoolcourse.png" alt="школьный курс"> школьный курс
 			   </a>
 			   <a href="list.php?section=2">
 					<img src="../../../img/ege.png" alt="егэ"> егэ 2017
 			   </a>
-			   <a href="list.php?section=3" style="float: right; position: relative; right: 120px;">
+			   <a href="list.php?section=3" style="float: right; position: relative; right: 20%;">
 					<img src="../../../img/olimp.png" alt="олимпиады"> олимпиады
 			   </a>
 			</div>
-			
 		</main>
 	</body>
 </html>
