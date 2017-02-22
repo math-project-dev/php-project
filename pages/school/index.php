@@ -72,7 +72,7 @@
 					<a class="theme-blocks" onclick="setAjaxState('<?=$row["m_ID"]?>', '1')"><?=$row["m_char"]?></a>
 				<? } ?>
 			</div>
-			
+
 		</div> 
 		
 		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 28%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
