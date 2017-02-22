@@ -50,7 +50,7 @@
             <a href="/" alt="Вернуться назад">
               <img src="../../img/ege.png" alt="">
             </a>
-			<div class="back-button">НАЗАД</div>
+			<a class="back-button">НАЗАД</a>
         </div>
 		<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ
 				<br>ЭКЗАМЕН</div>

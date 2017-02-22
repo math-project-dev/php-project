@@ -646,6 +646,9 @@ main .menu a:hover img {
 }
 .back-button {
     position: relative;
-    bottom: 15px;
-    right: 35px;
+    bottom: 20px;
+    right: 71px;
+    font-size: 60%;
+    color: #fff;
+    text-decoration: none;
 }

@@ -11,14 +11,17 @@
 
 <body>
     <header>
+	
         <div class="logo">
-          <a href="http://174.129.143.211/" alt="Вернуться назад">
-            <img src="../../img/olimp.png" alt="">
-          </a>
-           <div>НАЗАД</div> 
+            <a href="/" alt="Вернуться назад">
+              <img src="../../img/olymp.png" alt="">
+            </a>
+			<a class="back-button">НАЗАД</a>
         </div>
-
+		<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">ОЛИМПИАДЫ
+				</div>
     </header>
+	
     <main>
     </main>
 </body>

@@ -55,7 +55,7 @@
             <a href="http://184.72.196.215/" alt="Вернуться назад">
               <img src="../../img/schoolcourse.png" alt="">
             </a>
-			<div class="back-button">НАЗАД</div>
+			<a class="back-button">НАЗАД</a>
         </div>
 		
 		<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">ШКОЛЬНЫЙ
