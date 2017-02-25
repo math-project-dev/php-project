@@ -52,7 +52,7 @@
     <header>
 	
         <div class="logo">
-            <a href="http://184.72.196.215/" alt="Вернуться назад">
+            <a href="/" alt="Вернуться назад">
               <img src="../../img/schoolcourse.png" alt="">
             </a>
 			<a class="back-button">НАЗАД</a>

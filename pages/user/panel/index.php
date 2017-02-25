@@ -10,7 +10,7 @@
 	
 	$res = mysql_query("SELECT * FROM users WHERE userId=" .$_SESSION['user']);
 	$userRow = mysql_fetch_array($res);
-	
+	 
 	if ($userRow['statusID'] < 2 ) {
 		header("Location: /");
 		exit;
