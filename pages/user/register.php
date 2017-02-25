@@ -63,7 +63,7 @@ if (isset($_POST['btn-signup'])) {
         if ($res) {
             $errTyp = "success";
             $errMSG = "Вы успешно зарегистрированы, теперь вы можете войти!";
-			header('Refresh: 3; URL=http://184.72.196.215/pages/user/login.php');
+			header('Refresh: 3; URL=/pages/user/login.php');
             unset($name);
             unset($email);
             unset($pass);

@@ -4,7 +4,7 @@ session_start();
 require_once '../../config.php';
 
 if (isset($_SESSION['user']) != "") {
-    header("Location: http://184.72.196.215/");
+    header("Location: /");
     exit;
 }
 
@@ -44,7 +44,7 @@ if (isset($_POST['btn-login'])) {
         
         if ($count == 1 && $row['userPass'] == $password) {
             $_SESSION['user'] = $row['userId'];
-            header("Location: http://184.72.196.215/");
+            header("Location: /");
         } else {
             $errMSG = "Неверные данные";
         }

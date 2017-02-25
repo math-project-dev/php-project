@@ -4,7 +4,7 @@
 	require_once '../../../config.php';
 
 	if (!isset($_SESSION['user']) ) {
-		header("Location: http://184.72.196.215/pages/user/login.php");
+		header("Location: /pages/user/login.php");
 		exit;
 	}
 	
@@ -12,7 +12,7 @@
 	$userRow = mysql_fetch_array($res);
 	
 	if ($userRow['statusID'] < 2 ) {
-		header("Location: http://174.129.143.211/");
+		header("Location: /");
 		exit;
 	}  
 	?>
