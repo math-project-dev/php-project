@@ -74,8 +74,8 @@
 			</div>
 		</div>
 		
-		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 28%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
-		
+		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
+		 
 		<div id="output">
 			 <div class="welcome-output">Вы попали на страницу с выбором уровня и позиции!<br> Для того, чтобы начать решать задания, нажмите на стрелочку слева и выберите нужную позицию!</div>
 		</div>

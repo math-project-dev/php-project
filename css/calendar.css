@@ -3,6 +3,7 @@ div.calendar
 {
   font-size: smaller;
   color: #000;
+  margin-top: 40px;
   border: 9px solid #1e6d74;
 }
 

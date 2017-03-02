@@ -5,12 +5,11 @@
     <meta charset="utf-8">
     <title>Электронно-обучающее пособие по математике</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js'></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../../js/app.js" charset="utf-8"></script>
 </head>
 
-	<? require_once('/../../config.php'); ?>
+	<? require_once('../../config.php'); ?>
 	
 	<script type="text/javascript">
          function setAjaxState(arg, ajaxState) {
@@ -23,7 +22,6 @@
 					
 					if(ajaxState == 2) {
 						$('#output').html(data);
-						closeNav();
 					} else {
 						$('#side-output').html(data);
 					}
@@ -32,6 +30,32 @@
          	});
          }
     </script>
+	
+		
+	<script>
+	$(document).ready(function() {
+		$("#search_results").slideUp();
+		$("#button_find").click(function(event) {
+			event.preventDefault();
+			search_ajax_way();
+		});
+		$("#search_query").keyup(function(event) {
+			event.preventDefault();
+			search_ajax_way();
+		});
+	});
+
+	function search_ajax_way() {
+		$("#search_results").show();
+		var search_this = $("#search_query").val();
+		$.post("search.php", {
+			searchit: search_this
+		}, function(data) {
+			$("#side-output").html(data);
+
+		})
+	}
+	</script>
 	
 	
 	<script>
@@ -46,6 +70,7 @@
         }
 
     </script>
+	
 
 <body>
 
@@ -64,18 +89,23 @@
 	
 		<div id="sideBar" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			
+			<form>
+				<input type="text" name="search_query" id="search_query" placeholder="Что ищем?" size="30"/>
+			</form>
 			<div id="side-output">
 				<h1>ВЫБЕРИТЕ РАЗДЕЛ:</h1>
-				<? $result = mysql_query("SELECT MAX(math_charpter) AS m_char, MAX(math_ID) AS m_ID FROM themes GROUP BY  math_ID");
-				while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
-					<a class="theme-blocks" onclick="setAjaxState('<?=$row["m_ID"]?>', '1')"><?=$row["m_char"]?></a>
+				<? $maxID = mysql_result(mysql_query("SELECT MAX(ID) FROM themes"), 0); 
+				for ($i = 1; $i <= $maxID; $i++) 
+				{ 
+					$name[$i] = mysql_result(mysql_query("SELECT `math_topic` FROM themes WHERE ID = ". $i ." LIMIT 1 "), 0); ?>
+					<a class="theme-blocks" onclick="setAjaxState('<?=$i?>', '2')"><?=$name[$i]?></a>
 				<? } ?>
+				
 			</div>
 
 		</div> 
 		
-		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 28%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
+		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
 		
 		<div id="output">
 			

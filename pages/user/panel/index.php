@@ -48,7 +48,7 @@
 					<img src="../../../img/ege.png" alt="егэ"> егэ 2017
 			   </a>
 			   <a href="list.php?section=3" style="float: right; position: relative; right: 20%;">
-					<img src="../../../img/olimp.png" alt="олимпиады"> олимпиады
+					<img src="../../../img/olymp.png" alt="олимпиады"> олимпиады
 			   </a>
 			</div>
 		</main>

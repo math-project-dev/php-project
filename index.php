@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="overflow: hidden;">
 <? 	
 	ob_start();
 	session_start();
@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="css/calendar.css">
 	
 	<!-- JQuery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	
 	<!-- Calendar -->
@@ -40,7 +40,7 @@
 <body>
 	<header>
 		  
-		   <div style="width: 100%; height: 100%">СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
+		   <div style="width: 100%; height: 100%; margin-top: 1.1%;">СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
 		   <br> ПОСОБИЕ ПО МАТЕМАТИКЕ</div>
 		   
 	</header>
@@ -73,10 +73,13 @@
 				<a class="edit-button" style="float: right; position: absolute; right: 131px; top: 120px; z-index: 1" href="/pages/user/login.php">ВОЙТИ В АККАУНТ</a>
 			<? } ?>
 			<img style="float: right; width: 23%; margin-right: 20px;" src="img/elements/login.png"><br>
-			<img style="float: right; padding-top: 420px; margin-left: 240px; right: 100px; position: absolute;" src="img/elements/backpack.png">
+			<img style="float: right; padding-top: 420px; margin-left: 240px; right: 100px; position: absolute; height: calc(100vh - 596px);" src="img/elements/backpack.png">
 			
-			<img style="float: left; margin-top: 511px; padding-left: 100px" src="img/elements/cat.png">
-			<img style="float: left; right: 1605px; position: absolute;" src="img/elements/clock.png"><br>
+			<img style="float: left; padding-top: 26.8%; padding-left: 100px;" src="img/elements/cat.png">
+			
+			<canvas id="canvas" width="200" height="200" style="float: left; right: 82.3%; position: absolute;"></canvas>
+
+			<script type="text/javascript" src="js/clocks.js"></script>
 			
 			<div id="calendar" style="padding-top: 200px; right: 1560px; position: absolute;"> </div>
 			

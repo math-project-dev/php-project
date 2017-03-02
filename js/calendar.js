@@ -23,25 +23,25 @@ var Calendar = Class.create()
 // Constants
 //------------------------------------------------------------------------------
 
-Calendar.VERSION = '1.2'
+Calendar.VERSION = '1.2.1'
 
 Calendar.DAY_NAMES = new Array(
-  'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
-  'Sunday'
+  'Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Чертверг', 'Пятница', 'Суббота',
+  'Воскресенье'
 )
 
 Calendar.SHORT_DAY_NAMES = new Array(
-  'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S'
+  'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'
 )
 
 Calendar.MONTH_NAMES = new Array(
-  'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
-  'September', 'October', 'November', 'December'
+  'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август',
+  'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
 )
 
 Calendar.SHORT_MONTH_NAMES = new Array(
-  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov',
-  'Dec' 
+  'Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Нояб',
+  'Дек' 
 )
 
 Calendar.NAV_PREVIOUS_YEAR  = -2
@@ -364,7 +364,7 @@ Calendar.prototype = {
               cell.addClassName('today')
 
             // Weekend
-            if ([0, 6].indexOf(dayOfWeek) != -1)
+            if ([5, 6].indexOf(dayOfWeek) != -1)
               cell.addClassName('weekend')
 
             // Set the date to tommorrow
@@ -416,7 +416,7 @@ Calendar.prototype = {
     row = new Element('tr')
     this._drawButtonCell(row, '&#x00ab;', 1, Calendar.NAV_PREVIOUS_YEAR)
     this._drawButtonCell(row, '&#x2039;', 1, Calendar.NAV_PREVIOUS_MONTH)
-    this._drawButtonCell(row, 'Today',    3, Calendar.NAV_TODAY)
+    this._drawButtonCell(row, 'Сегодня',    3, Calendar.NAV_TODAY)
     this._drawButtonCell(row, '&#x203a;', 1, Calendar.NAV_NEXT_MONTH)
     this._drawButtonCell(row, '&#x00bb;', 1, Calendar.NAV_NEXT_YEAR)
     thead.appendChild(row)
@@ -425,7 +425,7 @@ Calendar.prototype = {
     row = new Element('tr')
     for (var i = 0; i < 7; ++i) {
       cell = new Element('th').update(Calendar.SHORT_DAY_NAMES[i])
-      if (i == 0 || i == 6)
+      if (i == 5 || i == 6)
         cell.addClassName('weekend')
       row.appendChild(cell)
     }

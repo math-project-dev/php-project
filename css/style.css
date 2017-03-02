@@ -13,22 +13,23 @@ header {
     font-size: 1.7rem;
     font-weight: 700;
     padding: 20px;
+	height: 83px;
 	-webkit-box-shadow: 0px 6px 43px 13px rgba(0,0,0,0.42);
 	-moz-box-shadow: 0px 6px 43px 13px rgba(0,0,0,0.42);
 	box-shadow: 0px 6px 43px 13px rgba(0,0,0,0.42);
 }
 main {
     position: absolute;
-    top: 131px;
+    top: 160px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    height: calc(100vh - 131px);
+    height: calc(100vh - 160px);
     background: url(../img/pcpic.png) no-repeat center bottom/contain;
 	background-position: center center;
 }
 main .menu {
-    margin-top: 12vh;
+    margin-top: 14vh;
 }
 main .menu a {
     display: inline-block;
@@ -90,14 +91,17 @@ main .menu a:hover img {
         position: absolute;
         left: 0;
         right: 0;
-        margin: 0 auto;
-        bottom: 480px;
 		margin-right: 15px;
     }
 }
 .app {
     background: #b9e9e8;
 }
+header .name-page,
+header .prev-page {
+	margin-top: 0.9%;
+}
+
 .app header {
     z-index: 999;
     height: 83px;
@@ -508,6 +512,10 @@ main .menu a:hover img {
     padding-top: 60px;
     box-shadow: 10px 0 10px -2px rgba(0, 0, 0, 0.5);
     box-shadow: 10px 0 10px -2px rgba(0, 0, 0, 0.5);
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 94%;
+	margin: auto;
 }
 .sidenav a {
     text-decoration: none;
@@ -554,16 +562,16 @@ main .menu a:hover img {
 .NavButton {
     font-size: 30px;
     cursor: pointer;
-    width: 10px;
+    width: 30px;
     float: left;
-    top: 50%;
-    left: 3px;
+    top: 45%;
+    left: 0;
     position: fixed;
-    height: 5%;
+    height: 125px;
     z-index: 10000;
     background-color: #1e6d74;
-    padding: 20px;
-    border-radius: 30px;
+    padding: 11px;
+    border-radius: 0px 20px 20px 0px;
 }
 .NavButton:not(:hover) {
     opacity: 0.6;
@@ -651,4 +659,12 @@ main .menu a:hover img {
     font-size: 60%;
     color: #fff;
     text-decoration: none;
+}
+.container {
+    width: 100%;
+    max-width: 215px;
+	max-height: 250px;
+    margin-right: auto;
+    margin-left: auto;
+} margin-left: -2px;
 }
