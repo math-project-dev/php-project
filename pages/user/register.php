@@ -97,7 +97,7 @@ if (isset($_POST['btn-signup'])) {
 			НОВОГО ПОЛЬЗОВАТЕЛЯ</div>
 			<div style="width: 20%; clear:left;"> </div>
 		</header>
-      <div class="container">
+      <div class="container-register">
          <div id="login-form">
             <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
                   <div class="form-group">

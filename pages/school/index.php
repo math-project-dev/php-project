@@ -93,14 +93,18 @@
 				<input type="text" name="search_query" id="search_query" placeholder="Что ищем?" size="30"/>
 			</form>
 			<div id="side-output">
-				<h1>ВЫБЕРИТЕ РАЗДЕЛ:</h1>
-				<? $maxID = mysql_result(mysql_query("SELECT MAX(ID) FROM themes"), 0); 
-				for ($i = 1; $i <= $maxID; $i++) 
-				{ 
-					$name[$i] = mysql_result(mysql_query("SELECT `math_topic` FROM themes WHERE ID = ". $i ." LIMIT 1 "), 0); ?>
-					<a class="theme-blocks" onclick="setAjaxState('<?=$i?>', '2')"><?=$name[$i]?></a>
-				<? } ?>
-				
+			<? $result = mysql_query("SELECT MAX(math_charpter) FROM themes GROUP BY math_charpter");
+				while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
+					<h1><?=$row[0]?></h1>
+					<? $maxID = mysql_result(mysql_query("SELECT MAX(themeID) FROM themes"), 0); 
+					for($i = 1; $i <= $maxID; $i++)
+					{
+						$theme = mysql_query("SELECT math_topic, ID FROM themes WHERE themeID = ". $i ." AND math_charpter = '". $row[0] ."'"); 
+						while ($rows = mysql_fetch_array($theme, MYSQL_BOTH)) { ?>
+							<a class="theme-blocks" onclick="setAjaxState('<?=$rows[1]?>', '2')"><?=$rows[0]?></a>
+					 <? }
+					}
+				} ?>
 			</div>
 
 		</div> 

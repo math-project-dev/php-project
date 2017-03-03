@@ -97,10 +97,6 @@ main .menu a:hover img {
 .app {
     background: #b9e9e8;
 }
-header .name-page,
-header .prev-page {
-	margin-top: 0.9%;
-}
 
 .app header {
     z-index: 999;
@@ -134,8 +130,7 @@ header .prev-page {
     font-size: .6em;
     text-transform: uppercase;
     font-weight: 900;
-    margin-right: 75px;
-    margin-top: 6px;
+    margin-top: 10px;
 }
 .app main {
     background: none;
@@ -599,7 +594,7 @@ header .prev-page {
     color: #fff;
 }
 #login-form {
-    margin-top: 25%;
+    margin-top: 15%;
     position: relative;
 }
 #login-form a {
@@ -666,5 +661,13 @@ header .prev-page {
 	max-height: 250px;
     margin-right: auto;
     margin-left: auto;
-} margin-left: -2px;
+	} margin-left: -2px;
+}
+
+.search-result {
+	margin-top: 20px;
+}
+
+#search_query {
+	border:1px solid #154c51;
 }
