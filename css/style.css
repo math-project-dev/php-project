@@ -29,13 +29,13 @@ main {
 	background-position: center center;
 }
 main .menu {
-    margin-top: 14vh;
+    margin-top: 5%;
 }
 main .menu a {
     display: inline-block;
     margin: 10px;
     position: relative;
-    font-size: 1.0rem;
+    font-size: 0.8rem;
     right: 10px;
     margin-bottom: 35px;
     text-transform: uppercase;
@@ -45,7 +45,7 @@ main .menu a {
 }
 main .menu a img {
     display: block;
-    width: 150px;
+    width: 130px;
     margin-bottom: 15px;
     transition: all .3s;
 }
@@ -382,13 +382,12 @@ main .menu a:hover img {
     padding: 10px;
     text-decoration: none;
     background-color: #1e6d74;
-    margin-top 10px;
+    margin-top: 10px;
     font-size: 20px;
     font-weight: 700;
     color: #fff;
 }
 .edit-panel {
-    margin-top: 60px;
     padding-top: 10px;
 }
 .achive-text {
@@ -628,6 +627,7 @@ main .menu a:hover img {
     padding-top: 10px;
     padding-bottom: 10px;
     cursor: pointer;
+	text-transform: uppercase;
 }
 .prev-page {
     font-size: 1.2rem;
@@ -668,6 +668,17 @@ main .menu a:hover img {
 	margin-top: 20px;
 }
 
-#search_query {
-	border:1px solid #154c51;
+.olymp-header {
+	padding-bottom: 20px;
+}
+.olymp-blocks {
+    display: block;
+    text-align: center;
+    background: #154c51;
+    font-size: 1rem;
+    font-weight: 800;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+	text-transform: uppercase;
 }
