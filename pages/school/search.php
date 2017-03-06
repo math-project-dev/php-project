@@ -5,7 +5,7 @@ $term       = strip_tags(substr($_POST['searchit'], 0, 100));
 $term       = mysql_escape_string($term); 
 if ($term == "") 
 {
-	$result = mysql_query("SELECT MAX(math_charpter) FROM themes GROUP BY math_charpter");
+	$result = mysql_query("SELECT MAX(math_charpter) FROM themes GROUP BY math_ID");
 	while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
 		<h1><?=$row[0]?></h1>
 		<? $maxID = mysql_result(mysql_query("SELECT MAX(themeID) FROM themes"), 0); 

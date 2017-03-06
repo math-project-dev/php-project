@@ -31,12 +31,17 @@
 				$rows[] = $row["math_topic"];
 				$rows[] = $row["math_ID"];
 				$rows[] = $row["math_theme_ID"];
+				$rows[] = $row["themeID"];
+				$rows[] = $row["math_amount"];
 			}  ?>
 			
 			<div class="positionTasks animated fadeInDown"><?=$rows[0]?><br> <span style="font-size: 1.2rem"><?=$rows[1]?><span></div>
 			<div class="answerDiv">
 				<div class="tasks" >
-				   <img style="margin: 20px;" src="images/<?=$rows[2]?>/<?=$rows[3]?>/1.png">
+				<? $maxID = mysql_result(mysql_query("SELECT MAX(math_amount) FROM themes WHERE ID = ". $argument .""), 0); 
+				for ($i = 1; $i <= $maxID; $i++) 
+				{ ?>
+				<? } ?>
 				</div>
 			</div>
 
@@ -44,7 +49,7 @@
 	<? } else if($ajaxState == -1)
 	{ ?>
 		<h1>ВЫБЕРИТЕ РАЗДЕЛ:</h1>
-		<? $result = mysql_query("SELECT MAX(math_charpter) AS m_char, MAX(math_ID) AS m_ID FROM themes GROUP BY  math_ID");
+		<? $result = mysql_query("SELECT MAX(math_charpter) AS m_char, MAX(math_ID) AS m_ID FROM themes GROUP BY math_ID");
 		while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
 			<a class="theme-blocks" onclick="setAjaxState('<?=$row["m_ID"]?>', '1')"><?=$row["m_char"]?></a>
 		<? } 

@@ -60,7 +60,7 @@
 		   <a href="pages/ege/">
 				<img src="img/ege.png" alt="егэ"> егэ 2017
 		   </a>
-		   <a href="#">
+		   <a href="pages/olymp/">
 				<img src="img/olymp.png" alt="олимпиады"> олимпиады
 		   </a>
 		</div>

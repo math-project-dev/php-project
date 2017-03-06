@@ -93,7 +93,7 @@
 				<input type="text" name="search_query" id="search_query" placeholder="Что ищем?" size="30"/>
 			</form>
 			<div id="side-output">
-			<? $result = mysql_query("SELECT MAX(math_charpter) FROM themes GROUP BY math_charpter");
+			<? $result = mysql_query("SELECT MAX(math_charpter) FROM themes GROUP BY math_ID");
 				while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
 					<h1><?=$row[0]?></h1>
 					<? $maxID = mysql_result(mysql_query("SELECT MAX(themeID) FROM themes"), 0); 
