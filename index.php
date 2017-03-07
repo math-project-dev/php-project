@@ -47,13 +47,10 @@
 		
 	<main>
 		<? if ($userRow['statusID'] >= 2) { ?>
-		<? } ?>
-		<div class="menu">
-			<? if ($userRow['statusID'] >= 2) { ?>
+		<div class="menu" style="top: -87px">
 			<div class="edit-panel">
 				<a class="edit-button" style="color: white" href="/pages/user/panel/">РЕЖИМ РЕДАКТИРОВАНИЯ</a>
 			</div>
-			<? } ?>
 		   <a href="pages/school/">
 				<img src="img/schoolcourse.png" alt="школьный курс"> школьный курс
 		   </a>
@@ -64,7 +61,19 @@
 				<img src="img/olymp.png" alt="олимпиады"> олимпиады
 		   </a>
 		</div>
-		
+		<? } else {?>
+		<div class="menu">
+		   <a href="pages/school/">
+				<img src="img/schoolcourse.png" alt="школьный курс"> школьный курс
+		   </a>
+		   <a href="pages/ege/">
+				<img src="img/ege.png" alt="егэ"> егэ 2017
+		   </a>
+		   <a href="pages/olymp/">
+				<img src="img/olymp.png" alt="олимпиады"> олимпиады
+		   </a>
+		</div>
+		<? } ?>
 		<div class="main-sides">
 			<? if (isset($_SESSION['user']) != "") { ?>
 				<a class="edit-button" style="float: right; position: absolute; right: 127px; top: 120px; z-index: 1" href="/pages/user/">ЛИЧНЫЙ КАБИНЕТ</a>

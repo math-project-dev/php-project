@@ -14,7 +14,37 @@
     <script src="../../../../js/app.js" charset="utf-8"></script>
 </head>
 	<? require_once('/../../../config.php'); ?>
-<body>
+	
+	<script>
+	
+        function openNav() {
+             document.getElementById("sideBar").style.width = "380px";
+			 document.getElementById("NavButton").style.display = "none";
+			 document.getElementById("closebtn").style.display = "";
+        }
+        function closeNav() {
+             document.getElementById("sideBar").style.width = "0";
+			 document.getElementById("NavButton").style.display = "";
+			 document.getElementById("closebtn").style.display = "none";
+        }
+
+    </script>
+	
+	<script type="text/javascript">
+         function getType(id, task) {
+         	$('#output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
+         	jQuery.ajax({
+         		url: "../settings.php",
+         		data:'id=' + id + '&task=' + task,
+         		type: "GET",
+         		success: function(data) {	
+					$('#output').html(data); 
+         		}
+         	});
+			closeNav();
+         }
+    </script>
+<body style="overflow-x: hidden">
     <header>
 	
         <div class="logo">
@@ -29,6 +59,31 @@
 	
     <? $selectType = $_GET['type']; ?>
 	<main>
+	    <div id="sideBar" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" id="closebtn" style="display:none;" onclick="closeNav()">&times;</a>
+			<h1>БАЗОВЫЙ УРОВЕНЬ</h1>
+			<? for( $i = 1; $i <= 20; $i++)
+			{ ?>
+				<a class="level-blocks" onclick="getType('1', '<?=$i?>')">ПОЗИЦИЯ <?=$i?></a>
+			<?} ?>
+			<h1>ПРОФИЛЬНЫЙ УРОВЕНЬ</h1>
+			<? for( $i = 1; $i <= 19; $i++)
+			{ ?>
+				<a class="level-blocks" onclick="getType('2', '<?=$i?>')">ПОЗИЦИЯ <?=$i?></a>
+			<? } ?>
+			<div class="make-own">
+				<a class="h1-class" href="">СОЗДАТЬ СВОЙ ВАРИАНТ</a>
+			</div>
+			<div class="make-own">
+				<a class="h1-class" href="own/">СПРАВОЧНЫЕ МАТЕРИАЛЫ</a>
+			</div>
+			<div class="make-own">
+				<a class="h1-class" href="own/">НОРМАТИВНО-ПРАВОВЫЕ ДОКУМЕНТЫ</a>
+			</div>
+		</div>
+		
+		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
+		 
 	<? if( $selectType != 0 )
 	{ ?>
         <div class="allTasks">
@@ -171,9 +226,27 @@
         </div>
 		<? } else { ?>
 		<div class="choose-your-variant">
-			<div style="margin: 20px;"><i>ВЫБЕРИТЕ НУЖНЫЙ УРОВЕНЬ ЭКЗАМЕНА:</i> </div>
+			<div style="margin-bottom: 20px;"><i>СОЗДАЙТЕ КЛАССИЧЕСКИЙ ВАРИАНТ</i> </div>
 			<a href="?type=1">БАЗОВЫЙ УРОВЕНЬ</a>
 			<a href="?type=2">ПРОФИЛЬНЫЙ УРОВЕНЬ</a>
+			<div style=" margin-bottom: 20px;"><br><br><i><strong>ИЛИ</strong><br><br>УКАЖИТЕ КОЛИЧЕСТВО НЕОБХОДИМЫХ ЗАДАНИЙ<br> ДЛЯ СОСТАВЛЕНИЯ ИНДИВИДУАЛЬНОГО ВАРИАНТА!</i> </div>
+			<div class="choose-blocks">
+				<div id="block" style="margin-top: 20px; float: right; position: absolute; right: 43%;">
+					<? for($i = 1; $i <= 19; $i++)
+					{ ?>
+					  <div>ПОЗИЦИЯ #<?=$i?> </div><input dir="rtl" type="text" id="prob<?=$i?>-2" value="" style="width: 20px;">
+					<? } ?>
+				</div>
+				<div id="block" style="margin-top: 20px; float: left; position: absolute; left: 43%">
+					<? for($i = 1; $i <= 20; $i++)
+					{ ?>
+					   <div>ПОЗИЦИЯ #<?=$i?> </div><input dir="rtl" type="text" id="prob<?=$i?>-1" value="" style="width: 20px;">
+					<? } ?>
+				</div>
+				<div style="width: 100%; margin-bottom: 40px; position: absolute; bottom: -310px;">
+					<a onclick="">СОСТАВИТЬ ВАРИАНТ</a>
+				</div>
+			</div>
 		<? } ?>
 		</div>
     </main>

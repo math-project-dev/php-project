@@ -29,7 +29,7 @@ main {
 	background-position: center center;
 }
 main .menu {
-    margin-top: 5%;
+    margin-top: 8%;
 }
 main .menu a {
     display: inline-block;
@@ -45,7 +45,7 @@ main .menu a {
 }
 main .menu a img {
     display: block;
-    width: 130px;
+    width: 140px;
     margin-bottom: 15px;
     transition: all .3s;
 }
@@ -196,9 +196,9 @@ main .menu a:hover img {
     background-color: #004D54;
 }
 .allTasks {
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     margin: 0 auto;
-    width: 45%;
+    width: 60%;
 	z-index: 4;
 }
 .tasks {
@@ -249,7 +249,7 @@ main .menu a:hover img {
     padding-bottom: 10px;
 }
 .answerButtons {
-    padding-top: 10px;
+	margin: 15px;
 }
 .checkAnswers {
     padding-top: 5px;
@@ -525,16 +525,16 @@ main .menu a:hover img {
     margin: 15px;
 }
 .h1-class {
-    font-size: 25px;
+    font-size: 18px;
 }
 .sidenav a:hover,
 .offcanvas a:focus {
     color: #f1f1f1;
 }
 .sidenav .closebtn {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 25px;
+    left: 270px;
     font-size: 36px;
     margin-left: 50px;
 }
@@ -577,7 +577,8 @@ main .menu a:hover img {
 }
 
 .choose-your-variant {
-    margin-top: 100px;
+    margin-top: 10px;
+	margin-bottom: 10px
 }
 .choose-your-variant i {
     font-size: 1.1rem;
@@ -612,7 +613,7 @@ main .menu a:hover img {
     font-size: 1.5rem;
     font-weight: 800;
     color: #1e6d74;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 .about-theme {
     margin: 20px;
@@ -627,7 +628,6 @@ main .menu a:hover img {
     padding-top: 10px;
     padding-bottom: 10px;
     cursor: pointer;
-	text-transform: uppercase;
 }
 .prev-page {
     font-size: 1.2rem;
@@ -663,11 +663,9 @@ main .menu a:hover img {
     margin-left: auto;
 	} margin-left: -2px;
 }
-
 .search-result {
 	margin-top: 20px;
 }
-
 .olymp-header {
 	padding-bottom: 20px;
 }
@@ -681,4 +679,21 @@ main .menu a:hover img {
     padding-bottom: 10px;
     cursor: pointer;
 	text-transform: uppercase;
+}
+#search_query {
+    height: 25px;
+    border-radius: 5px;
+    border-color: #154c51;
+	position: fixed;
+}
+#block div {
+	color: #154c51;
+	font-weight: 600
+}
+.choose-your-variant i {
+	font-weight: 800;
+	font-size: 1.5rem
+}
+.choose-blocks {
+	margin: 5px;
 }

@@ -32,15 +32,18 @@
     </script>
 	
 	<script>
-         function openNav() {
+	
+        function openNav() {
              document.getElementById("sideBar").style.width = "380px";
 			 document.getElementById("NavButton").style.display = "none";
-         }
-         
-         function closeNav() {
+			 document.getElementById("closebtn").style.display = "";
+        }
+        function closeNav() {
              document.getElementById("sideBar").style.width = "0";
 			 document.getElementById("NavButton").style.display = "";
-         }
+			 document.getElementById("closebtn").style.display = "none";
+        }
+
     </script>
 	
 <body>
@@ -58,7 +61,7 @@
     
 	<main>
 	    <div id="sideBar" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="javascript:void(0)" class="closebtn" id="closebtn" style="display:none;" onclick="closeNav()">&times;</a>
 			<h1>БАЗОВЫЙ УРОВЕНЬ</h1>
 			<? for( $i = 1; $i <= 20; $i++)
 			{ ?>
@@ -72,12 +75,20 @@
 			<div class="make-own">
 				<a class="h1-class" href="own/">СОЗДАТЬ СВОЙ ВАРИАНТ</a>
 			</div>
+			<div class="make-own">
+				<a class="h1-class" href="own/">СПРАВОЧНЫЕ МАТЕРИАЛЫ</a>
+			</div>
+			<div class="make-own">
+				<a class="h1-class" href="own/">НОРМАТИВНО-ПРАВОВЫЕ ДОКУМЕНТЫ</a>
+			</div>
 		</div>
 		
 		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
 		 
 		<div id="output">
-			 <div class="welcome-output">Вы попали на страницу с выбором уровня и позиции!<br> Для того, чтобы начать решать задания, нажмите на стрелочку слева и выберите нужную позицию!</div>
+			 <div class="welcome-output">
+			 Вы попали на страницу с выбором уровня и позиции!<br> Для того, чтобы начать решать задания,<br> нажмите на стрелочку слева и выберите нужную позицию!
+			 </div>
 		</div>
 		
     </main>

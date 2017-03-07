@@ -24,14 +24,19 @@
 	
 	<script type="text/javascript">
          function setAjaxState(arg, ajaxState) {
-         	$('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
+         	if(ajaxState == 4 || ajaxState == 5 || ajaxState == 6) $('#output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
+			else $('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
          	jQuery.ajax( {
          		url: "ajaxState.php",
          		data:'arg=' + arg + '&ajaxState=' + ajaxState,
          		type: "POST",
          		success: function(data) {
-					$('#side-output').html(data);
-
+					
+					if(ajaxState == 4 || ajaxState == 5 || ajaxState == 6) {
+						$('#output').html(data);
+					} else {
+						$('#side-output').html(data);
+					}
          		}
          	});
          }
@@ -42,10 +47,12 @@
         function openNav() {
              document.getElementById("sideBar").style.width = "380px";
 			 document.getElementById("NavButton").style.display = "none";
+			 document.getElementById("closebtn").style.display = "";
         }
         function closeNav() {
              document.getElementById("sideBar").style.width = "0";
 			 document.getElementById("NavButton").style.display = "";
+			 document.getElementById("closebtn").style.display = "none";
         }
 
     </script>
@@ -54,8 +61,11 @@
     <main>
 	
 		<div id="sideBar" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="fixed-side">
 			
+				<a href="javascript:void(0)" class="closebtn" id="closebtn" style="	display: none;" onclick="closeNav()">&times;</a>
+				
+			</div>
 			<div id="side-output">
 				<h1 class="olymp-header">ВЫБЕРИТЕ ОЛИМПИАДУ:</h1>
 				<a class="olymp-blocks" onclick="setAjaxState('-1', '1')">Всероссийская олимпиада школьников</a> 

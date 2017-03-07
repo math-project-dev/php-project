@@ -41,6 +41,7 @@
 				<? $maxID = mysql_result(mysql_query("SELECT MAX(math_amount) FROM themes WHERE ID = ". $argument .""), 0); 
 				for ($i = 1; $i <= $maxID; $i++) 
 				{ ?>
+				   <img style="margin: 20px; width: 85%" src="images/0<?=$rows[2]?>_0<?=$rows[4]?>_0<?=$i?>.png">	   
 				<? } ?>
 				</div>
 			</div>
