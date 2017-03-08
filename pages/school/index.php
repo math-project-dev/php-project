@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <title>Электронно-обучающее пособие по математике</title>
     <link rel="stylesheet" href="../../css/style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
     <script src="../../js/app.js" charset="utf-8"></script>
 </head>
 
@@ -65,17 +66,18 @@
 			 document.getElementById("NavButton").style.display = "none";
 			 document.getElementById("closebtn").style.display = "";
 			 document.getElementById("search_query").style.display = ""; 
+			 document.getElementById("backtotop").style.display = "inline"; 
         }
         function closeNav() {
              document.getElementById("sideBar").style.width = "0";
 			 document.getElementById("NavButton").style.display = "";
 			 document.getElementById("closebtn").style.display = "none";
 			 document.getElementById("search_query").style.display = "none";
+			 document.getElementById("backtotop").style.display = "none"; 
         }
 
     </script>
 	
-
 <body>
 
     <header>
@@ -92,14 +94,12 @@
     <main>
 	
 		<div id="sideBar" class="sidenav">
-			<div class="fixed-side">
-			
-				<a href="javascript:void(0)" class="closebtn" id="closebtn" style="	display: none;" onclick="closeNav()">&times;</a>
-				<form>
-					<input style="display:none; left: 32px; position: fixed; top: 40px; " type="text" name="search_query" id="search_query" placeholder="Что ищем?" size="40"/>
-				</form>
+		
+			<a href="javascript:void(0)" class="closebtn" id="closebtn" style="	display: none;" onclick="closeNav()">&times;</a>
+			<form>
+				<input style="display:none;" type="text" name="search_query" id="search_query" placeholder="Что ищем?" size="40"/>
+			</form>
 				
-			</div>
 			<div id="side-output">
 			<? $result = mysql_query("SELECT MAX(math_charpter) FROM themes GROUP BY math_ID");
 				while ($row = mysql_fetch_array($result, MYSQL_BOTH)) { ?>
@@ -117,6 +117,9 @@
 
 		</div> 
 		
+		<a href="" id="backtotop" class="back-to-top" style="display: none;">
+			<i class="fa fa-arrow-circle-up"></i>
+		</a>	
 		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
 		
 		<div id="output">

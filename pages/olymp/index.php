@@ -78,7 +78,7 @@
 		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
 		
 		<div id="output">
-			
+			<div class="welcome-output">Вы попали на страницу с олимпиадами<br>Для того, чтобы начать решать олимпиадные задания<br> и выберите нужную олимпиаду!</div>
 		</div>
     </main>
 </body>

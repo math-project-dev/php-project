@@ -532,7 +532,7 @@ main .menu a:hover img {
     color: #f1f1f1;
 }
 .sidenav .closebtn {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 270px;
     font-size: 36px;
@@ -684,16 +684,27 @@ main .menu a:hover img {
     height: 25px;
     border-radius: 5px;
     border-color: #154c51;
-	position: fixed;
 }
 #block div {
 	color: #154c51;
 	font-weight: 600
 }
-.choose-your-variant i {
+.choose-block-variant i {
 	font-weight: 800;
 	font-size: 1.5rem
 }
 .choose-blocks {
 	margin: 5px;
+}
+.back-to-top { 
+	background: none;
+	margin: 0; 
+	position: fixed; 
+	bottom: 1%;
+	font-size: 2rem;
+	left: 21%;
+	z-index: 100; 
+	display: none;
+	text-decoration: none;
+	color: #1e6d74;
 }

@@ -231,19 +231,21 @@
 			<a href="?type=2">ПРОФИЛЬНЫЙ УРОВЕНЬ</a>
 			<div style=" margin-bottom: 20px;"><br><br><i><strong>ИЛИ</strong><br><br>УКАЖИТЕ КОЛИЧЕСТВО НЕОБХОДИМЫХ ЗАДАНИЙ<br> ДЛЯ СОСТАВЛЕНИЯ ИНДИВИДУАЛЬНОГО ВАРИАНТА!</i> </div>
 			<div class="choose-blocks">
-				<div id="block" style="margin-top: 20px; float: right; position: absolute; right: 43%;">
+				<div id="block" style="margin-top: 20px; float: right; position: absolute; right: 33%;">
+					<i style="font-size: 1.6rem">ПРОФИЛЬНЫЙ УРОВЕНЬ </i><Br><Br>
 					<? for($i = 1; $i <= 19; $i++)
 					{ ?>
-					  <div>ПОЗИЦИЯ #<?=$i?> </div><input dir="rtl" type="text" id="prob<?=$i?>-2" value="" style="width: 20px;">
+					  <i>ПОЗИЦИЯ #<?=$i?>: </i><input dir="rtl" type="text" id="prob<?=$i?>-2" value="" style="width: 20px;"><br>
 					<? } ?>
 				</div>
-				<div id="block" style="margin-top: 20px; float: left; position: absolute; left: 43%">
+				<div id="block" style="margin-top: 20px; float: left; position: absolute; left: 33%">
+					<i style="font-size: 1.6rem">БАЗОВЫЙ УРОВЕНЬ </i><Br><Br>
 					<? for($i = 1; $i <= 20; $i++)
 					{ ?>
-					   <div>ПОЗИЦИЯ #<?=$i?> </div><input dir="rtl" type="text" id="prob<?=$i?>-1" value="" style="width: 20px;">
+					   <i>ПОЗИЦИЯ #<?=$i?>: </i><input dir="rtl" type="text" id="prob<?=$i?>-1" value="" style="width: 20px;"><br>
 					<? } ?>
 				</div>
-				<div style="width: 100%; margin-bottom: 40px; position: absolute; bottom: -310px;">
+				<div style="width: 100%; margin-bottom: 40px; position: absolute; bottom: -10px;">
 					<a onclick="">СОСТАВИТЬ ВАРИАНТ</a>
 				</div>
 			</div>
