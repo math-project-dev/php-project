@@ -69,13 +69,13 @@
 						?>
 						<div class="tasks">
 							<div class="title">ЗАДАНИЕ <?=$i?></div></br>
-							<img class="task" src="images/0<?=$i?>_0<?=$argument?>_.png" />
+							<img class="task" src="images/01_0<?=$argument?>_03_0<?=$argument?>_0<?=$i?>_01.PNG" />
 							<div class="answerButtons" >
 								<button class="answer" id="b1-<?=$i?>" style="" onclick="document.getElementById('answer-<?=$i?>').style.display=''; document.getElementById('b1-<?=$i?>').style.display='none'; document.getElementById('b2-<?=$i?>').style.display='';document.getElementById('answerAsMySQL-<?=$i?>').style.display=''">Показать решение и ответ</button>
 								<button class="answer" id="b2-<?=$i?>" style="display: none;" onclick="document.getElementById('answer-<?=$i?>').style.display='none';document.getElementById('b1-<?=$i?>').style.display='';document.getElementById('b2-<?=$i?>').style.display='none';document.getElementById('answerAsMySQL-<?=$i?>').style.display='none'">Скрыть решение и ответ</button>
 							</div>
 							<div class="answerImage" >
-								<img id="answer-<?=$i?>" style="display: none; padding: 5px" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
+								<img id="answer-<?=$i?>" style="display: none; padding: 5px" src="images/answers/0<?=$i?>_0<?=$argument?>_.png" />
 							</div>
 						</div>
 					<? } ?>
@@ -100,7 +100,7 @@
 								<button class="answer" id="b2-<?=$i?>" style="display: none;" onclick="document.getElementById('answer-<?=$i?>').style.display='none';document.getElementById('b1-<?=$i?>').style.display='';document.getElementById('b2-<?=$i?>').style.display='none';document.getElementById('answerAsMySQL-<?=$i?>').style.display='none'">Скрыть решение и ответ</button>
 							</div>
 							<div class="answerImage" >
-								<img id="answer-<?=$i?>" style="display: none; padding: 5px" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
+								<img id="answer-<?=$i?>" style="display: none; padding: 5px" src="images/answers/02_0<?=$argument?>_07_0<?=$i?>.PNG" />
 							</div>
 						</div>
 					<? } ?>
@@ -123,13 +123,13 @@
 						?>
 						<div class="tasks">
 							<div class="title">ЗАДАНИЕ <?=$i?></div></br>
-							<img class="task" src="images/0<?=$i?>_0<?=$argument?>_.png" />
+							<img class="task" src="images/01_0<?=$argument?>_0<?=$i?>_011_01_01.PNG" />
 							<div class="answerButtons" >
 								<button class="answer" id="b1-<?=$i?>" style="" onclick="document.getElementById('answer-<?=$i?>').style.display=''; document.getElementById('b1-<?=$i?>').style.display='none'; document.getElementById('b2-<?=$i?>').style.display='';document.getElementById('answerAsMySQL-<?=$i?>').style.display=''">Показать решение и ответ</button>
 								<button class="answer" id="b2-<?=$i?>" style="display: none;" onclick="document.getElementById('answer-<?=$i?>').style.display='none';document.getElementById('b1-<?=$i?>').style.display='';document.getElementById('b2-<?=$i?>').style.display='none';document.getElementById('answerAsMySQL-<?=$i?>').style.display='none'">Скрыть решение и ответ</button>
 							</div>
 							<div class="answerImage" >
-								<img id="answer-<?=$i?>" style="display: none; padding: 5px" src="tasks/type-<?=$selectType?>/answer/0<?=$selectTask?>/0<?=$selectTask?>_0<?=$i?>.png" />
+								<img id="answer-<?=$i?>" style="display: none; padding: 5px" src="images/answers/0<?=$i?>_0<?=$argument?>_0<?=$argument?>_01_01.png" />
 							</div>
 						</div>
 					<? } ?>

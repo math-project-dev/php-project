@@ -1,21 +1,29 @@
 ﻿<!DOCTYPE html>
-<html class="app">
+<html class="app" ng-app="app">
 
 <head>
     <meta charset="utf-8">
-    <title>Справочно-обучающее электронное пособие по математике</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#1e6d74">
+    <title>Электронно-обучающее пособие по математике</title>
     <link rel="stylesheet" href="../../css/style.css">
-	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
-	
     <script src="../../js/app.js" charset="utf-8"></script>
 </head>
 
-	<? require_once('/../../config.php'); ?>
+<body>
+
+    <header>
 	
+        <div class="logo">
+            <a href="/" alt="Вернуться назад">
+              <img src="../../img/ege.png" alt="">
+            </a>
+			<a class="back-button">НАЗАД</a>
+        </div>
+		<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ
+				<br>ЭКЗАМЕН</div>
+    </header>
 	<script type="text/javascript">
          function getType(id, task) {
          	jQuery.ajax({
@@ -26,9 +34,9 @@
 					$('#output').html(data); 
          		}
          	});
+			closeNav();
          }
     </script>
-	
 	<script>
 	
         function openNav() {
@@ -43,20 +51,6 @@
         }
 
     </script>
-	
-<body>
-    <header>
-	
-        <div class="logo">
-            <a href="/" alt="Вернуться назад">
-              <img src="../../img/ege.png" alt="">
-            </a>
-			<a class="back-button">НАЗАД</a>
-        </div>
-		<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">ЕДИНЫЙ ГОСУДАРСТВЕННЫЙ
-				<br>ЭКЗАМЕН</div>
-    </header>
-    
 	<main>
 	    <div id="sideBar" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" id="closebtn" style="display:none;" onclick="closeNav()">&times;</a>
@@ -98,16 +92,14 @@
 			
 		</div>
 		
-		
 		<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
-		 
 		<div id="output">
-			 <div class="welcome-output">
-			 Вы попали на страницу с выбором уровня и позиции!<br> Для того, чтобы начать решать задания,<br> нажмите на стрелочку слева и выберите нужную позицию!
-			 </div>
+			<div class="positionTasks">На этой странице представлены справочные материалы,<br> взятые из официальной демоверсии ЕГЭ по математике базового уровня</div>
+			<? for($i = 1; $i <= 4; $i++)
+			{ ?>
+				<img src="images/0<?=$i?>.png" style="padding: 5px;">
+			<? } ?>
 		</div>
-		
-    </main>
+	</main>
+	
 </body>
-
-</html>
