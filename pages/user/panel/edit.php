@@ -67,7 +67,7 @@
 					<div class="task-name"><?=$type?> УРОВЕНЬ / ПОЗИЦИЯ: #<?=$row['tasks'] ?><br>ЗАДАНИЕ #<?=$row['id'] ?></div>
 					<div class="preview-task">
 					   <div>УСЛОВИЕ:</div>
-					   <img alt="Задание" src="../../../pages/ege/tasks/type-<?=$row['type'] ?>/0<?=$row['tasks'] ?>/0<?=$row['tasks'] ?>_0<?=$row['id'] ?>.PNG" /><br>
+					   <img alt="Задание" src="../../../pages/ege/images/type-<?=$row['type'] ?>/0<?=$row['tasks'] ?>/0<?=$row['tasks'] ?>_0<?=$row['id'] ?>.PNG" /><br>
 					   <div style="margin-bottom: 20px;">
 						  <form enctype="multipart/form-data" method="POST">
 							 <input  type="hidden" name="MAX_FILE_SIZE" value="100000" style="display:none;" />
@@ -76,7 +76,7 @@
 						  </form>
 						  
 						  <?
-							 $target_path = "../../../pages/ege/tasks/type-". $row['type'] ."/0". $row['tasks'] ."/";
+							 $target_path = "../../../pages/ege/images/type-". $row['type'] ."/0". $row['tasks'] ."/";
 							 
 							 $filename = "0". $row['tasks']. "_0". $row['id'] .".png";
 
@@ -89,7 +89,7 @@
 						  
 					   </div>
 					   <div>РЕШЕНИЕ:</div>
-					   <img alt="Ответ" src="../../../pages/ege/tasks/type-<?=$row['type'] ?>/answer/0<?=$row['tasks'] ?>/0<?=$row['tasks'] ?>_0<?=$row['id'] ?>.PNG" />
+					   <img alt="Ответ" src="../../../pages/ege/images/type-<?=$row['type'] ?>/answer/0<?=$row['tasks'] ?>/0<?=$row['tasks'] ?>_0<?=$row['id'] ?>.PNG" />
 					   <div style="margin-bottom: 20px;">
 						  <form enctype="multipart/form-data" method="POST">
 							 <input  type="hidden" name="MAX_FILE_SIZE" value="100000" style="display:none;" />
@@ -98,7 +98,7 @@
 						  </form>
 						  
 						  <?
-							 $target_path = "../../../pages/ege/tasks/type-". $row['type'] ."/answer/0". $row['tasks'] ."/";
+							 $target_path = "../../../pages/ege/images/type-". $row['type'] ."/answer/0". $row['tasks'] ."/";
 							 
 							 $filename = "0". $row['tasks']. "_0". $row['id'] .".png";
 

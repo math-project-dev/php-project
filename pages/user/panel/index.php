@@ -30,10 +30,10 @@
 	</head>
 	<body>
 		<header>
-			<div class="prev-page">
+			<div class="prev-page" style="padding-top: 1%;">
 				<a href="/">НАЗАД</a>
 			</div>
-			<div class="name-page">РЕЖИМ РЕДАКТИРОВАНИЯ<br>
+			<div class="name-page" style="padding-top: 1%;" >РЕЖИМ РЕДАКТИРОВАНИЯ<br>
 			ВЫБОР РАЗДЕЛА</div>
 			<div style="width: 20%; clear:left;"> </div>
 		</header>

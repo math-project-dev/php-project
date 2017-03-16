@@ -40,16 +40,20 @@
 <body>
 	<header>
 		  
-		   <div style="width: 100%; height: 100%; margin-top: 1.1%;">СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ
-		   <br> ПОСОБИЕ ПО МАТЕМАТИКЕ</div>
+			<div class="name-page" style="margin-top: 1.1%;     width: 100%;">СПРАВОЧНО-ОБУЧАЮЩЕЕ ЭЛЕКТРОННОЕ<br>
+			ПОСОБИЕ ПО МАТЕМАТИКЕ</div>
+			<div style="width: 20%; clear:left;"> </div>
 		   
 	</header>
 		
 	<main>
 		<? if ($userRow['statusID'] >= 2) { ?>
-		<div class="menu" style="top: -87px">
+		<div class="menu" style="top: -84px">
 			<div class="edit-panel">
 				<a class="edit-button" style="color: white" href="/pages/user/panel/">РЕЖИМ РЕДАКТИРОВАНИЯ</a>
+			</div>
+			<div style="margin-top: 5px">
+				<a class="edit-button" style="color: white" href="/pages/docs/help/">РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ</a>
 			</div>
 		   <a href="pages/school/">
 				<img src="img/schoolcourse.png" alt="школьный курс"> школьный курс
@@ -62,7 +66,10 @@
 		   </a>
 		</div>
 		<? } else {?>
-		<div class="menu">
+		<div class="menu" style="top: -27px">
+			<div class="edit-panel">
+				<a class="edit-button" style="color: white" href="/pages/docs/help/">РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ</a>
+			</div>
 		   <a href="pages/school/">
 				<img src="img/schoolcourse.png" alt="школьный курс"> школьный курс
 		   </a>

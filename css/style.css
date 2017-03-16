@@ -37,7 +37,6 @@ main .menu a {
     position: relative;
     font-size: 0.8rem;
     right: 10px;
-    margin-bottom: 35px;
     text-transform: uppercase;
     font-weight: 900;
     color: #1d3740;
@@ -387,9 +386,7 @@ main .menu a:hover img {
     font-weight: 700;
     color: #fff;
 }
-.edit-panel {
-    padding-top: 10px;
-}
+
 .achive-text {
     padding-top: 10px;
     padding-left: 20px;
@@ -702,9 +699,10 @@ main .menu a:hover img {
 	position: fixed; 
 	bottom: 1%;
 	font-size: 2rem;
+	top: 1%;
 	left: 21%;
 	z-index: 100; 
 	display: none;
 	text-decoration: none;
-	color: #1e6d74;
+	color: #154c51;
 }

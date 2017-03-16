@@ -30,10 +30,10 @@
    
    <body>
 		<header>
-			<div class="prev-page">
+			<div class="prev-page" style="padding-top: 1%;">
 				<a href="/">НАЗАД</a>
 			</div>
-			<div class="name-page">ЛИЧНЫЙ КАБИНЕТ<br>
+			<div class="name-page" style="padding-top: 1%;">ЛИЧНЫЙ КАБИНЕТ<br>
 			ПОЛЬЗОВАТЕЛЯ</div>
 			<div style="width: 20%; clear:left;"> </div>
 		</header>
