@@ -23,10 +23,10 @@ var Calendar = Class.create()
 // Constants
 //------------------------------------------------------------------------------
 
-Calendar.VERSION = '1.2.1'
+Calendar.VERSION = '1.2.2'
 
 Calendar.DAY_NAMES = new Array(
-  'Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Чертверг', 'Пятница', 'Суббота',
+  'Понедельник', 'Вторник', 'Среда', 'Чертверг', 'Пятница', 'Суббота',
   'Воскресенье'
 )
 
@@ -416,7 +416,7 @@ Calendar.prototype = {
     row = new Element('tr')
     this._drawButtonCell(row, '&#x00ab;', 1, Calendar.NAV_PREVIOUS_YEAR)
     this._drawButtonCell(row, '&#x2039;', 1, Calendar.NAV_PREVIOUS_MONTH)
-    this._drawButtonCell(row, 'Сегодня',    3, Calendar.NAV_TODAY)
+    this._drawButtonCell(row, 'Сегодня',  3, Calendar.NAV_TODAY)
     this._drawButtonCell(row, '&#x203a;', 1, Calendar.NAV_NEXT_MONTH)
     this._drawButtonCell(row, '&#x00bb;', 1, Calendar.NAV_NEXT_YEAR)
     thead.appendChild(row)

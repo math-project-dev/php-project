@@ -197,11 +197,12 @@ main .menu a:hover img {
 .allTasks {
     padding-bottom: 50px;
     margin: 0 auto;
-    width: 60%;
-	z-index: 4;
+    width: 65%;
+    z-index: 4;
 }
 .tasks {
-    margin-top: 15px;
+    margin-top: 15px; 
+    padding: 25px;
     font-weight: 800;
     background-color: #fff;
     border-width: thin;
@@ -214,7 +215,8 @@ main .menu a:hover img {
 }
 .task {
     padding-bottom: 10px;
-    padding: 20px;
+    padding: 35px;
+    width: 60%;
 }
 .positionTasks {
     padding-top: 35px;

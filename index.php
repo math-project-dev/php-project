@@ -30,7 +30,8 @@
       window.onload = function() {
         Calendar.setup({
           dateField     : 'date',
-          parentElement : 'calendar'
+          parentElement : 'calendar',
+		  fdow 			: 1
         })
       }
     </script>
@@ -89,9 +90,9 @@
 				<a class="edit-button" style="float: right; position: absolute; right: 131px; top: 120px; z-index: 1" href="/pages/user/login.php">ВОЙТИ В АККАУНТ</a>
 			<? } ?>
 			<img style="float: right; width: 23%; margin-right: 20px;" src="img/elements/login.png"><br>
-			<img style="float: right; padding-top: 420px; margin-left: 240px; right: 100px; position: absolute; height: calc(100vh - 596px);" src="img/elements/backpack.png">
+			<a href="/pages/docs/help/"><img style="float: right; padding-top: 420px; margin-left: 240px; right: 100px; position: absolute; height: calc(100vh - 596px);" src="img/elements/backpack.png"></a>
 			
-			<img style="float: left; padding-top: 26.8%; padding-left: 100px;" src="img/elements/cat.png">
+			<a href="/support/" ><img style="float: left; padding-top: 26.8%; padding-left: 100px;" src="img/elements/cat.png"></a >
 			
 			<canvas id="canvas" width="200" height="200" style="float: left; right: 82.3%; position: absolute;"></canvas>
 

@@ -29,6 +29,27 @@
 			<link rel="stylesheet" href="../../../css/style.css">
 		</head>
 		<body>
+		
+		<script type="text/javascript">
+			function setAjaxState(arg, arg2, ajaxState, section) {
+				if(ajaxState != 1 && section == 1) $('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
+				jQuery.ajax( {
+					url: "ajax.php",
+					data:'arg=' + arg + '&ajaxState=' + ajaxState + '&section=' + section + '&arg2=' + arg2, // argument, state, section
+					type: "GET",
+					success: function(data) {
+							if (section == 3 && ajaxState == 1 || ajaxState == 2 || ajaxState == 3 || ajaxState == -1)
+							{
+								$('#side-output').html(data);
+							} else $('#output').html(data);
+		
+								
+							
+					}
+				});
+			}
+		</script>
+		
 		<!-- First section -->
 		<? if($_GET['section'] == 1) { ?>	
 			<header>
@@ -42,25 +63,6 @@
 				<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">РЕЖИМ РЕДАКТИРОВАНИЯ
 						<br>СПИСОК ЗАДАНИЙ</div>
 			</header>
-			<script type="text/javascript">
-				function setAjaxState(arg, ajaxState, section) {
-					if(ajaxState != 2) $('#side-output').html('<img src="http://www.thebuildingsshow.com/assets14/loading.gif" />');
-					jQuery.ajax( {
-						url: "ajaxState.php",
-						data:'arg=' + arg + '&ajaxState=' + ajaxState + '&section' + section,
-						type: "GET",
-						success: function(data) {
-							
-							if(ajaxState == 2) {
-								$('#output').html(data);
-							} else {
-								$('#side-output').html(data);
-							}
-
-						}
-					});
-				 }
-			</script>
 			
 				
 			<script>
@@ -146,7 +148,7 @@
 						{
 							$theme = mysql_query("SELECT math_topic, ID FROM themes WHERE themeID = ". $i ." AND math_charpter = '". $row[0] ."'"); 
 							while ($rows = mysql_fetch_array($theme, MYSQL_BOTH)) { ?>
-								<a class="theme-blocks" onclick="setAjaxState('<?=$rows[1]?>', '2', '1')"><?=$rows[0]?></a>
+								<a class="theme-blocks" onclick="setAjaxState('<?=$rows[1]?>', '-1', '1', '1')"><?=$rows[0]?></a>
 						 <? }
 						}
 					} ?>
@@ -160,138 +162,122 @@
 			<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
 			
 			<main style="background: none; text-align:center"> 
-				<div id="output">		
+			
+				<div id="output">
+				
 				</div>
+				
 			</main>
+			<!-- End of first section -->
+			
 			<!-- Second section -->
 			<? } else if($_GET['section'] == 2) { ?>
-			<header>
-			
-				<div class="logo">
-					<a href="/" alt="Вернуться назад">
-					  <img src="../../../img/ege.png" alt="">
-					</a>
-					<div class="back-button">НАЗАД</div>
-				</div>
-				<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">РЕЖИМ РЕДАКТИРОВАНИЯ
-						<br>СПИСОК ЗАДАНИЙ</div>
-			</header>
-			<main style="background: none; text-align:center"> 
+				<script>
 				
-				<h1 class="left-header">БАЗОВЫЙ УРОВЕНЬ<h1>
-				<h1 class="right-header">ПРОФИЛЬНЫЙ УРОВЕНЬ<h1>
-				
-				<table style="margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 1.4rem;"> 
-					<tbody> 
-						<tr>
-							<td style="width: 400px; height: 20px; float: right; padding: 0 150px 0 150px; ">
-								<? for( $i = 1; $i <= 19; $i++)
-								{ ?>
-									<div style="padding: 20px">
-										<a  class="edit-button" id="b1-<?=$i?>-type-2" style="padding: 9px 40px; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display=''; document.getElementById('b1-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
-										<a  class="edit-button" id="b2-<?=$i?>-type-2" style="padding: 9px 40px; display: none; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='none'; document.getElementById('b1-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
-										<div class="content-<?=$i?>" id="content-<?=$i?>-type-2" style="display: none;">
-											<? for ($d = 1; $d <= 19; $d++) { 
-												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 2 AND tasks = '. $i .'  AND id = '. $d .' '); 
-												while ($row = mysql_fetch_assoc($query_w)) { ?>
-												<div class="select-block">
-													<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
-												</div>
-												<? }
-											 } ?>
-										</div>
-									</div>
-								<? } ?>
-							</td>
-							<td style="width: 400px; height: 20px; float: left; padding: 0 150px 0 150px;">
-								<? for( $i = 1; $i <= 20; $i++)
-								{ ?>
-									<div style="padding: 20px">
-										<a  class="edit-button" id="b1-<?=$i?>-type-1" style="padding: 9px 40px; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display=''; document.getElementById('b1-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
-										<a  class="edit-button" id="b2-<?=$i?>-type-1" style="padding: 9px 40px; display: none; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='none'; document.getElementById('b1-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a>
+					function openNav() {
+						 document.getElementById("sideBar").style.width = "380px";
+						 document.getElementById("NavButton").style.display = "none";
+						 document.getElementById("closebtn").style.display = "";
+					}
+					function closeNav() {
+						 document.getElementById("sideBar").style.width = "0";
+						 document.getElementById("NavButton").style.display = "";
+						 document.getElementById("closebtn").style.display = "none";
+					}
 
-										<div class="content-<?=$i?>" id="content-<?=$i?>-type-1" style="display: none;">
-											<? for ($d = 1; $d <= 20; $d++) { 
-												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 1 AND tasks = '. $i .'  AND id = '. $d .' '); 
-												while ($row = mysql_fetch_assoc($query_w)) { ?>
-													<div class="select-block">
-														<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
-													</div>
-												<? }
-											} ?>
-										</div>
-									</div>
-								<? } ?>
-							</td>
-						</tr> 
-					</tbody> 
-				</table>
-			</main>
-			<!-- Third section -->
-			<? } else if ($_GET['section'] == 3) { ?>
-			<header>
-			
-				<div class="logo">
-					<a href="/" alt="Вернуться назад">
-					  <img src="../../../img/olymp.png" alt="">
-					</a>
-					<div class="back-button">НАЗАД</div>
+				</script>
+				<header>
+				
+					<div class="logo">
+						<a href="/" alt="Вернуться назад">
+						  <img src="../../../img/ege.png" alt="">
+						</a>
+						<div class="back-button">НАЗАД</div>
+					</div>
+					<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">РЕЖИМ РЕДАКТИРОВАНИЯ
+							<br>СПИСОК ЗАДАНИЙ</div>
+				</header>
+				
+				
+				<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
+				
+				<div id="sideBar" class="sidenav">
+				
+					<a href="javascript:void(0)" class="closebtn" id="closebtn" style="display:none;" onclick="closeNav()">&times;</a>
+					<h1>БАЗОВЫЙ УРОВЕНЬ</h1>
+					<? for( $i = 1; $i <= 20; $i++)
+					{ ?>
+						<a class="level-blocks" onclick="setAjaxState('<?=$i?>', '1', '1', '2')">ПОЗИЦИЯ <?=$i?></a>
+					<?} ?>
+					<h1>ПРОФИЛЬНЫЙ УРОВЕНЬ</h1>
+					<? for( $i = 1; $i <= 19; $i++)
+					{ ?>
+						<a class="level-blocks" onclick="setAjaxState('<?=$i?>', '2', '1', '2')">ПОЗИЦИЯ <?=$i?></a>
+					<? } ?>
+					
 				</div>
-				<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">РЕЖИМ РЕДАКТИРОВАНИЯ
-						<br>СПИСОК ЗАДАНИЙ</div>
-			</header>
-			<main style="background: none; text-align:center"> 
 				
-				<h1 class="left-header">БАЗОВЫЙ УРОВЕНЬ<h1>
-				<h1 class="right-header">ПРОФИЛЬНЫЙ УРОВЕНЬ<h1>
+				<main style="background: none; text-align:center"> 
+					
+					<div id="output">
 				
-				<table style="margin-left: auto; margin-right: auto; margin-top: 50px; font-size: 1.4rem;"> 
-					<tbody> 
-						<tr>
-							<td style="width: 400px; height: 20px; float: right; padding: 0 150px 0 150px; ">
-								<? for( $i = 1; $i <= 19; $i++)
-								{ ?>
-									<div style="padding: 20px">
-										<a  class="edit-button" id="b1-<?=$i?>-type-2" style="padding: 9px 40px; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display=''; document.getElementById('b1-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
-										<a  class="edit-button" id="b2-<?=$i?>-type-2" style="padding: 9px 40px; display: none; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-2').style.display='none'; document.getElementById('b2-<?=$i?>-type-2').style.display='none'; document.getElementById('b1-<?=$i?>-type-2').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
-										<div class="content-<?=$i?>" id="content-<?=$i?>-type-2" style="display: none;">
-											<? for ($d = 1; $d <= 19; $d++) { 
-												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 2 AND tasks = '. $i .'  AND id = '. $d .' '); 
-												while ($row = mysql_fetch_assoc($query_w)) { ?>
-												<div class="select-block">
-													<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
-												</div>
-												<? }
-											 } ?>
-										</div>
-									</div>
-								<? } ?>
-							</td>
-							<td style="width: 400px; height: 20px; float: left; padding: 0 150px 0 150px;">
-								<? for( $i = 1; $i <= 20; $i++)
-								{ ?>
-									<div style="padding: 20px">
-										<a  class="edit-button" id="b1-<?=$i?>-type-1" style="padding: 9px 40px; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display=''; document.getElementById('b1-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a> 
-										<a  class="edit-button" id="b2-<?=$i?>-type-1" style="padding: 9px 40px; display: none; cursor: pointer;" onclick="document.getElementById('content-<?=$i?>-type-1').style.display='none'; document.getElementById('b2-<?=$i?>-type-1').style.display='none'; document.getElementById('b1-<?=$i?>-type-1').style.display='';">ПОЗИЦИЯ #<?=$i?></a>
+					<div>
+					
+				</main>
+				<!-- End of second section -->
+				
+				<!-- Third section -->
+				<? } else if ($_GET['section'] == 3) { ?>
+				<header>
+				
+					<div class="logo">
+						<a href="/" alt="Вернуться назад">
+						  <img src="../../../img/olymp.png" alt="">
+						</a>
+						<div class="back-button">НАЗАД</div>
+					</div>
+					<div style="padding: 4px; margin-top: 10px; margin-right: 240px;">РЕЖИМ РЕДАКТИРОВАНИЯ
+							<br>СПИСОК ЗАДАНИЙ</div>
+				</header>
+				
+				<script>
+				
+					function openNav() {
+						 document.getElementById("sideBar").style.width = "380px";
+						 document.getElementById("NavButton").style.display = "none";
+						 document.getElementById("closebtn").style.display = "";
+					}
+					function closeNav() {
+						 document.getElementById("sideBar").style.width = "0";
+						 document.getElementById("NavButton").style.display = "";
+						 document.getElementById("closebtn").style.display = "none";
+					}
 
-										<div class="content-<?=$i?>" id="content-<?=$i?>-type-1" style="display: none;">
-											<? for ($d = 1; $d <= 20; $d++) { 
-												$query_w = mysql_query('SELECT tableID FROM answers WHERE type = 1 AND tasks = '. $i .'  AND id = '. $d .' '); 
-												while ($row = mysql_fetch_assoc($query_w)) { ?>
-													<div class="select-block">
-														<a class="select-task" href="edit.php?id=<?=$row['tableID']?>">ЗАДАНИЕ #<?=$d?></a>
-													</div>
-												<? }
-											} ?>
-										</div>
-									</div>
-								<? } ?>
-							</td>
-						</tr> 
-					</tbody> 
-				</table>
-			</main>
+				</script>
+				<main style="background: none; text-align:center"> 
+					<div id="sideBar" class="sidenav">
+						<div class="fixed-side">
+						
+							<a href="javascript:void(0)" class="closebtn" id="closebtn" style="	display: none;" onclick="closeNav()">&times;</a>
+							
+						</div>
+						<div id="side-output">
+							<h1 class="olymp-header">ВЫБЕРИТЕ ОЛИМПИАДУ:</h1>
+							<a class="olymp-blocks" onclick="setAjaxState('-1', '-1', '1', '3')">Всероссийская олимпиада школьников</a> 
+							<a class="olymp-blocks" onclick="setAjaxState('-1', '-1', '2', '3')">Математический праздник</a>
+							<a class="olymp-blocks" onclick="setAjaxState('-1', '-1', '3', '3')">Московская математическая олимпиада</a>
+						</div>
+
+					</div> 
+					
+					<span class="NavButton" id="NavButton" onclick="openNav()"><div style="top: 36%; left: 33%; position: absolute; font-size: 40px;">&#187;</div></i></span>
+					
+					<div id="output">
+						<div class="welcome-output">Вы попали на страницу с олимпиадами<br>Для того, чтобы начать решать олимпиадные задания<br> и выберите нужную олимпиаду!</div>
+					</div>
+				</main>
 			<? } ?>
+			<!-- End of third section -->
 		</body>
 	</html>
 

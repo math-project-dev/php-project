@@ -141,8 +141,8 @@
 	else if ($ajaxState == -1)
 	{ ?>
 		<h1 class="olymp-header">ВЫБЕРИТЕ ОЛИМПИАДУ:</h1>
-			<a class="olymp-blocks" onclick="setAjaxState('-1', '1')">Всероссийская олимпиада школьников</a> 
-			<a class="olymp-blocks" onclick="setAjaxState('-1', '2')">Математический праздник</a>
-			<a class="olymp-blocks" onclick="setAjaxState('-1', '3')">Московская математическая олимпиада</a>
+				<a class="olymp-blocks" onclick="setAjaxState('-1', '1')">Всероссийская олимпиада школьников</a> 
+				<a class="olymp-blocks" onclick="setAjaxState('-1', '2')">Математический праздник</a>
+				<a class="olymp-blocks" onclick="setAjaxState('-1', '3')">Московская математическая олимпиада</a>
 	<? }
 ?>
