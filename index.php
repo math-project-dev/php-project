@@ -87,12 +87,12 @@
 				<a class="edit-button" style="float: right; position: absolute; right: 127px; top: 120px; z-index: 1" href="/pages/user/">ЛИЧНЫЙ КАБИНЕТ</a>
 				<a class="edit-button" style="float: right; position: absolute; right: 194px; top: 180px; z-index: 1" href="/pages/user/logout.php?logout">ВЫХОД</a>
 			<? } else if (isset($_SESSION['user']) == "") { ?>
-				<a class="edit-button" style="float: right; position: absolute; right: 131px; top: 120px; z-index: 1" href="/pages/user/login.php">ВОЙТИ В АККАУНТ</a>
+				<a class="edit-button account-login" style="float: right; position: absolute; right: 131px; top: 120px; z-index: 1" href="/pages/user/login.php">ВОЙТИ В АККАУНТ</a>
 			<? } ?>
-			<img style="float: right; width: 23%; margin-right: 20px;" src="img/elements/login.png"><br>
-			<a href="/pages/docs/help/"><img style="float: right; padding-top: 420px; margin-left: 240px; right: 100px; position: absolute; height: calc(100vh - 596px);" src="img/elements/backpack.png"></a>
+			<img class="login-img" src="img/elements/login.png"><br>
+			<a href="/pages/docs/help/"><img class="backp-img" src="img/elements/backpack.png"></a>
 			
-			<a href="/support/" ><img style="float: left; padding-top: 26.8%; padding-left: 100px;" src="img/elements/cat.png"></a >
+			<a href="/support/" ><img class="cat-img" src="img/elements/cat.png"></a >
 			
 			<canvas id="canvas" width="200" height="200" style="float: left; right: 82.3%; position: absolute;"></canvas>
 
