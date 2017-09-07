@@ -69,31 +69,6 @@
 			{ ?>
 				<a class="level-blocks" onclick="getType('2', '<?=$i?>')">ПОЗИЦИЯ <?=$i?></a>
 			<? } ?>
-			<div class="make-own">
-				<a class="h1-class" href="/pages/ege/own/">СОЗДАТЬ СВОЙ ВАРИАНТ</a>
-			</div>
-			<div class="make-own">
-				<a class="h1-class" href="/pages/info/">СПРАВОЧНЫЕ МАТЕРИАЛЫ</a>
-			</div>
-			<h1>НОРМАТИВНО-ПРАВОВЫЕ ДОКУМЕНТЫ</h1>
-			<div class="make-own">
-				<a class="h1-class" href="/pages/docs/?sector=1">ДЕМОВЕРСИЯ: БАЗОВАЯ</a>
-			</div>
-			<div class="make-own">
-				<a class="h1-class" href="/pages/docs/?sector=2">ДЕМОВЕРСИЯ: ПРОФИЛЬНАЯ</a>
-			</div>
-			<div class="make-own">
-				<a class="h1-class" href="/pages/docs/?sector=3">СПЕЦИФИКАЦИЯ: БАЗОВАЯ</a>
-			</div>
-			<div class="make-own">
-				<a class="h1-class" href="/pages/docs/?sector=4">СПЕЦИФИКАЦИЯ: ПРОФИЛЬНАЯ</a>
-			</div>
-			<div class="make-own">
-				<a class="h1-class" href="/pages/docs/?sector=5">КОДИФИКАТОР ТРЕБОВАНИЙ</a>
-			</div>
-			<div class="make-own">
-				<a class="h1-class" href="/pages/docs/?sector=6">КОДИФИКАТОР ЭЛЕМЕНТОВ СОДЕРЖАНИЯ</a>
-			</div>
 			
 		</div>
 		
