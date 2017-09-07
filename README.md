@@ -1,6 +1,8 @@
 # Math assistant
 
 [![Build Status](https://travis-ci.org/math-project-dev/php-project.svg?branch=master)](https://travis-ci.org/math-project-dev/php-project)
+[![Uptime Robot status](https://img.shields.io/uptimerobot/status/m778918918-3e92c097147760ee39d02d36.svg)]()
+[![Jenkins tests](https://img.shields.io/jenkins/t/https/jenkins.qa.ubuntu.com/view/Precise/view/All%20Precise/job/precise-desktop-amd64_default.svg)]()
 
 That assistant has been written using PHP  5.0, jQuery and Ajax technologies. That project has been winner on russian student's competitions between teams. We've been in Mail.RU and on forum named "Gorod Obrazovaniya" (Город Образования). 
 
