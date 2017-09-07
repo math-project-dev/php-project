@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>Электронно-обучающее пособие по математике</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <script src="../../js/app.js" charset="utf-8"></script>
+    <script src="../../assets/js/app.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 	
         <div class="logo">
             <a href="/" alt="Вернуться назад">
-              <img src="../../img/ege.png" alt="">
+              <img src="../../assets/img/ege.png" alt="">
             </a>
 			<a class="back-button">НАЗАД</a>
         </div>

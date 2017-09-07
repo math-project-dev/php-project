@@ -26,7 +26,7 @@
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 			<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 			<meta name="theme-color" content="#1e6d74">
-			<link rel="stylesheet" href="../../../css/style.css">
+			<link rel="stylesheet" href="../../../assets/css/style.css">
 		</head>
 		<body>
 		
@@ -56,7 +56,7 @@
 			
 				<div class="logo">
 					<a href="/" alt="Вернуться назад">
-					  <img src="../../../img/schoolcourse.png" alt="">
+					  <img src="../../../assets/img/schoolcourse.png" alt="">
 					</a>
 					<div class="back-button">НАЗАД</div>
 				</div>
@@ -232,7 +232,7 @@
 				
 					<div class="logo">
 						<a href="/" alt="Вернуться назад">
-						  <img src="../../../img/olymp.png" alt="">
+						  <img src="../../../assets/img/olymp.png" alt="">
 						</a>
 						<div class="back-button">НАЗАД</div>
 					</div>

@@ -85,7 +85,7 @@ if (isset($_POST['btn-signup'])) {
       <title>Справочно-обучающее электронное пособие по математике</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"  />
 	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-      <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+      <link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
 	  <meta name="theme-color" content="#1e6d74">
    </head>
    <body>

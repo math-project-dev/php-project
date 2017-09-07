@@ -4,17 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title>Справочно-обучающее электронное пособие по математике</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#1e6d74">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
 	
-    <script src="../../js/app.js" charset="utf-8"></script>
+    <script src="../../assets/js/app.js" charset="utf-8"></script>
 </head>
 
-	<? require_once('/../../config.php'); ?>
+	<? require_once('../../config.php'); ?>
 	
 	<script type="text/javascript">
          function getType(id, task) {
@@ -49,7 +48,7 @@
 	
         <div class="logo">
             <a href="/" alt="Вернуться назад">
-              <img src="../../img/ege.png" alt="">
+              <img src="../../assets/img/ege.png" alt="">
             </a>
 			<a class="back-button">НАЗАД</a>
         </div>

@@ -59,7 +59,7 @@ if (isset($_POST['btn-login'])) {
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <title>Справочно-обучающее электронное пособие по математике</title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"  />
-      <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+      <link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
 	  <meta name="theme-color" content="#1e6d74">
    </head>
    <body>

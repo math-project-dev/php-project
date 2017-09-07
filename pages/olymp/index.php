@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
+	<meta name="theme-color" content="#1e6d74">
     <title>Электронно-обучающее пособие по математике</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="../../js/app.js" charset="utf-8"></script>
+    <script src="../../assets/js/app.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
 	
         <div class="logo">
             <a href="/" alt="Вернуться назад">
-              <img src="../../img/olymp.png" alt="">
+              <img src="../../assets/img/olymp.png" alt="">
             </a>
 			<a class="back-button">НАЗАД</a>
         </div>
@@ -67,10 +68,22 @@
 				
 			</div>
 			<div id="side-output">
-				<h1 class="olymp-header">ВЫБЕРИТЕ ОЛИМПИАДУ:</h1>
-				<a class="olymp-blocks" onclick="setAjaxState('-1', '1')">Всероссийская олимпиада школьников</a> 
-				<a class="olymp-blocks" onclick="setAjaxState('-1', '2')">Математический праздник</a>
-				<a class="olymp-blocks" onclick="setAjaxState('-1', '3')">Московская математическая олимпиада</a>
+				<h1 class="olymp-header">ВСЕРОССИЙСКАЯ ОЛИМПИАДА ШКОЛЬНИКОВ</h1>
+				<? for ($i = 10; $i <= 16; $i++) 
+				{ ?>
+					<a class="theme-blocks" onclick="setAjaxState('<?=$i?>', '4')">ОЛИМПИАДА 20<?=$i?> - 20<?=$i+1?> УЧЕБНОГО ГОДА</a>
+				<? } ?>
+				<h1 class="olymp-header">МАТЕМАТИЧЕСКИЙ ПРАЗДНИК</h1>
+				<? for ($i = 11; $i <= 27; $i++) 
+				{ ?>
+					<a class="theme-blocks" onclick="setAjaxState('<?=$i?>', '5')">МАТЕМАТИЧЕСКИЙ ПРАЗДНИК #<?=$i?></a>
+				<? } ?>
+				<h1 class="olymp-header">МОСКОВСКАЯ МАТЕМАТИЧЕСКАЯ ОЛИМПИАДА</h1>
+				<? for ($i = 12; $i <= 16; $i++) 
+				{  ?>
+					<a class="theme-blocks" onclick="setAjaxState('<?=$i?>', '6')">ОЛИМПИАДА 20<?=$i?> УЧЕБНОГО ГОДА</a>
+				<? } ?>
+				<h1 class="olymp-header"></h1>
 			</div>
 
 		</div> 

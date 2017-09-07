@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="utf-8">
+	<meta name="theme-color" content="#1e6d74">
     <title>Электронно-обучающее пособие по математике</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
-    <script src="../../js/app.js" charset="utf-8"></script>
+    <script src="../../assets/js/app.js" charset="utf-8"></script>
 </head>
 
 	<? require_once('../../config.php'); ?>
@@ -107,7 +108,7 @@
 	
         <div class="logo">
             <a href="/" alt="Вернуться назад">
-              <img src="../../img/schoolcourse.png" alt="">
+              <img src="../../assets/img/schoolcourse.png" alt="">
             </a>
 			<a class="back-button">НАЗАД</a>
         </div>

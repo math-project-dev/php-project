@@ -24,7 +24,7 @@
       <title>Справочно-обучающее электронное пособие по математике</title>
 	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	  <script src="//cdn.jsdelivr.net/jdenticon/1.4.0/jdenticon.min.js" async></script>
-      <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+      <link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
 	  <meta name="theme-color" content="#1e6d74">
    </head>
    

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html style="overflow: hidden;">
+<html>
 <? 	
 	ob_start();
 	session_start();
@@ -16,7 +16,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#1e6d74">
     <title>Справочно-обучающее электронное пособие по математике</title>
-    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
 	
 	<!-- JQuery -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -25,8 +25,8 @@
 	
 </head>
 
-<body>
-	<header >
+<body style="background-color: #B9E9E8; overflow: hidden;" >
+	<header>
 		  
 			<div class="prev-page" style="margin-top: 1.1%;">
 				<a href="/">НАЗАД</a>
@@ -37,7 +37,7 @@
 		   
 	</header>
 		
-	<main style="background: none; background-color: ">
-		<div class="welcome-output" style="color: white" >Вы попали на страницу с руководством пользователя!<br>Здесь Вы можете ознакомиться с пособием</div>
+	<main style="background: none; background-color: #B9E9E8 ">
+		<div class="welcome-output" style="color: #1e6d74" >Данный раздел находится в разработке, попробуйте зайти позже!</div>
 	</main>
 </body>
